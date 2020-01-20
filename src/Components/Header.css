@@ -1,0 +1,13 @@
+.header {
+    display: block;
+    min-width: 100px;
+    font-weight: bold;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 44px;
+    padding-left: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    margin-left: 248px;
+    background-color: red;
+}
