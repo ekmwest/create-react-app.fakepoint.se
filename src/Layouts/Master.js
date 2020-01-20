@@ -1,11 +1,14 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
+import './Master.css'
 
 function Master({ children }) {
     return (
-        <div>
+        <div className="main">
             <Sidebar></Sidebar>
-            {children}
+            <div className="main__content">
+                {children}
+            </div>
         </div>
     );
 }

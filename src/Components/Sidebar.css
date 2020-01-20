@@ -1,0 +1,50 @@
+.sidebar {
+    width:248px;
+    background-color: #222;
+    box-sizing: border-box;;
+    padding:0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom:0;
+    color: inherit;
+    color: #c5c5c5;
+}
+
+.sidebar h4 {
+    margin: 0;
+    padding: 12px 0 0 12px;
+}
+
+.sidebar ul {
+    padding: 8px 0;
+    margin: 0;
+}
+
+.sidebar li a {
+    display: block;
+    padding: 8px 8px 8px 12px;
+    color: inherit;
+    color: #c5c5c5;
+    text-decoration: none;
+    line-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(255,255,255,.09);
+}
+
+.sidebar li a.current {
+    background-color: rgba(255,255,255,.16);
+    color: #fff;
+}
+
+.sidebar li a:hover {
+    background-color: rgba(255,255,255,.16);
+    color: #fff;
+}
+
+.sidebar li {
+    list-style: none;
+    padding: 0;
+}
