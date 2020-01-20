@@ -3,3 +3,7 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f7f7f7;
 }
+
+.main {
+  margin-left: 248px;
+}

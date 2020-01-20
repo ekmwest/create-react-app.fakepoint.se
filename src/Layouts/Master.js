@@ -1,12 +1,16 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
+import Header from '../Components/Header';
 
 function Master({ children }) {
     return (
-        <div>
+        <>
             <Sidebar></Sidebar>
-            {children}
-        </div>
+            <Header></Header>
+            <div class="main">
+                {children}
+            </div>
+        </>
     );
 }
 
