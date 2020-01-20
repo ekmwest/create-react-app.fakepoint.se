@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Sidebar() {
-    const [courses, setCourses] = useState([{ id: 1, name: "LIA" }]);
+    const [courses, setCourses] = useState([]);
 
     useEffect(() => {
         fetch('https://api.fakepoint.se/courses', {
