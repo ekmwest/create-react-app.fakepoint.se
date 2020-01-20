@@ -6,12 +6,14 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import CourseNews from './Pages/CourseNews';
 import NotFound from './Pages/NotFound';
+import ScrollToTop from './Components/ScrollToTop'
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
 function App() {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Master>
                 <Switch>
                     <Route path='/' exact>

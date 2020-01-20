@@ -5,13 +5,15 @@ import './Master.css'
 
 function Master({ children }) {
     return (
-        <div className="main">
+        <>
             <Sidebar></Sidebar>
-            <Header></Header>
-            <div className="main__content">
-                {children}
+            <div className="main">
+                <Header></Header>
+                <div className="main__content">
+                    {children}
+                </div>
             </div>
-        </div>
+        </>
     )
 };
 
