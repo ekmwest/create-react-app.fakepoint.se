@@ -1,9 +1,10 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-function CourseChannel(props) {
-    console.log(props);
+function CourseChannel() {
+    let { id } = useParams();
     return (
-        <h1>Course Channel</h1>
+        <h1>Course {id} Channel</h1>
     );
 }
 
