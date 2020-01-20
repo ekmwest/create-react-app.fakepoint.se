@@ -1,0 +1,15 @@
+.comment {
+    background-color: #f0f0f0;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.header {
+    /* margin-bottom: 4px; */
+}
+
+.content {
+    margin-left: 40px;
+}

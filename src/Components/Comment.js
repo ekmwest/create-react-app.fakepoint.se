@@ -1,14 +1,14 @@
 import React from 'react';
 import User from './User'
-import './Comment.css';
+import styles from './Comment.module.css';
 
 function Comment({ comment, users }) {
     return (
-        <div className="comment">
-            <div className="header">
+        <div className={styles.comment}>
+            <div className={styles.header}>
                 <User user={users.find(user => user.id === comment.user_id)} />
             </div>
-            <div className="content">
+            <div className={styles.content}>
                 {comment.content}
             </div>
         </div>

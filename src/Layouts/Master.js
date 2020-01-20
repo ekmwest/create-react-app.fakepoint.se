@@ -1,18 +1,18 @@
 import React from 'react';
 import Sidebar from '../Components/Sidebar';
 import Header from '../Components/Header';
-import './Master.css'
+import styles from './Master.module.css'
 
 function Master({ children }) {
     return (
         <>
             <Sidebar></Sidebar>
-            <div className="main">
-                <Header></Header>
-                <div className="main__content">
+            <Header></Header>
+            <main className={styles.main}>
+                <div className={styles.content}>
                     {children}
                 </div>
-            </div>
+            </main>
         </>
     )
 };

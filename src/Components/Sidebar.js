@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './Sidebar.css'
+import styles from './Sidebar.module.css'
 
 function Sidebar() {
     const [courses, setCourses] = useState([]);
@@ -18,7 +18,7 @@ function Sidebar() {
     }, [])
 
     return (
-        <div className="sidebar">
+        <div className={styles.sidebar}>
             <ul>
                 <li>
                     <Link to="/">Home</Link>
