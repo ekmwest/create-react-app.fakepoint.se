@@ -3,13 +3,3 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f7f7f7;
 }
-
-.post {
-  background-color: #fff;
-  padding: 16px;
-}
-
-.comment {
-  background-color: #f3f3f3;
-  padding: 12px;
-}
