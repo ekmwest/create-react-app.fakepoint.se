@@ -1,11 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-function CourseChannel() {
+function CourseNews() {
     let { id } = useParams();
     return (
         <h1>Course {id} Channel</h1>
     );
 }
 
-export default CourseChannel;
+export default CourseNews;

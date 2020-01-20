@@ -11,7 +11,7 @@ function Sidebar() {
                 <Link to="/about">About</Link>
             </li>
             <li>
-                <Link to="/course/7/channel">LIA kurs</Link>
+                <Link to="/course/7/news">LIA kurs</Link>
             </li>
         </ul>
     );

@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Master from './Layouts/Master';
 import Home from './Pages/Home';
 import About from './Pages/About';
-import CourseChannel from './Pages/CourseChannel';
+import CourseNews from './Pages/CourseNews';
 import NotFound from './Pages/NotFound';
 
 ReactDOM.render(<App />, document.getElementById('app'));
@@ -20,8 +20,12 @@ function App() {
                     <Route path='/about' exact>
                         <About />
                     </Route>
-                    <Route path='/course/:id/channel' exact component={CourseChannel}></Route>
-                    <Route path='/' component={NotFound}></Route>
+                    <Route path='/course/:id/news' exact>
+                        <CourseNews />
+                    </Route>
+                    <Route path='/'>
+                        <NotFound />
+                    </Route>
                 </Switch>
             </Master>
         </BrowserRouter>
