@@ -4,6 +4,7 @@ import Post from './../Components/Post';
 
 function CourseNews() {
     let { id } = useParams();
+    const [course, setCourse] = useState(null);
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
 
@@ -27,10 +28,20 @@ function CourseNews() {
             .then(posts => setPosts(posts));
     }, [id]);
 
-    if(users.length > 0) {
+    useEffect(() => {
+        fetch(`https://api.fakepoint.se/courses/${id}`, {
+            headers: {
+                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
+            }
+        })
+            .then(res => res.json())
+            .then(course => setCourse(course));
+    }, [id]);
+
+    if(users.length > 0 && course) {
         return (
             <>
-                <h1>Course News</h1>
+                <h1>{course.name}</h1>
                 {posts.map(post => (
                     <Post
                         key={post.id}

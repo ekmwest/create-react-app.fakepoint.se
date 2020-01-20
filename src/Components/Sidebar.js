@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import styles from './Sidebar.module.css'
 
 function Sidebar() {
@@ -21,13 +21,21 @@ function Sidebar() {
         <div className={styles.sidebar}>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <NavLink exact to="/" activeClassName={styles.current}>Home</NavLink>
                 </li>
                 <li>
                     <h4>GRUPPER</h4>
                 </li>
                 {courses.map(course => (
-                    <li key={course.id}><Link to={`/courses/${course.id}/news`}>{course.name}</Link></li>
+                    <li key={course.id}>
+                        <NavLink
+                            exact
+                            to={`/courses/${course.id}/news`}
+                            activeClassName={styles.current}
+                        >
+                            {course.name}
+                        </NavLink>
+                    </li>
                 ))}
             </ul>
         </div >
