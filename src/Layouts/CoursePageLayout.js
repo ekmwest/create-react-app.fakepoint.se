@@ -1,10 +1,12 @@
 import React from 'react';
 import CourseNav from '../Components/CourseNav/CourseNav';
-import styles from './CoursePage.module.css';
+import Header from '../Components/Header/Header';
+import styles from './CoursePageLayout.module.css';
 
-function CoursePage({ children }) {
+function CoursePageLayout({ children, title }) {
     return (
         <>
+            <Header title={title} />
             <CourseNav />
             <div className={styles.content}>
                 {children}
@@ -13,6 +15,4 @@ function CoursePage({ children }) {
     )
 };
 
-export default CoursePage;
-
-
+export default CoursePageLayout;

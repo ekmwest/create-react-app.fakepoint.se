@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Post from '../Components/Post/Post';
-import CoursePage from '../Layouts/CoursePage';
+import CoursePageLayout from '../Layouts/CoursePageLayout';
 
 
-function CoursePosts() {
+function CoursePostsPage() {
     let { id } = useParams();
     const [course, setCourse] = useState(null);
     const [posts, setPosts] = useState([]);
@@ -42,19 +42,19 @@ function CoursePosts() {
 
     if (users.length > 0 && course) {
         return (
-            <CoursePage>
+            <CoursePageLayout title={course.name}>
                 {posts.map(post => (
                     <Post
                         key={post.id}
                         post={post}
                         users={users}
                     />))}
-            </CoursePage>
+            </CoursePageLayout>
         );
     } else {
-        return (<CoursePage></CoursePage>);
+        return (<CoursePageLayout></CoursePageLayout>);
     }
 
 }
 
-export default CoursePosts;
+export default CoursePostsPage;

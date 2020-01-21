@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-function Header() {
+function Header({title}) {
     return (
         <div className={styles.header}>
-            Home
+            {title}
         </div>
     );
 }
