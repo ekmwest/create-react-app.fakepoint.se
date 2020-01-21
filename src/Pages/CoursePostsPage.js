@@ -58,6 +58,21 @@ function CoursePostsPage() {
             });
     }
 
+    const deletePost = postId => {
+        fetch(`https://api.fakepoint.se/posts/${postId}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM=',
+                'Content-Type': 'application/json'
+            }
+        })
+            .then(response => response.json())
+            .then(post => {
+                console.log(post);
+                setPosts(posts.filter(p => p.id !== postId));
+            });
+    }
+
     if (users.length > 0 && course) {
         return (
             <CoursePageLayout title={course.name}>
@@ -67,6 +82,7 @@ function CoursePostsPage() {
                         key={post.id}
                         post={post}
                         users={users}
+                        deleteHandler={() => deletePost(post.id)}
                     />))}
             </CoursePageLayout>
         );
