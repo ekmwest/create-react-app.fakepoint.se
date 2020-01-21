@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Sidebar.module.css'
 
 function Sidebar() {
@@ -30,7 +30,7 @@ function Sidebar() {
                     <li key={course.id}>
                         <NavLink
                             exact
-                            to={`/courses/${course.id}/news`}
+                            to={`/courses/${course.id}/posts`}
                             activeClassName={styles.current}
                         >
                             {course.name}

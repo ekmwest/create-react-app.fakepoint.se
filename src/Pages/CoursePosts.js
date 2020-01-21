@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Post from './../Components/Post';
+import Post from '../Components/Post';
 
-function CourseNews() {
+
+function CoursePosts() {
     let { id } = useParams();
     const [course, setCourse] = useState(null);
     const [posts, setPosts] = useState([]);
@@ -56,4 +57,4 @@ function CourseNews() {
 
 }
 
-export default CourseNews;
+export default CoursePosts;
