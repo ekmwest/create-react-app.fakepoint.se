@@ -1,14 +1,17 @@
 import React from 'react';
 import styles from './AddPost.module.css';
+import useForm from './../../Hooks/useForm';
 
-function AddPost() {
+function AddPost({ saveHandler }) {
+    const [values, changeHandler] = useForm({ content: "" });
+
     return (
         <div className={styles.add_post}>
             <div>
-                <textarea className={styles.content_input}></textarea>
+                <textarea name="content" value={values.content} onChange={changeHandler} className={styles.content_input} />
             </div>
             <div>
-                <button>Save</button>
+                <button onClick={() => saveHandler(values)}>Save</button>
             </div>
         </div>
     );

@@ -22,7 +22,7 @@ function CoursePostsPage() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://api.fakepoint.se/posts?_embed=comments&course_id=${id}`, {
+        fetch(`https://api.fakepoint.se/posts?_embed=comments&course_id=${id}&_sort=created_at&_order=desc`, {
             headers: {
                 'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
             }
@@ -41,10 +41,27 @@ function CoursePostsPage() {
             .then(course => setCourse(course));
     }, [id]);
 
+    const savePost = post => {
+        console.log(post);
+        fetch(`https://api.fakepoint.se/courses/${id}/posts`, {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM=',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ content: post.content, user_id: 1 })
+        })
+            .then(response => response.json())
+            .then(post => {
+                post.comments = [];
+                setPosts([post, ...posts]);
+            });
+    }
+
     if (users.length > 0 && course) {
         return (
             <CoursePageLayout title={course.name}>
-                <AddPost />
+                <AddPost saveHandler={savePost} />
                 {posts.map(post => (
                     <Post
                         key={post.id}
