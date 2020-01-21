@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './CoursePage.module.css'
-import CourseNav from './../Components/CourseNav';
+import CourseNav from '../Components/CourseNav/CourseNav';
 
 function CoursePage({ children }) {
     return (

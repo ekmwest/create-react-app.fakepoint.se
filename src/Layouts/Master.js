@@ -1,6 +1,6 @@
 import React from 'react';
-import Sidebar from '../Components/Sidebar';
-import Header from '../Components/Header';
+import Sidebar from '../Components/Sidebar/Sidebar';
+import Header from '../Components/Header/Header';
 import styles from './Master.module.css'
 
 function Master({ children }) {

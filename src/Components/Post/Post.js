@@ -1,8 +1,8 @@
 import React from 'react';
-import Comment from './Comment';
-import User from './User';
+import Comment from '../Comment/Comment';
+import User from '../User/User';
 import styles from './Post.module.css';
-import fmt from '../Code/fmt';
+import fmt from '../../Code/fmt';
 
 function Post({ post, users }) {
     return (

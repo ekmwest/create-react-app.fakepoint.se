@@ -1,5 +1,5 @@
 import React from 'react';
-import User from './User'
+import User from '../User/User'
 import styles from './Comment.module.css';
 
 function Comment({ comment, users }) {

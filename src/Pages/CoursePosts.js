@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Post from '../Components/Post';
+import Post from '../Components/Post/Post';
 
 
 function CoursePosts() {
