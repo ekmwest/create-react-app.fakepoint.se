@@ -9,9 +9,7 @@ function Master({ children }) {
             <Sidebar></Sidebar>
             <Header></Header>
             <main className={styles.main}>
-                <div className={styles.content}>
-                    {children}
-                </div>
+                {children}
             </main>
         </>
     )

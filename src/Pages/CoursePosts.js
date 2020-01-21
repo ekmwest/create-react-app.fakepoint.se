@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Post from '../Components/Post/Post';
+import CoursePage from '../Layouts/CoursePage';
 
 
 function CoursePosts() {
@@ -39,20 +40,19 @@ function CoursePosts() {
             .then(course => setCourse(course));
     }, [id]);
 
-    if(users.length > 0 && course) {
+    if (users.length > 0 && course) {
         return (
-            <>
-                <h1>{course.name}</h1>
+            <CoursePage>
                 {posts.map(post => (
                     <Post
                         key={post.id}
                         post={post}
                         users={users}
                     />))}
-            </>
+            </CoursePage>
         );
     } else {
-        return (<></>);
+        return (<CoursePage></CoursePage>);
     }
 
 }
