@@ -8,3 +8,11 @@
 .header {
   margin-bottom: 8px;
 }
+
+.created_at {
+  color:#666;
+  font-size:12px;    
+  margin-bottom: 4px; 
+  margin-top:-6px;
+  padding-left: 40px;
+}
