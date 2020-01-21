@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Post from '../Components/Post/Post';
+import AddPost from '../Components/Post/AddPost';
 import CoursePageLayout from '../Layouts/CoursePageLayout';
 
 
@@ -43,6 +44,7 @@ function CoursePostsPage() {
     if (users.length > 0 && course) {
         return (
             <CoursePageLayout title={course.name}>
+                <AddPost />
                 {posts.map(post => (
                     <Post
                         key={post.id}
