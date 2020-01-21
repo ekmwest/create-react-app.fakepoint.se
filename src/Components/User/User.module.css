@@ -1,6 +1,6 @@
 .user {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .avatar {
