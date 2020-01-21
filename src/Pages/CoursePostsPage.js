@@ -11,6 +11,16 @@ function CoursePostsPage() {
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
 
+    const loadPosts = () => {
+        fetch(`https://api.fakepoint.se/posts?_embed=comments&course_id=${id}&_sort=created_at&_order=desc`, {
+            headers: {
+                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
+            }
+        })
+            .then(res => res.json())
+            .then(posts => setPosts(posts));
+    }
+
     useEffect(() => {
         fetch(`https://api.fakepoint.se/users`, {
             headers: {
@@ -22,13 +32,7 @@ function CoursePostsPage() {
     }, []);
 
     useEffect(() => {
-        fetch(`https://api.fakepoint.se/posts?_embed=comments&course_id=${id}&_sort=created_at&_order=desc`, {
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
-            }
-        })
-            .then(res => res.json())
-            .then(posts => setPosts(posts));
+        loadPosts();
     }, [id]);
 
     useEffect(() => {
@@ -53,8 +57,26 @@ function CoursePostsPage() {
         })
             .then(response => response.json())
             .then(post => {
+                console.log(post);
                 post.comments = [];
                 setPosts([post, ...posts]);
+            });
+    }
+
+    const saveComment = (comment) => {
+        console.log(comment);
+        fetch(`https://api.fakepoint.se/comments`, {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM=',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ content: comment.content, user_id: 3, post_id: comment.postId })
+        })
+            .then(response => response.json())
+            .then(post => {
+                console.log(post);
+                loadPosts();
             });
     }
 
@@ -83,6 +105,7 @@ function CoursePostsPage() {
                         post={post}
                         users={users}
                         deleteHandler={() => deletePost(post.id)}
+                        saveCommentHandler={saveComment}
                     />))}
             </CoursePageLayout>
         );

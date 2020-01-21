@@ -1,0 +1,23 @@
+.add_comment {
+    margin: 16px 0 32px 0;
+}
+
+.content_input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 24px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    border-color: #ccc;
+    margin-bottom: 8px;
+    transition: all .16s;
+}
+
+.content_input:focus {
+    border-color: #3C9AF4;
+    box-shadow: 0 0 3px rgba(60, 154, 244, .6);
+}
