@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './AddComment.module.css';
 import useForm from './../../Hooks/useForm';
-import css from './../Button.module.css';
+import User from '../User/User'
 
-function AddComment({ saveComment, postId }) {
+function AddComment({ saveComment, users, postId }) {
     const [values, setValues, changeHandler] = useForm({ content: "", postId });
     const keyDownHandler = event => {
         if (event.key === "Enter" && !event.shiftKey) {
@@ -14,8 +14,9 @@ function AddComment({ saveComment, postId }) {
 
     return (
         <div className={styles.add_comment}>
+            <User user={users.find(user => user.id === 1)} hideUserName="true" />
             <div className={styles.comment_textarea}>
-                <textarea name="content" value={values.content} onChange={changeHandler} className={styles.content_input} onKeyDown={keyDownHandler} />
+                <textarea rows="1" placeholder="Add a comment..." name="content" value={values.content} onChange={changeHandler} className={styles.content_input} onKeyDown={keyDownHandler} />
             </div>
         </div>
     );

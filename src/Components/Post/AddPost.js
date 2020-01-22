@@ -9,9 +9,9 @@ function AddPost({ saveHandler }) {
     return (
         <div className={styles.add_post}>
             <div className={styles.post_textarea}>
-                <textarea name="content" value={values.content} onChange={changeHandler} className={styles.content_input} />
+                <textarea placeholder="Add a post..." name="content" value={values.content} onChange={changeHandler} className={styles.content_input} />
             </div>
-            <div>
+            <div className={styles.post_send}>
                 <button className={css.button} onClick={() => saveHandler(values)}>Add</button>
             </div>
         </div>
