@@ -8,6 +8,7 @@ function TestPage() {
             <Header title="Test"></Header>
             <div className={styles.content}>
                 <h1>Test</h1>
+                <p>{process.env.REACT_APP_API_URL}</p>
             </div>
         </>
     );
