@@ -1,6 +1,5 @@
 .user {
     display: flex;
-    align-items: flex-start;
 }
 
 .avatar {
@@ -18,4 +17,8 @@
     margin-left:8px;
     color: #0094EF;
     font-weight: 600;
+}
+
+.HIDE {
+    display: none;
 }

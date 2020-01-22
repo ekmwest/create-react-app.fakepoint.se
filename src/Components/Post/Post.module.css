@@ -34,6 +34,11 @@
     vertical-align: bottom;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 16px 16px;
+    background-size: 14px 14px;
     background-image: url('/icons/delete.png');
+    transition: opacity .1s;
+}
+
+.delete:hover {
+    opacity: 1;
 }
