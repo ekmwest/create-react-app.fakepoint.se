@@ -8,7 +8,11 @@ function Posts({ courseId }) {
     const [users, setUsers] = useState([]);
 
     const loadPosts = () => {
-        api.get(`/posts?_embed=comments&course_id=${courseId}&_sort=created_at&_order=desc`, setPosts);
+        if(courseId) {
+            api.get(`/posts?_embed=comments&course_id=${courseId}&_sort=created_at&_order=desc`, setPosts);
+        } else {
+            api.get(`/posts?_embed=comments&_sort=created_at&_order=desc`, setPosts);
+        }        
     }
 
     const loadUsers = () => {
@@ -34,7 +38,7 @@ function Posts({ courseId }) {
     if (users.length && posts.length) {
         return (
             <div>
-                <AddPost saveHandler={savePost} />
+                {courseId && <AddPost saveHandler={savePost} />}
                 {posts.map(post => (
                     <Post
                         key={post.id}
