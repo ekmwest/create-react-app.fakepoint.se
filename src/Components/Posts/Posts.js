@@ -1,86 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import Post from '../Post/Post';
 import AddPost from '../Post/AddPost';
-
+import api from '../../Code/api';
 
 function Posts({ courseId }) {
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
 
-
     const loadPosts = () => {
-        fetch(`https://api.fakepoint.se/posts?_embed=comments&course_id=${courseId}&_sort=created_at&_order=desc`, {
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
-            }
-        })
-            .then(res => res.json())
-            .then(posts => setPosts(posts));
+        api.get(`/posts?_embed=comments&course_id=${courseId}&_sort=created_at&_order=desc`, setPosts);
     }
 
-    useEffect(() => {
-        fetch(`https://api.fakepoint.se/users`, {
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
-            }
-        })
-            .then(res => res.json())
-            .then(users => setUsers(users));
-    }, []);
+    const loadUsers = () => {
+        api.get('/users', setUsers);
+    }
 
+    useEffect(loadUsers, []);
 
-    useEffect(() => {
-        loadPosts();
-    }, [courseId]);
+    useEffect(loadPosts, [courseId]);
 
     const savePost = post => {
-        console.log(post);
-        fetch(`https://api.fakepoint.se/courses/${courseId}/posts`, {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM=',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ content: post.content, user_id: 1 })
-        })
-            .then(response => response.json())
-            .then(post => {
-                console.log(post);
-                post.comments = [];
-                setPosts([post, ...posts]);
-            });
+        api.post('/posts', { content: post.content, course_id: parseInt(courseId), user_id: 1 }, loadPosts);
     }
 
     const saveComment = (comment) => {
-        console.log(comment);
-        fetch(`https://api.fakepoint.se/comments`, {
-            method: 'POST',
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM=',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ content: comment.content, user_id: 3, post_id: comment.postId })
-        })
-            .then(response => response.json())
-            .then(post => {
-                console.log(post);
-                loadPosts();
-            });
+        api.post('/comments', { content: comment.content, user_id: 3, post_id: comment.postId }, loadPosts);
     }
 
     const deletePost = postId => {
-        fetch(`https://api.fakepoint.se/posts/${postId}`, {
-            method: 'DELETE',
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM=',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(post => {
-                console.log(post);
-                setPosts(posts.filter(p => p.id !== postId));
-            });
+        api.delete(`/posts/${postId}`, loadPosts);
     }
 
     if (users.length && posts.length) {
