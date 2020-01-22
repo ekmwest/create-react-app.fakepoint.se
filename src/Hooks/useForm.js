@@ -5,6 +5,7 @@ const useForm = initialValues => {
 
     return [
         values,
+        setValues,
         e => {
             setValues({
                 ...values,

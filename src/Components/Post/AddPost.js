@@ -4,7 +4,7 @@ import useForm from './../../Hooks/useForm';
 import css from './../Button.module.css'
 
 function AddPost({ saveHandler }) {
-    const [values, changeHandler] = useForm({ content: "" });
+    const [values, setValues, changeHandler] = useForm({ content: "" });
 
     return (
         <div className={styles.add_post}>
