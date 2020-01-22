@@ -1,0 +1,42 @@
+.button {
+    display: inline-block;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 50%, rgba(0,0,0,0.02));
+    border:1px solid transparent;
+    border-radius: 3px; 
+    color: #fff;
+    background-color: #3C9AF4;
+    border-color:transparent;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 16px;
+    outline: 0;
+    padding: 6px 14px;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s, box-shadow .2s;
+    -webkit-tap-highlight-color: rgba(0,0,0,.1);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    vertical-align: baseline;
+}
+
+.button::-moz-focus-inner {
+    border: 0;
+}
+
+
+.button:hover {
+    background-color: #378CDE;
+}
+
+.button:active {
+    background-image: linear-gradient(rgba(0,0,0,0.06), rgba(0,0,0,0) 60%, rgba(0,0,0,0));
+}
+
+.button:active {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0));
+}
+
+
