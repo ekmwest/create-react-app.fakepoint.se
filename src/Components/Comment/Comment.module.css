@@ -1,5 +1,5 @@
 .comment {
-    margin-top: 16px;
+    margin-top: 24px;
     font-size: 14px;
 }
 
@@ -9,11 +9,10 @@
 }
 
 .content {
-    margin-left: 40px;  
-    background-color: #f0f0f0; 
-    padding: 12px;
-    border-radius: 8px;
-    margin-top: -10px;
+    background-color: #f2f2f2; 
+    padding:32px 12px 12px 18px;
+    border-radius: 12px;
+    margin:-42px 0 0 24px;
 }
 
 .created_at {

@@ -14,7 +14,7 @@ function AddComment({ saveComment, users, postId }) {
 
     return (
         <div className={styles.add_comment}>
-            <User user={users.find(user => user.id === 1)} hideUserName="true" />
+            <User user={users.find(user => user.id === 3)} hideUserName="true" />
             <div className={styles.comment_textarea}>
                 <textarea rows="1" placeholder="Add a comment..." name="content" value={values.content} onChange={changeHandler} className={styles.content_input} onKeyDown={keyDownHandler} />
             </div>

@@ -9,7 +9,7 @@ function Post({ post, users, deleteHandler, saveCommentHandler }) {
     return (
         <div className={styles.post}>
             <div className={styles.header}>
-                <User user={users.find(user => user.id === post.user_id)} />
+                <User user={users.find(user => user.id === post.user_id)} bigUserAvatar />
                 <div className={styles.created_at}>{fmt.date(post.created_at)}</div>
                 <button className={styles.delete} onClick={deleteHandler}></button>
             </div>
