@@ -5,6 +5,10 @@ import css from './../Button.module.css'
 
 function AddPost({ saveHandler }) {
     const [values, setValues, changeHandler] = useForm({ content: "" });
+    const onSaveHandler = event => {
+        saveHandler(values);
+        setValues({ content: "" });
+    }
 
     return (
         <div className={styles.add_post}>
@@ -12,7 +16,7 @@ function AddPost({ saveHandler }) {
                 <textarea placeholder="Add a post..." name="content" value={values.content} onChange={changeHandler} className={styles.content_input} />
             </div>
             <div className={styles.post_send}>
-                <button className={css.button} onClick={() => saveHandler(values)}>Add</button>
+                <button className={css.button} onClick={onSaveHandler}>Add</button>
             </div>
         </div>
     );

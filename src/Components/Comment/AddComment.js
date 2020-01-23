@@ -7,6 +7,7 @@ function AddComment({ saveComment, users, postId }) {
     const [values, setValues, changeHandler] = useForm({ content: "", postId });
     const keyDownHandler = event => {
         if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
             saveComment(values);
             setValues({ content: "", postId });
         }
