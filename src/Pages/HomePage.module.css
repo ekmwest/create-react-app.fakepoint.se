@@ -1,7 +1,15 @@
 .content {  
-    margin: 0 auto;
+    /* margin: 0 auto;
     padding: 16px;
-    max-width: 600px;
+    max-width: 600px; */
+    background-color: #fff;
+    max-width: 840px;
+    box-sizing: border-box;
+    margin: 72px auto;
+    border-radius: 4px;
+    padding: 48px 128px 64px 92px;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
 .content h1 {

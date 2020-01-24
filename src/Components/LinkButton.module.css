@@ -1,0 +1,12 @@
+.link_button {
+    color: inherit;
+    font-size: inherit;    
+    border: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-family: inherit;
+    outline: 0;
+    padding: revert;
+    margin: 0;
+    cursor: pointer;
+}

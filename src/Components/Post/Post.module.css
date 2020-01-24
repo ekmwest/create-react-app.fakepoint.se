@@ -10,39 +10,26 @@
     margin-bottom: 8px;
 }
 
-.created_at {
-    color: #666;
-    font-size: 12px;
+.meta {
+    display:flex;
+    align-items: center;  
     margin-bottom: 4px; 
-    margin-top: -24px;
+    margin-top: -20px; 
+    font-size: 13px;
+    color: #875;
     padding-left: 56px;
+    position: relative;
+    z-index: 20;
+}
+
+.meta * {
+    color: inherit;
+    font-size: inherit;    
+    padding: 0 0 0 4px !important;
+    text-decoration: none;
 }
 
 .content {
-    margin-top: 16px;
-}
-
-.delete {
-    position: absolute;
-    right:12px;
-    top:16px;
-    border:none;
-    -webkit-appearance: none;
-    background-color: transparent;
-    cursor: pointer;
-    color:#0094EF;
-    opacity: 0.5;
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    vertical-align: bottom;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 14px 14px;
-    background-image: url('/icons/delete.png');
-    transition: opacity .1s;
-}
-
-.delete:hover {
-    opacity: 1;
+    margin-top: 16px;  
+    padding-left: 56px;
 }

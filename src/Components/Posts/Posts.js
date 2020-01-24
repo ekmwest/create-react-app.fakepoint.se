@@ -9,9 +9,9 @@ function Posts({ courseId }) {
 
     const loadPosts = () => {
         if(courseId) {
-            api.get(`/posts?_embed=comments&course_id=${courseId}&_sort=created_at&_order=desc`, setPosts);
+            api.get(`/posts?_expand=course&_embed=comments&course_id=${courseId}&_sort=created_at&_order=desc`, setPosts);
         } else {
-            api.get(`/posts?_embed=comments&_sort=created_at&_order=desc`, setPosts);
+            api.get(`/posts?_expand=course&_embed=comments&_sort=created_at&_order=desc`, setPosts);
         }        
     }
 

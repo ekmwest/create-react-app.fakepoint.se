@@ -5,13 +5,13 @@
 }
 
 .avatar {
-    width:32px;
-    height:32px;
+    width:40px;
+    height:40px;
 }
 
 .BIG {
-    width:48px;
-    height:48px;
+    width:40px;
+    height:40px;
 }
 
 .avatar img,
@@ -22,7 +22,7 @@
 }
 
 .name {
-    margin-left:8px;
+    margin-left:16px;
     color: #0094EF;
     font-weight: 600;
 }

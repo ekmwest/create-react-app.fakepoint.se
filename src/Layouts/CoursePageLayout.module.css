@@ -1,5 +1,10 @@
 .content {  
-    margin: 0 auto;
-    padding: 32px;
-    max-width: 600px;
+    background-color: #fff;
+    max-width: 840px;
+    box-sizing: border-box;
+    margin: 32px auto;
+    border-radius: 4px;
+    padding: 48px 128px 64px 92px;
+    font-size: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
