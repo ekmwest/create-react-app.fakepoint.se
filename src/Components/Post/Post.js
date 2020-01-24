@@ -23,8 +23,10 @@ function Post({ post, users, deleteHandler, saveCommentHandler }) {
             <div className={styles.content}>
                 {post.content}
             </div>
-            {post.comments.map(comment => (<Comment key={comment.id} comment={comment} users={users} />))}
-            <AddComment postId={post.id} users={users} saveComment={saveCommentHandler}></AddComment>
+            <div className={styles.comments}>
+                {post.comments.map(comment => (<Comment key={comment.id} comment={comment} users={users} />))}
+                <AddComment postId={post.id} users={users} saveComment={saveCommentHandler}></AddComment>
+            </div>
         </div>
     );
 }
