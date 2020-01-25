@@ -1,45 +1,52 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './Sidebar.module.css'
+import styles from './Sidebar.module.css';
+import api from '../../Code/api';
+import { SidebarContext } from '../../Contexts/SidebarContext';
+import { isMobile } from '../../Code/utils';
 
 function Sidebar() {
     const [courses, setCourses] = useState([]);
+    const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
+
+    const clickHandler = () => {
+        if (isMobile()) {
+            toggleSidebar();
+        }
+    }
 
     useEffect(() => {
-        fetch('https://api.fakepoint.se/courses', {
-            headers: {
-                'Authorization': 'Basic ZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE6YldVNmNHRnpjZFhObGNtNWhiV1U2Y0dGemMzZHZjbVFiV1U2Y0dGemM='
-            }
-        })
-            .then(res => res.json())
-            .then(courses => {
-                setCourses(courses);
-            })
-    }, [])
+        api.get('/courses', setCourses);
+    }, []);
 
-    return (
-        <div className={styles.sidebar}>
-            <ul>
-                <li>
-                    <NavLink exact to="/" activeClassName={styles.current}>Home</NavLink>
-                </li>
-                <li>
-                    <h4>GRUPPER</h4>
-                </li>
-                {courses.map(course => (
-                    <li key={course.id}>
-                        <NavLink
-                            exact
-                            to={`/courses/${course.id}/posts`}
-                            activeClassName={styles.current}
-                        >
-                            {course.name}
-                        </NavLink>
+    if (sidebarOpen) {
+        return (
+            <div className={styles.sidebar}>
+                <ul>
+                    <li>
+                        <NavLink exact to="/" activeClassName={styles.current} onClick={clickHandler}>Home</NavLink>
                     </li>
-                ))}
-            </ul>
-        </div >
-    );
+                    <li>
+                        <h4>GRUPPER</h4>
+                    </li>
+                    {courses.map(course => (
+                        <li key={course.id}>
+                            <NavLink
+                                exact
+                                to={`/courses/${course.id}/posts`}
+                                activeClassName={styles.current}
+                                onClick={clickHandler}
+                            >
+                                {course.name}
+                            </NavLink>
+                        </li>
+                    ))}
+                </ul>
+            </div >
+        );
+    } else {
+        return null;
+    }
 }
 
 export default Sidebar;

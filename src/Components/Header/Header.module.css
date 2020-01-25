@@ -1,6 +1,6 @@
 .header {
     position: fixed;
-    left: 248px;
+    left: 0;
     top: 0;
     right: 0;
     font-weight: bold;
@@ -11,4 +11,12 @@
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
     z-index:100;
+}
+
+.sidebar_open {
+    left: 248px;
+}
+
+button {
+    margin-right: 8px;
 }
