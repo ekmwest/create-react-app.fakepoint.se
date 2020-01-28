@@ -17,7 +17,9 @@ function Post({ post, users, deleteHandler, saveCommentHandler }) {
                     <span>•</span>
                     <Link to={`/courses/${post.course.id}/posts`}>{post.course.name}</Link>
                     <span>•</span>
-                    <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Ta bort</button>
+                    <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Delete</button>
+                    <span>•</span>
+                    <Link to={`/courses/${post.course.id}/posts/${post.id}`}>View</Link>
                 </div>
             </div>
             <div className={styles.content}>

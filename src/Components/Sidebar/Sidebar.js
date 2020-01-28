@@ -32,7 +32,7 @@ function Sidebar() {
                     {courses.map(course => (
                         <li key={course.id}>
                             <NavLink
-                                exact
+                                
                                 to={`/courses/${course.id}/posts`}
                                 activeClassName={styles.current}
                                 onClick={clickHandler}

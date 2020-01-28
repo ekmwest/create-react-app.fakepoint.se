@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MasterLayout from './Layouts/MasterLayout';
 import HomePage from './Pages/HomePage';
 import CoursePostsPage from './Pages/CoursePostsPage';
+import CoursePostPage from './Pages/CoursePostPage';
 import TestPage from './Pages/TestPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import ScrollToTop from './Components/ScrollToTop';
@@ -28,6 +29,9 @@ function App() {
                         </Route>
                         <Route path='/courses/:id/posts' exact>
                             <CoursePostsPage />
+                        </Route>
+                        <Route path='/courses/:id/posts/:postId' exact>
+                            <CoursePostPage />
                         </Route>
                         <Route path='/test' exact>
                             <TestPage />
