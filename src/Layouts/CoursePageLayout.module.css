@@ -4,6 +4,6 @@
     padding: 2em 1em;
 }
 
-:global(.is-mobile) .content { 
+:global(.ismobile) .content { 
     padding: 32px 0;
 }

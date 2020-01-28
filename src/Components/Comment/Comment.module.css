@@ -12,6 +12,11 @@
     padding: 32px 12px 12px 64px;
     /* border-radius: 12px; */
     margin: -50px 0 0 -8px;
+    padding: 32px 12px 12px 8px;
+    padding: 32px 12px 12px 12px;
+    border-radius: 18px;
+    margin: -50px 0 0 44px;
+    background-color: #f2f2f2;
 }
 
 .created_at {

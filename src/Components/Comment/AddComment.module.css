@@ -1,7 +1,7 @@
 .add_comment {
     display: flex;
     align-items: center;
-    border-top: 1px solid #ddd;
+    /* border-top: 1px solid #ddd; */
     padding: 0 16px;
 }
 
@@ -10,7 +10,11 @@
     background-color: #f2f2f2;
     padding: 16px 16px 16px 64px;
     /* border-radius: 12px; */
-    margin-left: -48px;
+    /* margin-left: -48px; */
+    padding: 12px;    
+    padding: 8px;
+    border-radius: 18px;
+    margin-left: 4px;
 }
 
 .content_input {
@@ -24,10 +28,13 @@
     border-radius: 4px;
     outline: none;
     border-color: #ccc;
+    border-color: transparent;
     transition: all .16s;
+    background-color: inherit;
 }
 
 .content_input:focus {
     border-color: #3C9AF4;
-    box-shadow: 0 0 3px rgba(60, 154, 244, .6);
+    border-color: transparent;
+    /* box-shadow: 0 0 3px rgba(60, 154, 244, .6); */
 }

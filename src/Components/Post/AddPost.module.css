@@ -2,9 +2,13 @@
     margin: 16px 0 32px 0; 
 }
 
+:global(.is-mobile) .add_post  { 
+    padding:0 16px;
+}
+
+
 .post_textarea {
     flex:1;
-    margin-right: 8px;
     margin-bottom: 8px;
 }
 
