@@ -7,6 +7,10 @@
     border:1px solid #ddd;
 }
 
+:global(.is-mobile) .post { 
+    border-radius: 0;
+}
+
 .header {
     margin-bottom: 8px;
 }
@@ -21,6 +25,10 @@
     padding-left: 54px;
     position: relative;
     z-index: 20;
+}
+
+:global(.is-mobile) .meta { 
+    flex-wrap: wrap;
 }
 
 .meta * {
