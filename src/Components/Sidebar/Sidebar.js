@@ -3,13 +3,11 @@ import { NavLink } from 'react-router-dom';
 import styles from './Sidebar.module.css';
 import api from '../../Code/api';
 import { SidebarContext } from '../../Contexts/SidebarContext';
-import { isMobile } from '../../Code/utils';
+import { isMobile, isDesktop } from '../../Code/utils';
 
 function Sidebar() {
     const [courses, setCourses] = useState([]);
     const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
-    const [width, setWidth] = useState(null);
-
 
     const clickHandler = () => {
         if (isMobile()) {
@@ -17,25 +15,24 @@ function Sidebar() {
         }
     }
 
-    const handleWindowResize = event => {
-        setWidth({width: window.innerWidth});
-         if (isMobile()) {
-            toggleSidebar();
-        }
-    };
-
     useEffect(() => {
+        const handleWindowResize = () => {
+            if (isMobile() && sidebarOpen) {
+                toggleSidebar(); // close sidebar
+                return;
+            }
+            if(isDesktop() && !sidebarOpen) {
+                toggleSidebar(); // open sidebar
+                return;
+            }
+        };
+
         window.addEventListener('resize', handleWindowResize);
 
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         };
-    }, [width]);
-
-
-    useEffect(() => {
-        api.get('/courses', setCourses);
-    }, []);
+    }, [sidebarOpen, toggleSidebar]);
 
 
     useEffect(() => {
@@ -55,7 +52,6 @@ function Sidebar() {
                     {courses.map(course => (
                         <li key={course.id}>
                             <NavLink
-
                                 to={`/courses/${course.id}/posts`}
                                 activeClassName={styles.current}
                                 onClick={clickHandler}
@@ -73,5 +69,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
-
