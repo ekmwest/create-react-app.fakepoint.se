@@ -2,6 +2,12 @@
     margin: 16px 0 32px 0; 
 }
 
+.post_content {
+    display:flex;
+    align-items: center;
+    margin-bottom:8px;
+}
+
 :global(.is-mobile) .add_post  { 
     padding:0 16px;
 }
@@ -9,7 +15,7 @@
 
 .post_textarea {
     flex:1;
-    margin-bottom: 8px;
+    margin-left:16px;
 }
 
 .content_input {
@@ -29,4 +35,8 @@
 .content_input:focus {
     border-color: #3C9AF4;
     box-shadow: 0 0 3px rgba(60, 154, 244, .6);
+}
+
+.post_send {
+    text-align: right;;
 }

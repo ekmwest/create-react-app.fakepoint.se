@@ -38,7 +38,7 @@ function Posts({ courseId }) {
     if (users.length && posts.length) {
         return (
             <div>
-                {courseId && <AddPost saveHandler={savePost} />}
+                {courseId && <AddPost saveHandler={savePost} users={users}/>}
                 {posts.map(post => (
                     <Post
                         key={post.id}

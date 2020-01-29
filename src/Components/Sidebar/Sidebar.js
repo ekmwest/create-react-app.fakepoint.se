@@ -8,12 +8,35 @@ import { isMobile } from '../../Code/utils';
 function Sidebar() {
     const [courses, setCourses] = useState([]);
     const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
+    const [width, setWidth] = useState(null);
+
 
     const clickHandler = () => {
         if (isMobile()) {
             toggleSidebar();
         }
     }
+
+    const handleWindowResize = event => {
+        setWidth({width: window.innerWidth});
+         if (isMobile()) {
+            toggleSidebar();
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, [width]);
+
+
+    useEffect(() => {
+        api.get('/courses', setCourses);
+    }, []);
+
 
     useEffect(() => {
         api.get('/courses', setCourses);
@@ -32,7 +55,7 @@ function Sidebar() {
                     {courses.map(course => (
                         <li key={course.id}>
                             <NavLink
-                                
+
                                 to={`/courses/${course.id}/posts`}
                                 activeClassName={styles.current}
                                 onClick={clickHandler}
