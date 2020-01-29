@@ -14,7 +14,7 @@ function AddPost({ saveHandler, users }) {
     return (
         <div className={styles.add_post}>
             <div className={styles.post_content}>
-                <User user={users.find(user => user.id === 3)} hideUserName="true" />
+                <User user={users.find(user => user.id === 4)} hideUserName="true" />
                 <div className={styles.post_textarea}>
                     <textarea placeholder="Add a post..." name="content" value={values.content} onChange={changeHandler} className={styles.content_input} />
                 </div>

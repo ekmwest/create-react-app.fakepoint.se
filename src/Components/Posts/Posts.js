@@ -24,11 +24,11 @@ function Posts({ courseId }) {
     useEffect(loadPosts, [courseId]);
 
     const savePost = post => {
-        api.post('/posts', { content: post.content, course_id: parseInt(courseId), user_id: 1 }, loadPosts);
+        api.post('/posts', { content: post.content, course_id: parseInt(courseId), user_id: 4 }, loadPosts);
     }
 
     const saveComment = (comment) => {
-        api.post('/comments', { content: comment.content, user_id: 3, post_id: comment.postId }, loadPosts);
+        api.post('/comments', { content: comment.content, user_id: 7, post_id: comment.postId }, loadPosts);
     }
 
     const deletePost = postId => {

@@ -22,6 +22,7 @@ function CoursePostPage() {
     if (post && users.length) {
         return (
             <CoursePageLayout title={post.course.name}>
+                <p><strong><em><center>NOTE: Comments don't work on post details page.</center></em></strong></p>
                 <Post
                     post={post}
                     users={users}
