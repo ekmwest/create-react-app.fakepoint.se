@@ -1,0 +1,45 @@
+.notifications {
+    position: relative;
+}
+
+.toggler {
+    background-image: url('/icons/bell.png');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+}
+
+.count {
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-weight: 600;
+    font-size: 11px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.list {
+    position: absolute;
+    width: 320px;
+    right: 0;
+    top: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15), 0 5px 10px rgba(0,0,0,0.05);
+}
+
+.list_item {
+    display: block;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+}
