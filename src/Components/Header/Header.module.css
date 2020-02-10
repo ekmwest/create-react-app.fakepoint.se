@@ -9,11 +9,12 @@
     padding: 0 16px 0 10px;
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
-    z-index: 100;
+    z-index: 100;      
+    transition: left .2s ease;
 }
 
 .sidebar_open {
-    left: 248px;
+    left: 248px;    
 }
 
 .left_panel {

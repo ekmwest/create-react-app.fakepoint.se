@@ -6,9 +6,14 @@
     padding: 7px 0;
     position: fixed;
     top: 0;
-    left: 0;
+    left:-248px;
     bottom: 0;
-    color: #c5c5c5;
+    color: #c5c5c5;  
+    transition: left .2s ease;
+}
+
+.sidebar_open {
+    left: 0;
 }
 
 .sidebar ul {

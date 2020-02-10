@@ -8,6 +8,7 @@ import { isMobile, isDesktop } from '../../Code/utils';
 function Sidebar() {
     const [courses, setCourses] = useState([]);
     const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
+    const sidebarCssClass = () => sidebarOpen ? `${styles.sidebar}  ${styles.sidebar_open}` : `${styles.sidebar}`;
 
     const clickHandler = () => {
         if (isMobile()) {
@@ -21,7 +22,7 @@ function Sidebar() {
                 toggleSidebar(); // close sidebar
                 return;
             }
-            if(isDesktop() && !sidebarOpen) {
+            if (isDesktop() && !sidebarOpen) {
                 toggleSidebar(); // open sidebar
                 return;
             }
@@ -39,33 +40,31 @@ function Sidebar() {
         api.get('/courses', setCourses);
     }, []);
 
-    if (sidebarOpen) {
-        return (
-            <div className={styles.sidebar}>
-                <ul>
-                    <li>
-                        <NavLink exact to="/" activeClassName={styles.current} onClick={clickHandler}>Home</NavLink>
+
+
+    return (
+        <div className={sidebarCssClass()}>
+            <ul>
+                <li>
+                    <NavLink exact to="/" activeClassName={styles.current} onClick={clickHandler}>Home</NavLink>
+                </li>
+                <li>
+                    <h4>GRUPPER</h4>
+                </li>
+                {courses.map(course => (
+                    <li key={course.id}>
+                        <NavLink
+                            to={`/courses/${course.id}/posts`}
+                            activeClassName={styles.current}
+                            onClick={clickHandler}
+                        >
+                            {course.name}
+                        </NavLink>
                     </li>
-                    <li>
-                        <h4>GRUPPER</h4>
-                    </li>
-                    {courses.map(course => (
-                        <li key={course.id}>
-                            <NavLink
-                                to={`/courses/${course.id}/posts`}
-                                activeClassName={styles.current}
-                                onClick={clickHandler}
-                            >
-                                {course.name}
-                            </NavLink>
-                        </li>
-                    ))}
-                </ul>
-            </div >
-        );
-    } else {
-        return null;
-    }
+                ))}
+            </ul>
+        </div >
+    );
 }
 
 export default Sidebar;
