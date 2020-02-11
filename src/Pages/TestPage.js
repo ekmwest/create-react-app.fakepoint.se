@@ -9,7 +9,15 @@ function TestPage() {
             <Header title="Test"></Header>
             <div className={styles.content}>
                 <h1>Test</h1>
-                <p>{config.apiUrl}/HEJ</p>
+                <p>accept = image/*</p>
+                <p>
+                    <input type="file" accept="image/*" />
+                </p>
+                <br />
+                <p>accept = image/png, image/jpeg, image/gif</p>
+                <p>
+                    <input type="file" accept="image/png, image/jpeg, image/gif" />
+                </p>
             </div>
         </>
     );
