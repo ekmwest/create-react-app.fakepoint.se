@@ -11,10 +11,9 @@
     display:flex;
 }
 
-:global(.is-mobile) .add_post  { 
-    /* padding:0 16px; */
+:global(.is-mobile) .add_post  {   
+    border-radius: 0;
 }
-
 
 .post_textarea {
     flex:1;
@@ -39,12 +38,6 @@
 
 .open .content_input {
     height: 100px;
-}
-
-
-.content_input:focus {
-    /* border-color: #3C9AF4;
-    box-shadow: 0 0 3px rgba(60, 154, 244, .6); */
 }
 
 .post_options {

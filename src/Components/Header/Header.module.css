@@ -17,6 +17,10 @@
     left: 248px;    
 }
 
+:global(.is-mobile) .sidebar_open  { 
+    left: 0;  
+}
+
 .left_panel {
     flex: 1 1 auto;
 }

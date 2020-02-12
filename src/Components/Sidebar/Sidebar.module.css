@@ -2,7 +2,6 @@
     width: 248px;
     background-color: #222;
     box-sizing: border-box;
-    ;
     padding: 7px 0;
     position: fixed;
     top: 0;
@@ -10,11 +9,20 @@
     bottom: 0;
     color: #c5c5c5;  
     transition: left .2s ease;
+    z-index:1000;
 }
 
 .sidebar_open {
     left: 0;
 }
+
+:global(.is-mobile) .sidebar  { 
+   top:45px;
+}
+
+:global(.is-mobile) .sidebar_open  { 
+    width:100%;
+ }
 
 .sidebar ul {
     padding: 0;
@@ -33,7 +41,7 @@
 
 .sidebar li a {
     display: block;
-    padding: 8px 8px 8px 12px;
+    padding: 12px;
     color: inherit;
     text-decoration: none;
     line-height: 17px;
