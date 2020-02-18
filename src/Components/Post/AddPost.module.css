@@ -1,14 +1,14 @@
 .add_post {
-    margin: 16px 0 32px 0; 
-    background-color: #fff;  
-    padding:16px;
-    border-radius: 8px;
+    margin: 16px 0 32px 0;    
     position: relative;
-    border:1px solid #ddd;
 }
 
 .post_content {
-    display:flex;
+    display:flex;  
+    background-color: #fff;  
+    padding:16px;
+    border-radius: 8px;
+    border:1px solid #ddd;
 }
 
 :global(.is-mobile) .add_post  {   
@@ -37,7 +37,7 @@
 }
 
 .open .content_input {
-    height: 100px;
+    height: 80px;
 }
 
 .post_options {
