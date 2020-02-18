@@ -9,7 +9,7 @@ function CourseNav() {
                     Innehåll
                 </li>
                 <li className={styles.selected}>
-                    Nyheter
+                    Inlägg
                 </li>
                 <li>
                     Loggbok
