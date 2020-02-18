@@ -29,12 +29,22 @@ function AddPost({ saveHandler, users }) {
     }
 
 
+    const openTextarea = event => {
+        if (emptyPostError == true) {
+            setEmptyPostError(!emptyPostError);
+        }
+        if (textareaOpen == false) {
+            setTextareaOpen(!textareaOpen);
+        }
+    }
+
+
     return (
         <div className={textareaOpen ? `${styles.add_post} ${styles.open}` : `${styles.add_post}`}>
             <div className={styles.post_content}>
                 <User user={users.find(user => user.id === 4)} hideUserName="true" />
                 <div className={styles.post_textarea}>
-                    <textarea placeholder="Skriv inlägg..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={() => setTextareaOpen(!textareaOpen)} />
+                    <textarea placeholder="Skriv inlägg..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} />
                 </div>
             </div>
             <div className={styles.post_options}>
