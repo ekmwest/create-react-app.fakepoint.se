@@ -1,0 +1,81 @@
+.add_message {
+    margin: 0px 0 32px 0;
+    position: relative;
+}
+
+.message_content {
+    display: flex;
+    background-color: #fff;
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+:global(.is-mobile) .add_post {
+    border-radius: 0;
+}
+
+.message_textarea {
+    flex: 1;
+    margin-left: 8px;
+}
+
+.content_input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    height: 40px;
+    border-color: #ccc;
+    border-color: transparent;
+    transition: height .4s ease;
+}
+
+.open .content_input {
+    height: 80px;
+}
+
+.content_input.error::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #D8000C
+}
+
+.content_input.error:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #D8000C;
+}
+
+.content_input.error::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #D8000C;
+    opacity: 1;
+}
+
+.content_input.error:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #D8000C;
+}
+
+.content_input.error::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #D8000C;
+}
+
+.content_input.error::placeholder {
+    /* Most modern browsers support this now. */
+    color: #D8000C;
+}
+
+.message_options {
+    display: none;
+    margin-top: 16px;
+}
+
+.open .message_options {
+    text-align: right;
+    display: block;
+}

@@ -5,6 +5,8 @@ import MasterLayout from './Layouts/MasterLayout';
 import HomePage from './Pages/HomePage';
 import CoursePostsPage from './Pages/CoursePostsPage';
 import CoursePostPage from './Pages/CoursePostPage';
+import CourseMessagesPage from './Pages/CourseMessagesPage';
+import CourseMessagePage from './Pages/CourseMessagePage';
 import TestPage from './Pages/TestPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import ScrollToTop from './Components/ScrollToTop';
@@ -33,6 +35,12 @@ function App() {
                         <Route path='/courses/:id/posts/:postId' exact>
                             <CoursePostPage />
                         </Route>
+                        <Route path='/courses/:id/messages' exact>
+                            <CourseMessagesPage />
+                        </Route>
+                        <Route path='/courses/:id/messages/:messageId' exact>
+                            <CourseMessagePage />
+                        </Route>
                         <Route path='/test' exact>
                             <TestPage />
                         </Route>
@@ -42,6 +50,6 @@ function App() {
                     </Switch>
                 </MasterLayout>
             </SidebarContext.Provider>
-        </BrowserRouter >
+        </BrowserRouter>
     );
 }

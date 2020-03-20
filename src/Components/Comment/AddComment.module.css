@@ -1,8 +1,9 @@
 .add_comment {
     display: flex;
     align-items: center;
+    background-color: #fff;
     /* border-top: 1px solid #ddd; */
-    padding: 0 16px;
+    padding: 16px;
 }
 
 .comment_textarea {
@@ -11,7 +12,7 @@
     padding: 16px 16px 16px 64px;
     /* border-radius: 12px; */
     /* margin-left: -48px; */
-    padding: 12px;    
+    padding: 12px;
     padding: 8px;
     border-radius: 18px;
     margin-left: 4px;

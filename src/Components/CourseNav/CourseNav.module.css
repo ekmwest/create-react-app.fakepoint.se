@@ -29,3 +29,8 @@
     box-sizing: border-box;
     line-height: 36px;
 }
+
+.course_nav ul li a {
+    color: inherit;
+    text-decoration: none;
+}

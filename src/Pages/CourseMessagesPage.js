@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Posts from '../Components/Posts/Posts';
+import Messages from '../Components/Messages/Messages';
 import CoursePageLayout from '../Layouts/CoursePageLayout';
 import api from '../Code/api';
 
-function CoursePostsPage() {
+function CourseMessagesPage() {
     let { id } = useParams();
     const [course, setCourse] = useState(null);
 
@@ -15,12 +15,13 @@ function CoursePostsPage() {
     if (course) {
         return (
             <CoursePageLayout title={course.name} courseId={id}>
-                <Posts courseId={id}></Posts>
+                <Messages courseId={id}></Messages>
             </CoursePageLayout>
+
         );
     } else {
         return (<CoursePageLayout></CoursePageLayout>);
     }
 }
 
-export default CoursePostsPage;
+export default CourseMessagesPage;
