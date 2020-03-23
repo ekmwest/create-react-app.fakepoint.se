@@ -35,10 +35,6 @@
     transition: height .4s ease;
 }
 
-.open .content_input {
-    height: 80px;
-}
-
 .content_input.error::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: #D8000C
