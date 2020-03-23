@@ -21,7 +21,7 @@ function CoursePostPage() {
 
     if (post && users.length) {
         return (
-            <CoursePageLayout title={post.course.name}>
+            <CoursePageLayout title={post.course.name} courseId={post.course.id}>
                 <p><strong><em><center>NOTE: Comments don't work on post details page.</center></em></strong></p>
                 <Post
                     post={post}
