@@ -42,7 +42,7 @@ function AddPost({ saveHandler, users }) {
             <div className={styles.post_content}>
                 <User user={users.find(user => user.id === 4)} hideUserName="true" />
                 <div className={styles.post_textarea}>
-                    <textarea placeholder="Skriv inlägg..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} />
+                    <textarea placeholder="Skriv nyhet..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} />
                 </div>
             </div>
             <div className={styles.post_options}>
