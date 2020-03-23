@@ -18,12 +18,15 @@ function Message({ post, users, deleteHandler }) {
                     <Link to={`/courses/${post.course.id}/messages`}>{post.course.name}</Link>
                     <span>•</span>
                     <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Delete</button>
-                    <span>•</span>
-                    <Link to={`/courses/${post.course.id}/messages/${post.id}`}>View</Link>
+                    {/* <span>•</span>
+                    <Link to={`/courses/${post.course.id}/messages/${post.id}`}>View</Link> */}
                 </div>
             </div>
             <div className={styles.content}>
                 {post.content}
+            </div>
+            <div className={styles.comments}>
+                <Link to={`/courses/${post.course.id}/messages/${post.id}`}>{post.comments.length} Kommentarer</Link>
             </div>
         </div>
     );

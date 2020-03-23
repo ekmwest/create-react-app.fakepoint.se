@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './AddMessage.module.css';
 import useForm from '../../Hooks/useForm';
 import User from '../User/User';
@@ -9,23 +9,38 @@ function AddMessage({ saveHandler, users }) {
     const [textareaOpen, setTextareaOpen] = useState(false);
     const [emptyPostError, setEmptyPostError] = useState(false);
 
-    const onSaveHandler = event => {
-        if (values.content === "") {
-            setEmptyPostError(!emptyPostError);
-            return false;
-        } else {
-            saveHandler(values);
-            setValues({ content: "" });
-            setTextareaOpen(!textareaOpen);
-        }
+    // const onSaveHandler = event => {
+    //     if (values.content === "") {
+    //         setEmptyPostError(!emptyPostError);
+    //         return false;
+    //     } else {
+    //         saveHandler(values);
+    //         setValues({ content: "" });
+    //         setTextareaOpen(!textareaOpen);
+    //     }
 
-    }
+    // }
 
-    const onCancelHandler = event => {
-        if (emptyPostError) {
-            setEmptyPostError(!emptyPostError);
+
+    // const onCancelHandler = event => {
+    //     if (emptyPostError) {
+    //         setEmptyPostError(!emptyPostError);
+    //     }
+    //     setTextareaOpen(!textareaOpen);
+    // }
+
+    const keyDownHandler = event => {
+        if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault();
+            if (values.content === "") {
+                setEmptyPostError(!emptyPostError);
+                return false;
+            } else {
+                saveHandler(values);
+                setValues({ content: "" });
+                setTextareaOpen(!textareaOpen);
+            }
         }
-        setTextareaOpen(!textareaOpen);
     }
 
     const openTextarea = event => {
@@ -36,19 +51,25 @@ function AddMessage({ saveHandler, users }) {
             setTextareaOpen(!textareaOpen);
         }
     }
+    const divRefToScroll = useRef(null);
+
+    useEffect(() => {
+        divRefToScroll.current.scrollIntoView();
+    });
+
 
     return (
-        <div className={textareaOpen ? `${styles.add_message} ${styles.open}` : `${styles.add_post}`}>
+        <div className={textareaOpen ? `${styles.add_message} ${styles.open}` : `${styles.add_post}`} ref={divRefToScroll} >
             <div className={styles.message_content}>
                 <User user={users.find(user => user.id === 4)} hideUserName="true" />
                 <div className={styles.message_textarea}>
-                    <textarea placeholder="Skriv inlägg..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} />
+                    <textarea placeholder="Skriv inlägg..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} onKeyDown={keyDownHandler} />
                 </div>
             </div>
-            <div className={styles.message_options}>
+            {/* <div className={styles.message_options}>
                 <button className={css.button} onClick={onCancelHandler}>Avbryt</button>
                 <button className={[css.button, css.PRIMARY].join(' ')} onClick={onSaveHandler}>Spara</button>
-            </div>
+            </div> */}
         </div>
     );
 }

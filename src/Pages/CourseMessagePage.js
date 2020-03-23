@@ -4,6 +4,7 @@ import Message from '../Components/Message/Message';
 import CoursePageLayout from '../Layouts/CoursePageLayout';
 import Comment from '../Components/Comment/Comment';
 import AddComment from '../Components/Comment/AddComment';
+import { Link } from 'react-router-dom';
 import api from '../Code/api';
 
 function CourseMessagePage() {
@@ -30,7 +31,8 @@ function CourseMessagePage() {
     if (post && users.length) {
         return (
             <CoursePageLayout title={post.course.name}>
-
+            
+            <Link to={`/courses/${post.course.id}/messages`}><img src="/icons/back_617160.png" width="40" height="40"></img></Link>
                 <Message
                     post={post}
                     users={users}
