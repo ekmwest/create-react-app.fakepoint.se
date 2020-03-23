@@ -1,5 +1,6 @@
 .notifications {
     position: relative;
+    display: none;
 }
 
 .toggler {
