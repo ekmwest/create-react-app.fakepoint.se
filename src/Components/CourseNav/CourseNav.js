@@ -8,33 +8,18 @@ function CourseNav({ id }) {
         <div className={styles.course_nav}>
             <ul>
                 <li>
-                    Innehåll
-                </li>
-                <li>
                     <NavLink
                         to={`/courses/${id}/posts`}
                         activeClassName={styles.selected}>
-                        Inlägg
+                        Nyheter
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
                         to={`/courses/${id}/messages`}
                         activeClassName={styles.selected}>
-                        Meddelande
+                        Inlägg
                     </NavLink>
-                </li>
-                <li>
-                    Loggbok
-                </li>
-                <li>
-                    LIA
-                </li>
-                <li>
-                    Personal
-                </li>
-                <li>
-                    Om
                 </li>
             </ul>
         </div>

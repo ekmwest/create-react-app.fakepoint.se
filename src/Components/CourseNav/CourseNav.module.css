@@ -14,13 +14,18 @@
     display: flex;
 }
 
-.course_nav ul li.selected {
+.course_nav ul li {
+    display: block;
+}
+
+.course_nav ul li .selected {
     background-color: #f3f3f3;
     font-weight: 600;
 }
 
-.course_nav ul li {
+.course_nav ul li * {
     padding: 0;
+    line-height: 36px;
     border-right: 1px solid #e0e0e0;
     color: inherit;
     text-decoration: none;
@@ -28,9 +33,6 @@
     padding: 0 16px;
     box-sizing: border-box;
     line-height: 36px;
-}
-
-.course_nav ul li a {
     color: inherit;
     text-decoration: none;
 }
