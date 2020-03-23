@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header/Header';
 import styles from './TestPage.module.css';
-import config from '../Code/config';
+// import config from '../Code/config';
 
 function TestPage() {
     return (

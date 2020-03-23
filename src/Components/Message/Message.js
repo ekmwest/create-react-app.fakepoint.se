@@ -1,8 +1,8 @@
 import React from 'react';
-import Comment from '../Comment/Comment';
+// import Comment from '../Comment/Comment';
 import User from '../User/User';
 import styles from './Message.module.css';
-import AddComment from '../Comment/AddComment';
+// import AddComment from '../Comment/AddComment';
 import fmt from '../../Code/fmt';
 import { Link } from 'react-router-dom';
 import linkButtonStyles from '../LinkButton.module.css'

@@ -31,8 +31,10 @@ function CourseMessagePage() {
     if (post && users.length) {
         return (
             <CoursePageLayout title={post.course.name} courseId={post.course.id}>
-            
-            <Link to={`/courses/${post.course.id}/messages`}><img src="/icons/back_617160.png" width="40" height="40"></img></Link>
+
+                <Link to={`/courses/${post.course.id}/messages`}>
+                    <img src="/icons/back_617160.png" alt="Back" width="40" height="40"></img>
+                </Link>
                 <Message
                     post={post}
                     users={users}

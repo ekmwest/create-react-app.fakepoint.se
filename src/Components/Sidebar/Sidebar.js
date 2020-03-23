@@ -57,6 +57,7 @@ function Sidebar() {
                             to={`/courses/${course.id}/posts`}
                             activeClassName={styles.current}
                             onClick={clickHandler}
+                            isActive={(match, location) => location.pathname.startsWith(`/courses/${course.id}/`)}
                         >
                             {course.name}
                         </NavLink>
