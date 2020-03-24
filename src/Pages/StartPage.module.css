@@ -55,6 +55,12 @@
     box-shadow: 0 0 4px 0 rgba(17, 22, 26, 0.16), 0 2px 4px 0 rgba(17, 22, 26, 0.08), 0 4px 8px 0 rgba(17, 22, 26, 0.08);
 }
 
+:global(.is-mobile) .course,
+:global(.is-mobile) .notification_list { 
+    width: 100%;
+    margin-right: 0;  
+}
+
 .course a {
     text-decoration: none;
     font-size: 20px;
