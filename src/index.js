@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MasterLayout from './Layouts/MasterLayout';
+import StartPage from './Pages/StartPage';
 import HomePage from './Pages/HomePage';
 import CoursePostsPage from './Pages/CoursePostsPage';
 import CoursePostPage from './Pages/CoursePostPage';
@@ -28,6 +29,9 @@ function App() {
                     <Switch>
                         <Route path='/' exact>
                             <HomePage />
+                        </Route>
+                        <Route path='/start' exact>
+                            <StartPage />
                         </Route>
                         <Route path='/courses/:id/posts' exact>
                             <CoursePostsPage />

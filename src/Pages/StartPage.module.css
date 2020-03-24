@@ -1,0 +1,62 @@
+.content {
+    max-width: 800px;
+    margin: 32px auto;
+    padding: 2em 1em;
+}
+
+.content h2 {
+    margin-top:48px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.notification_list {
+    margin-right: 16px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.notification_icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
+
+.notification_content {
+
+}
+
+.course_list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.course {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 16px;
+    background-color: #fff;
+    margin-bottom: 16px;
+    padding: 32px 16px;
+    border-top: 2px solid #0094EF;
+    text-align: center;
+    box-shadow: 0 0 4px 0 rgba(17, 22, 26, 0.16), 0 2px 4px 0 rgba(17, 22, 26, 0.08), 0 4px 8px 0 rgba(17, 22, 26, 0.08);
+}
+
+.course a {
+    text-decoration: none;
+    font-size: 20px;
+    color: inherit;
+}

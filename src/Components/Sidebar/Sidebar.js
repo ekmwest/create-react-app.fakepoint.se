@@ -49,6 +49,9 @@ function Sidebar() {
                     <NavLink exact to="/" activeClassName={styles.current} onClick={clickHandler}>Home</NavLink>
                 </li>
                 <li>
+                    <NavLink exact to="/start" activeClassName={styles.current} onClick={clickHandler}>Start Page</NavLink>
+                </li>
+                <li>
                     <h4>GRUPPER</h4>
                 </li>
                 {courses.map(course => (
