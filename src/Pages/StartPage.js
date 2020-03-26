@@ -48,8 +48,7 @@ function StartPage() {
                         <div className={styles.course} key={course.id}>
                             <Link
                                 to={`/courses/${course.id}/posts`}
-                                activeClassName={styles.current}
-                                isActive={(match, location) => location.pathname.startsWith(`/courses/${course.id}/`)}
+    
                             >
                                 {course.name}
                             </Link>

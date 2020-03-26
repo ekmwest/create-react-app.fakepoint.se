@@ -52,7 +52,7 @@ function Sidebar() {
                     <NavLink exact to="/start" activeClassName={styles.current} onClick={clickHandler}>Start Page</NavLink>
                 </li>
                 <li>
-                    <NavLink exact to="/startpagemessages" activeClassName={styles.current} onClick={clickHandler}>Start Page Messages</NavLink>
+                    <NavLink exact to="/startpagenotifications" activeClassName={styles.current} onClick={clickHandler}>Start Page Notifications</NavLink>
                 </li>
                 <li>
                     <h4>GRUPPER</h4>
