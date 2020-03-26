@@ -1,0 +1,68 @@
+.content {
+    max-width: 640px;
+    margin: 80px auto;
+    position: relative;
+}
+
+.content h2 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.notification_list {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.notification_icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+}
+
+.notification_content {
+    font-weight: 600;
+    flex:1;
+    font-size: 18px;
+}
+
+.notification_number {
+    background-color: #0094EF;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    margin-left: 16px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.messages {
+    height: 80vh;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    border-top: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

@@ -13,6 +13,7 @@ import NotFoundPage from './Pages/NotFoundPage';
 import ScrollToTop from './Components/ScrollToTop';
 import { SidebarContext } from './Contexts/SidebarContext';
 import { isMobile } from './Code/utils';
+import StartPageMessages from './Pages/StartPageMessages';
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
@@ -32,6 +33,9 @@ function App() {
                         </Route>
                         <Route path='/start' exact>
                             <StartPage />
+                        </Route>
+                        <Route path='/startpagemessages' exact>
+                            <StartPageMessages />
                         </Route>
                         <Route path='/courses/:id/posts' exact>
                             <CoursePostsPage />
