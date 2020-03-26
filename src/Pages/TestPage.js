@@ -8,15 +8,14 @@ function TestPage() {
         <>
             <Header title="Test"></Header>
             <div className={styles.content}>
-                <h1>Test</h1>
-                <p>accept = image/*</p>
+                <h1>Normal input</h1>
                 <p>
-                    <input type="file" accept="image/*" />
+                    <input type="text" />
                 </p>
                 <br />
-                <p>accept = image/png, image/jpeg, image/gif</p>
+                <p>autocapitalize="off"</p>
                 <p>
-                    <input type="file" accept="image/png, image/jpeg, image/gif" />
+                <input type="text" autocapitalize="off" />
                 </p>
             </div>
         </>
