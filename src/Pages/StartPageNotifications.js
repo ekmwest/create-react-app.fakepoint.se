@@ -88,18 +88,50 @@ function StartPageNotifications() {
                             Svara
                         </div>
                     </div>
-
+                    <h3 className={styles.notification_title}>New</h3>
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
                                 <img src="/icons/user.jpg" className={styles.notification_avatar}></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Stig Rig has added a new comment
+                                Stig Rig and 20 others have commented on your post
+                            </div>
+
+                            <div className={styles.notification_read}>
                             </div>
                         </div>
                         <div className={styles.notification_action}>
-                            Projektmetodik, kommunikation och kundbemötande • 12:00
+                            Javascript 3 • Today
+                        </div>
+                    </div>
+                    <div className={styles.notification}>
+                        <div className={styles.notification_header}>
+                            <div className={styles.notification_icon}>
+                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar}></img>
+                            </div>
+                            <div className={styles.notification_content}>
+                                Maria Mania has added a new post
+                            </div>                           
+                            <div className={styles.notification_read}>
+                            </div>
+                        </div>
+                        <div className={styles.notification_action}>
+                            Informationsarkitektur • Yesterday
+                        </div>
+                    </div>
+                    <h3 className={styles.notification_title}>Earlier</h3>
+                    <div className={styles.notification}>
+                        <div className={styles.notification_header}>
+                            <div className={styles.notification_icon}>
+                                <img src="/icons/user-4.jpeg" className={styles.notification_avatar}></img>
+                            </div>
+                            <div className={styles.notification_content}>
+                                Sara Hansson has commented on your post
+                            </div>
+                        </div>
+                        <div className={styles.notification_action}>
+                            Lärande i arbete • March 25
                         </div>
                     </div>
                     <div className={styles.notification}>
@@ -112,7 +144,7 @@ function StartPageNotifications() {
                             </div>
                         </div>
                         <div className={styles.notification_action}>
-                            Informationsarkitektur • 9:00
+                            Informationsarkitektur 3 • March 25
                         </div>
                     </div>
                     <div className={styles.notification}>
@@ -121,24 +153,37 @@ function StartPageNotifications() {
                                 <img src="/icons/user-4.jpeg" className={styles.notification_avatar}></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Sara Tara has commented on your post
+                                Sara Hansson has commented on your post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
-                            Lärande i arbete • Mar 25
+                            Javascript 3 • March 24
                         </div>
                     </div>
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-2.jpeg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user.jpg" className={styles.notification_avatar}></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Justin Mustin has commented on your post
+                                Stig Rig and 2 others have commented on your post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
-                            Javascript 3 • Mar 25
+                            Informationsarkitektur 3 • Mar 23
+                        </div>
+                    </div>
+                    <div className={styles.notification}>
+                        <div className={styles.notification_header}>
+                            <div className={styles.notification_icon}>
+                                <img src="/icons/user.jpg" className={styles.notification_avatar}></img>
+                            </div>
+                            <div className={styles.notification_content}>
+                                Stig Rig has added a new post
+                            </div>
+                        </div>
+                        <div className={styles.notification_action}>
+                            Informationsarkitektur 3 • Mar 23
                         </div>
                     </div>
                 </div>
