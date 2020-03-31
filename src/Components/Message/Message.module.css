@@ -1,7 +1,7 @@
 .message {
     position: relative;
     padding: 16px;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
     background-color: #fff;
 }
 
@@ -11,18 +11,21 @@
 
 .header {
     margin-bottom: 8px;
+    display: flex;
 }
 
 .meta {
     display: flex;
     align-items: center;
     margin-bottom: 4px;
-    margin-top: -18px;
+    margin-top: -14px;
     font-size: 13px;
     color: #875;
-    padding-left: 54px;
+    padding-left: 4px;
+    padding-left: 4px;
     position: relative;
     z-index: 20;
+    flex:1;
 }
 
 :global(.is-mobile) .meta {
@@ -32,51 +35,51 @@
 .meta * {
     color: inherit;
     font-size: inherit;
-    padding: 0 0 0 4px !important;
+    padding: 0 0 0 2px !important;
     text-decoration: none;
 }
 
 .content {
-    margin-top: 16px;
+    margin-top: -24px;
     padding-left: 56px;
+    padding-right: 56px;
 }
 
 :global(.is-mobile) .content, :global(.is-mobile) .comments {
     padding-left: 0;
+    margin-top: 0;
+    padding-right: 0;
 }
 
 .comments {
-    margin-top: 4px; 
     padding-left: 56px;
-    display: flex;  
     font-size: 14px;
-    align-items: center;
-}
-
-.comment {
-    flex: 1;
-    color: #0094EF;   
-    text-decoration: none;
-}
-
-.total_comments {   
-    text-decoration: none;
-    color: #0094EF;
-    font-weight: 600;
-}
-
-.new_comment {
-    background-color: #0094EF;  
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-left: 6px;
-    margin-top: 4px;
+    text-align: right;
 }
 
 .speech_bubble {
-    width: 36px;
-    height: 36px;
-    margin-right: -4px;
-    margin-top: 4px;
+    width: 28px;
+    display:inline-block;
+    color:#fff;
+    text-align: center;
+    height: 28px;
+    line-height: 23px;
+    background-image: url("/icons/speech-bubble.png");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.empty_speech_bubble {
+    width: 28px;
+    display:inline-block;
+    color:transparent;
+    text-align: center;
+    height: 28px;
+    background-image: url("/icons/empty-speech-bubble.png");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    opacity: 0.5;
 }

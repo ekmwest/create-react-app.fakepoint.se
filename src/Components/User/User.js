@@ -8,7 +8,7 @@ function User({ user, hideUserName, bigUserAvatar }) {
                 <img src={user.image_url} alt="User"></img>
             </div>
             <div className={hideUserName ? styles.HIDE: styles.name}>
-                {user.name}
+                {user.display_name}
             </div>
         </div>
     );

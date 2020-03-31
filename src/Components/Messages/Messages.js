@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Message from '../Message/Message';
+import styles from './Messages.module.css';
 import AddMessage from '../Message/AddMessage';
 import api from '../../Code/api';
 
@@ -36,15 +37,17 @@ function Messages({ courseId }) {
 
     if (users.length && posts.length) {
         return (
-            <div>
-                {posts.map(post => (
-                    <Message
-                        key={post.id}
-                        post={post}
-                        users={users}
-                        deleteHandler={() => deletePost(post.id)}
-                    />))}
-                {courseId && <AddMessage saveHandler={savePost} users={users} />}
+            <div className={styles.messages_container}>
+                <div className={styles.messages}>
+                    {posts.map(post => (
+                        <Message
+                            key={post.id}
+                            post={post}
+                            users={users}
+                            deleteHandler={() => deletePost(post.id)}
+                        />))}
+                    {courseId && <AddMessage saveHandler={savePost} users={users} />}
+                </div>
             </div>
         );
     } else {

@@ -1,0 +1,10 @@
+.messages_container {
+}
+
+.messages {
+    padding-bottom: 74px;
+}
+
+:global(.is-mobile) .messages {
+    padding-bottom: 36px;
+}
