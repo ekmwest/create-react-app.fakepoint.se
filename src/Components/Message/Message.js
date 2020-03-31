@@ -26,7 +26,10 @@ function Message({ post, users, deleteHandler }) {
                 {post.content}
             </div>
             <div className={styles.comments}>
-                <Link to={`/courses/${post.course.id}/messages/${post.id}`}>{post.comments.length} Kommentarer</Link>
+                <Link to={`/courses/${post.course.id}/messages/${post.id}`}  className={styles.comment}> Skriv Kommentar</Link>
+                <Link to={`/courses/${post.course.id}/messages/${post.id}`} > <img src="/icons/speech-bubble.png" className={styles.speech_bubble}></img></Link>
+                {/*  */}
+                <div className={styles.total_comments}>{post.comments.length}</div>
             </div>
         </div>
     );

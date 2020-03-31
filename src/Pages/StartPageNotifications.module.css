@@ -54,6 +54,11 @@
     font-size: 18px;
 }
 
+.notification_content a{
+    text-decoration: none;
+    color:inherit;
+}
+
 
 .notification_action {
     margin-left: 66px;

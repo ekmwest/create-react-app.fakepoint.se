@@ -46,12 +46,37 @@
 }
 
 .comments {
-    margin-top: 16px;
+    margin-top: 4px; 
     padding-left: 56px;
+    display: flex;  
+    font-size: 14px;
+    align-items: center;
 }
 
-.comments * {
-    color: #0094EF;
-    font-size: 13px;
+.comment {
+    flex: 1;
+    color: #0094EF;   
     text-decoration: none;
+}
+
+.total_comments {   
+    text-decoration: none;
+    color: #0094EF;
+    font-weight: 600;
+}
+
+.new_comment {
+    background-color: #0094EF;  
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 6px;
+    margin-top: 4px;
+}
+
+.speech_bubble {
+    width: 36px;
+    height: 36px;
+    margin-right: -4px;
+    margin-top: 4px;
 }

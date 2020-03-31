@@ -23,8 +23,8 @@
 
 .name {
     margin-left:16px;
-    color: #0094EF;
-    font-weight: bold;
+    /* color: #0094EF; */
+    font-weight: 600;
 }
 
 .HIDE {
