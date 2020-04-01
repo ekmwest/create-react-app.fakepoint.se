@@ -10,9 +10,12 @@ function TestPage() {
             <div className={styles.content}>
                 <p>
                     <input type="submit" value="⯆" />
-                    </p>
-                    <p>
+                </p>
+                <p>
                     <button type="submit">⯆</button>
+                </p>
+                <p>
+                    <span>Hej ⯆</span>
                 </p>
                 <h1>Normal input</h1>
                 <p>
@@ -21,7 +24,7 @@ function TestPage() {
                 <br />
                 <p>autocapitalize="off"</p>
                 <p>
-                <input type="text" autocapitalize="off" />
+                    <input type="text" autocapitalize="off" />
                 </p>
             </div>
         </>
