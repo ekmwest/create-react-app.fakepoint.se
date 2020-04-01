@@ -8,6 +8,9 @@ function TestPage() {
         <>
             <Header title="Test"></Header>
             <div className={styles.content}>
+                <p>
+                    <input type="submit" value="⯆" />
+                </p>
                 <h1>Normal input</h1>
                 <p>
                     <input type="text" />
