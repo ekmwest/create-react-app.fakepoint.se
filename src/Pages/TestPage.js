@@ -10,6 +10,9 @@ function TestPage() {
             <div className={styles.content}>
                 <p>
                     <input type="submit" value="⯆" />
+                    </p>
+                    <p>
+                    <button type="submit">⯆</button>
                 </p>
                 <h1>Normal input</h1>
                 <p>
