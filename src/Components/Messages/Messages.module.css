@@ -2,7 +2,8 @@
 }
 
 .messages {
-    padding-bottom: 74px;
+    padding:8px 0 74px;   
+    background-color: #fff;
 }
 
 :global(.is-mobile) .messages {

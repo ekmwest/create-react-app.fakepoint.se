@@ -1,8 +1,8 @@
 .message {
     position: relative;
-    padding: 16px 16px 0;
-    /* border-bottom: 1px solid #ddd; */
+    padding: 4px 16px;
     background-color: #fff;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 :global(.is-mobile) .post {
@@ -51,35 +51,48 @@
     padding-right: 0;
 }
 
-.comments {
+.comments,
+.no_comments {
     padding-left: 56px;
     font-size: 14px;
-    text-align: right;
+    display: flex;
+    align-items: center;
+}
+
+.no_comments .total_comments,
+.no_comments .new_comment_indicator {
+    display: none;
+}
+
+.total_comments {
+    display: block;
+    font-size: 12px;
+    margin-left: -2px;
+}
+
+.new_comment_indicator {
+    width:8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #0094EF;
+    display: block;
 }
 
 .speech_bubble {
-    width: 28px;
+    width: 30px;  
+    height: 30px;
+    line-height: 28px;
+    color: #000;
     display:inline-block;
-    color:#fff;
-    text-align: center;
-    height: 28px;
-    line-height: 23px;
-    background-image: url("/icons/speech-bubble.png");
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
     text-decoration: none;
-    font-size: 10px;
-    font-weight: 600;
+    text-align: center;
+    background-image: url("/icons/chat-bubble.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    margin-left:-4px;
+    font-size:12px;
 }
 
-.empty_speech_bubble {
-    width: 28px;
-    display:inline-block;
-    color:transparent;
-    text-align: center;
-    height: 28px;
-    background-image: url("/icons/empty-speech-bubble.png");
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
-    opacity: 0.5;
+.no_comments .speech_bubble {
+    color: transparent;
 }

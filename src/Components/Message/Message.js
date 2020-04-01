@@ -9,7 +9,7 @@ import linkButtonStyles from '../LinkButton.module.css'
 
 function Message({ post, users, deleteHandler }) {
 
-    const cssClass = () => post.comments.length > 0 ? styles.speech_bubble : styles.empty_speech_bubble;
+    const comments = () => post.comments.length > 0 ? styles.comments : styles.no_comments;
 
     return (
         <div className={styles.message}>
@@ -17,15 +17,17 @@ function Message({ post, users, deleteHandler }) {
                 <User user={users.find(user => user.id === post.user_id)} bigUserAvatar />
                 <div className={styles.meta}>
                     <div>{fmt.date(post.created_at)}</div>
-                    {/* <span>•</span>
-                    <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Delete</button> */}
+                    {/* <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Delete</button> */}
                 </div>
-                <div className={styles.comments}>
-                    <Link to={`/courses/${post.course.id}/messages/${post.id}`} className={cssClass()}>{post.comments.length}</Link>
-                </div>
+                <div className={styles.new_comment_indicator}></div>
             </div>
             <div className={styles.content}>
                 {post.content}
+            </div>
+            <div className={comments()}>
+                <Link to={`/courses/${post.course.id}/messages/${post.id}`} className={styles.speech_bubble}></Link>
+                <div className={styles.total_comments}>{post.comments.length}</div>
+                {/* <div className={styles.new_comment_indicator}></div> */}
             </div>
 
         </div>
