@@ -9,31 +9,19 @@ function TestPage() {
             <Header title="Test"></Header>
             <div className={styles.content}>
                 <p>
-                    <input className="unicode-char" type="submit" value="⯆" />
+                    <span>⯆ Not displayed correct in Safari</span>
                 </p>
                 <p>
-                    <button className="unicode-char" type="submit">⯆</button>
+                    <span>⯅ Not displayed correct in Safari</span>
                 </p>
                 <p>
-                    <span className="unicode-char">Hej ⯆</span>
+                    <span>▼ OK</span>
                 </p>
                 <p>
-                    <span>ß</span>
+                    <span>▲ OK</span>
                 </p>
                 <p>
-                    <span>▼</span>
-                </p>
-                <p>
-                    <span>&#9660;</span>
-                </p>
-                <h1>Normal input</h1>
-                <p>
-                    <input type="text" />
-                </p>
-                <br />
-                <p>autocapitalize="off"</p>
-                <p>
-                    <input type="text" autocapitalize="off" />
+                    <span>&#9660; OK</span>
                 </p>
             </div>
         </>
