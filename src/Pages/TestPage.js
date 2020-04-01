@@ -9,13 +9,13 @@ function TestPage() {
             <Header title="Test"></Header>
             <div className={styles.content}>
                 <p>
-                    <input type="submit" value="⯆" />
+                    <input className="unicode-char" type="submit" value="⯆" />
                 </p>
                 <p>
-                    <button type="submit">⯆</button>
+                    <button className="unicode-char" type="submit">⯆</button>
                 </p>
                 <p>
-                    <span>Hej ⯆</span>
+                    <span className="unicode-char">Hej ⯆</span>
                 </p>
                 <h1>Normal input</h1>
                 <p>
