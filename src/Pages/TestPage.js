@@ -17,6 +17,9 @@ function TestPage() {
                 <p>
                     <span className="unicode-char">Hej ⯆</span>
                 </p>
+                <p>
+                    <span>&#9660;</span>
+                </p>
                 <h1>Normal input</h1>
                 <p>
                     <input type="text" />
