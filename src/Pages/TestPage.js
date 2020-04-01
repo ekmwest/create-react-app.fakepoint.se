@@ -21,6 +21,9 @@ function TestPage() {
                     <span>ß</span>
                 </p>
                 <p>
+                    <span>▼</span>
+                </p>
+                <p>
                     <span>&#9660;</span>
                 </p>
                 <h1>Normal input</h1>
