@@ -1,15 +1,12 @@
-import React from 'react';
-// import Comment from '../Comment/Comment';
+ import React from 'react';
 import User from '../User/User';
 import styles from './Message.module.css';
-// import AddComment from '../Comment/AddComment';
 import fmt from '../../Code/fmt';
 import { Link } from 'react-router-dom';
-import linkButtonStyles from '../LinkButton.module.css'
 
 function Message({ post, users, deleteHandler }) {
 
-    const comments = () => post.comments.length > 0 ? styles.comments : styles.no_comments;
+    const comments = () => post.comments.length > 0 ? post.comments.length == 1 ?  post.comments.length + " Kommentar" :  post.comments.length + " Kommentarer" : "Kommentera";
 
     return (
         <div className={styles.message}>
@@ -17,19 +14,11 @@ function Message({ post, users, deleteHandler }) {
                 <User user={users.find(user => user.id === post.user_id)} bigUserAvatar />
                 <div className={styles.meta}>
                     <div>{fmt.date(post.created_at)}</div>
-                    {/* <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Delete</button> */}
                 </div>
-                <div className={styles.new_comment_indicator}></div>
             </div>
             <div className={styles.content}>
-                {post.content}
+                {post.content} <Link to={`/courses/${post.course.id}/messages/${post.id}`} className={styles.total_comments}>{comments()}</Link>
             </div>
-            <div className={comments()}>
-                <Link to={`/courses/${post.course.id}/messages/${post.id}`} className={styles.speech_bubble}></Link>
-                <div className={styles.total_comments}>{post.comments.length}</div>
-                {/* <div className={styles.new_comment_indicator}></div> */}
-            </div>
-
         </div>
     );
 }

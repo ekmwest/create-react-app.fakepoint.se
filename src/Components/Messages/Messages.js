@@ -36,20 +36,48 @@ function Messages({ courseId }) {
     }
 
     if (users.length && posts.length) {
-        return (
-            <div className={styles.messages_container}>
-                <div className={styles.messages}>
-                    {posts.map(post => (
-                        <Message
-                            key={post.id}
-                            post={post}
-                            users={users}
-                            deleteHandler={() => deletePost(post.id)}
-                        />))}
-                    {courseId && <AddMessage saveHandler={savePost} users={users} />}
+        const lastThreePosts = posts.slice(-3, posts.length);
+        if (!lastThreePosts) {
+            return (
+                <div className={styles.messages_container}>
+                    <div className={styles.messages}>
+                        {posts.map(post => (
+                            <Message
+                                key={post.id}
+                                post={post}
+                                users={users}
+                                deleteHandler={() => deletePost(post.id)}
+                            />))}
+                        {courseId && <AddMessage saveHandler={savePost} users={users} />}
+                    </div>
                 </div>
-            </div>
-        );
+            );
+        } else {
+            return (
+                <div className={styles.messages_container}>
+                    <div className={styles.messages}>
+                        {posts.map(post => (
+                            <Message
+                                key={post.id}
+                                post={post}
+                                users={users}
+                                deleteHandler={() => deletePost(post.id)}
+                            />))}
+                        <div className={styles.unread_message_indicator}>
+                            <span className={styles.unread_message_indicator_label}>Ny</span>
+                        </div>
+                        {lastThreePosts.map(post => (
+                            <Message
+                                key={post.id}
+                                post={post}
+                                users={users}
+                                deleteHandler={() => deletePost(post.id)}
+                            />))}
+                        {courseId && <AddMessage saveHandler={savePost} users={users} />}
+                    </div>
+                </div>
+            );
+        }
     } else {
         return (<div></div>);
     }

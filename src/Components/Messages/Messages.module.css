@@ -9,3 +9,28 @@
 :global(.is-mobile) .messages {
     padding-bottom: 36px;
 }
+
+.unread_message_indicator {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    margin: 0 16px;
+}
+
+.unread_message_indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #e01e5a;
+    z-index: -1;
+}
+
+.unread_message_indicator_label {
+    color: #e01e5a;
+    background-color: #fff;
+    font-weight: 600;
+    width: 30px;
+    display: inline-block;
+}
