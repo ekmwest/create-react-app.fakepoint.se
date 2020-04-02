@@ -8,14 +8,20 @@ function TestPage() {
         <>
             <Header title="Test"></Header>
             <div className={styles.content}>
-                <h1>Normal input</h1>
                 <p>
-                    <input type="text" />
+                    <span>⯆ Not displayed correct in Safari</span>
                 </p>
-                <br />
-                <p>autocapitalize="off"</p>
                 <p>
-                <input type="text" autocapitalize="off" />
+                    <span>⯅ Not displayed correct in Safari</span>
+                </p>
+                <p>
+                    <span>▼ OK</span>
+                </p>
+                <p>
+                    <span>▲ OK</span>
+                </p>
+                <p>
+                    <span>&#9660; OK</span>
                 </p>
             </div>
         </>

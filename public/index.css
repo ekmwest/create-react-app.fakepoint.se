@@ -5,3 +5,8 @@ body {
   overflow-y: scroll;
   background-color: #f7f7f7;
 }
+
+.unicode-char {
+  font-family: "SF Pro Icons";
+  font-family: "Zapf Dingbats";
+}
