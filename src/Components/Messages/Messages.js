@@ -37,6 +37,7 @@ function Messages({ courseId }) {
 
     if (users.length && posts.length) {
         const lastThreePosts = posts.slice(-3, posts.length);
+        console.log(posts);
         if (!lastThreePosts) {
             return (
                 <div className={styles.messages_container}>

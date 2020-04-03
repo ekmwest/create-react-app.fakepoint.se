@@ -2,7 +2,7 @@
 }
 
 .messages {
-    padding:8px 0 74px;   
+    padding:8px 0 80px;   
     background-color: #fff;
 }
 
@@ -13,7 +13,7 @@
 .unread_message_indicator {
     position: relative;
     z-index: 1;
-    text-align: right;
+    text-align: center;
     margin: 0 16px;
 }
 
