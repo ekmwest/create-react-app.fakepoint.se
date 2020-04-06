@@ -65,7 +65,7 @@ function Messages({ courseId }) {
                                 deleteHandler={() => deletePost(post.id)}
                             />))}
                         <div className={styles.unread_message_indicator}>
-                            <span className={styles.unread_message_indicator_label}>Ny</span>
+                            <span className={styles.unread_message_indicator_label}>Nya inlägg</span>
                         </div>
                         {lastThreePosts.map(post => (
                             <Message
