@@ -4,6 +4,8 @@ const shortMonthNames = monthNames.map(m => m.slice(0, 3));
 const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 const shortDayNames = dayNames.map(d => d.slice(0, 3));
 
+exports.capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
+
 exports.date = timestamp => {
     const date = new Date(timestamp);
 
@@ -12,7 +14,13 @@ exports.date = timestamp => {
     const year = date.getFullYear();
     const monthName = this.capitalize(shortMonthNames[date.getMonth()]);
 
-    return `${weekday} ${monthday} ${monthName} ${year}`;
+    const currentYear = () => new Date().getFullYear();
+
+    if (year === currentYear()) {
+        return `${weekday} ${monthday} ${monthName}`;
+    } else {
+        return `${weekday} ${monthday} ${monthName} ${year}`;
+    }
 };
 
 exports.datetime = timestamp => {
@@ -23,5 +31,3 @@ exports.datetime = timestamp => {
 
     return this.date(timestamp) + `, ${hour}.${minute}`;
 }
-
-exports.capitalize = s => s.charAt(0).toUpperCase() + s.slice(1);
