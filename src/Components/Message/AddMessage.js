@@ -9,26 +9,6 @@ function AddMessage({ saveHandler, users }) {
     const [textareaOpen, setTextareaOpen] = useState(false);
     const [emptyPostError, setEmptyPostError] = useState(false);
 
-    // const onSaveHandler = event => {
-    //     if (values.content === "") {
-    //         setEmptyPostError(!emptyPostError);
-    //         return false;
-    //     } else {
-    //         saveHandler(values);
-    //         setValues({ content: "" });
-    //         setTextareaOpen(!textareaOpen);
-    //     }
-
-    // }
-
-
-    // const onCancelHandler = event => {
-    //     if (emptyPostError) {
-    //         setEmptyPostError(!emptyPostError);
-    //     }
-    //     setTextareaOpen(!textareaOpen);
-    // }
-
     const keyDownHandler = event => {
         if (event.key === "Enter" && !event.shiftKey) {
             event.preventDefault();
@@ -66,10 +46,6 @@ function AddMessage({ saveHandler, users }) {
                     <textarea placeholder="Skriv inlägg..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} onKeyDown={keyDownHandler} />
                 </div>
             </div>
-            {/* <div className={styles.message_options}>
-                <button className={css.button} onClick={onCancelHandler}>Avbryt</button>
-                <button className={[css.button, css.PRIMARY].join(' ')} onClick={onSaveHandler}>Spara</button>
-            </div> */}
         </div>
     );
 }

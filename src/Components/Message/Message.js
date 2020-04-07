@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 function Message({ post, users, deleteHandler }) {
 
     const comments = () => post.comments.length > 0 ? post.comments.length == 1 ? post.comments.length + " Kommentar" : post.comments.length + " Kommentarer" : "";
+    const newComments = () => post.comments.length > 0 ? styles.new_comment_indicator : "";
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -26,8 +27,8 @@ function Message({ post, users, deleteHandler }) {
             </div>
             <div className={styles.content}>
                 {post.content}
-                <div>
-                    <Link to={`/courses/${post.course.id}/messages/${post.id}`} className={styles.total_comments}>{comments()}</Link>
+                <div className={styles.comments}>
+                   <div className={newComments()}></div><Link to={`/courses/${post.course.id}/messages/${post.id}`} className={styles.total_comments}>{comments()}</Link>
                 </div>
             </div>
         </div>

@@ -36,28 +36,10 @@ function Messages({ courseId }) {
     }
 
     if (users.length && posts.length) {
-        const lastThreePosts = posts.slice(-3, posts.length);
-        console.log(posts);
-        if (!lastThreePosts) {
             return (
                 <div className={styles.messages_container}>
                     <div className={styles.messages}>
-                        {posts.map(post => (
-                            <Message
-                                key={post.id}
-                                post={post}
-                                users={users}
-                                deleteHandler={() => deletePost(post.id)}
-                            />))}
-                        {courseId && <AddMessage saveHandler={savePost} users={users} />}
-                    </div>
-                </div>
-            );
-        } else {
-            return (
-                <div className={styles.messages_container}>
-                    <div className={styles.messages}>
-                        {posts.map(post => (
+                        {posts.splice(0,posts.length-3).map(post => (
                             <Message
                                 key={post.id}
                                 post={post}
@@ -67,7 +49,7 @@ function Messages({ courseId }) {
                         <div className={styles.unread_message_indicator}>
                             <span className={styles.unread_message_indicator_label}>Nya inlägg</span>
                         </div>
-                        {lastThreePosts.map(post => (
+                        {posts.slice(-3).map(post => (
                             <Message
                                 key={post.id}
                                 post={post}
@@ -78,7 +60,6 @@ function Messages({ courseId }) {
                     </div>
                 </div>
             );
-        }
     } else {
         return (<div></div>);
     }
