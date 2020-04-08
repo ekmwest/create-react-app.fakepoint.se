@@ -32,8 +32,9 @@
     color: #e01e5a;
     color: #000;
     background-color: #CBEEFA;
-    width: 120px;
-    line-height: 24px;
+    width: 80px;
+    padding: 4px;
     border-radius: 4px;
     display: inline-block;
+    font-size: 14px;
 }

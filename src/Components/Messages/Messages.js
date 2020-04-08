@@ -63,9 +63,6 @@ function Messages({ courseId }) {
     } else {
         return (<div></div>);
     }
-
-
-
 }
 
 export default Messages;
