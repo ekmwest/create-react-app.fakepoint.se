@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Post from '../Post/Post';
 import AddPost from '../Post/AddPost';
+import styles from './Posts.module.css';
 import api from '../../Code/api';
 
 function Posts({ courseId }) {
@@ -37,7 +38,7 @@ function Posts({ courseId }) {
 
     if (users.length && posts.length) {
         return (
-            <div>
+            <div className={styles.posts}>
                 {courseId && <AddPost saveHandler={savePost} users={users}/>}
                 {posts.map(post => (
                     <Post

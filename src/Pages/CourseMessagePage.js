@@ -41,7 +41,7 @@ function CourseMessagePage() {
                     deleteHandler={() => { }}
                 >
                 </Message>
-                <div>
+                <div className={styles.comments}>
                     {post.comments.map(comment => (<Comment key={comment.id} comment={comment} users={users} />))}
                     <AddComment postId={post.id} users={users} saveComment={saveComment} ></AddComment>
                 </div>
