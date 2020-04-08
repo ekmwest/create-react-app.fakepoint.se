@@ -5,6 +5,15 @@
     border-bottom: 1px solid #e0e0e0;
     background-color: #fff;
     box-sizing: border-box;
+    position: fixed;
+    right:0;
+    left:0;
+    z-index: 100;    
+    transition: left .2s ease;
+}
+
+.sidebar_open {
+    left: 248px;    
 }
 
 .course_nav ul {

@@ -1,6 +1,6 @@
 .message {
     position: relative;
-    padding: 6px 16px;
+    padding: 6px 98px;
     background-color: #fff;
     /* border-bottom: 1px solid #ddd; */
 }
@@ -40,7 +40,6 @@
 .content {
     margin-top: -28px;
     padding-left: 56px;
-    padding-right: 56px;
 }
 
 :global(.is-mobile) .content, :global(.is-mobile) .comments {
@@ -79,7 +78,6 @@
     height:20px;
     cursor: pointer;
     position: relative;   
-    z-index: 100;   
     background-color: #fff;
 }
 

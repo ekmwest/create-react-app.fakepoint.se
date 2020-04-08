@@ -5,12 +5,12 @@
 .message_content {
     display: flex;
     background-color: #fff;
-    padding: 16px;
+    padding: 16px 98px;
     position: fixed;
     bottom: 0;
-    width: 576px;
-    z-index: 10;
-    border-top: 1px solid #ddd;
+    width: 572px;
+    z-index: 30;
+    /* border-top: 1px solid #ddd; */
 }
 
 :global(.is-mobile) .add_post {
@@ -34,7 +34,6 @@
     outline: none;
     height: 40px;
     border-color: #ccc;
-    border-color: transparent;
     transition: height .4s ease;
 }
 

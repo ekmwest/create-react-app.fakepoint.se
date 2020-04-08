@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext }  from 'react';
 import styles from './CourseNav.module.css';
 import { NavLink } from 'react-router-dom';
+import { SidebarContext } from '../../Contexts/SidebarContext';
 
 function CourseNav({ id }) {
 
+    const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
+
+    const cssClass = () => sidebarOpen ? `${styles.course_nav} ${styles.sidebar_open}` : `${styles.course_nav}`;
+
     return (
-        <div className={styles.course_nav}>
+        <div className={cssClass()}>
             <ul>
                 <li>
                     <NavLink
