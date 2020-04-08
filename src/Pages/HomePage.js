@@ -6,7 +6,7 @@ import Posts from '../Components/Posts/Posts';
 function HomePage() {
     return (
         <>
-            <Header title="Home"></Header>
+            <Header title="Home A"></Header>
             <div className={styles.content}>
                 <Posts></Posts>
             </div>
