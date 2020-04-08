@@ -15,7 +15,6 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    margin: 0 98px;
 }
 
 .unread_message_indicator::before {
