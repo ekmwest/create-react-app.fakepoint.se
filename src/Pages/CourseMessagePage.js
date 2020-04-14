@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Message from '../Components/Message/Message';
 import CoursePageLayout from '../Layouts/CoursePageLayout';
-import Comment from '../Components/Comment/Comment';
-import AddComment from '../Components/Comment/AddComment';
+import ThreadMessage from '../Components/Thread/ThreadMessage';
+import AddThreadMessage from '../Components/Thread/AddThreadMessage';
 import { Link } from 'react-router-dom';
 import styles from './CourseMessagePage.module.css';
 import api from '../Code/api';
@@ -35,15 +35,18 @@ function CourseMessagePage() {
                 <Link to={`/courses/${post.course.id}/messages`} title="Tillbaka">
                     <img className={styles.backIcon} src="/icons/back_617160.png" alt="Back" width="40" height="40"></img>
                 </Link>
-                <Message
-                    post={post}
-                    users={users}
-                    deleteHandler={() => { }}
-                >
-                </Message>
+                <div className={styles.message}>
+                    <Message
+                        post={post}
+                        users={users}
+                        deleteHandler={() => { }}
+
+                    >
+                    </Message>
+                </div>
                 <div className={styles.comments}>
-                    {post.comments.map(comment => (<Comment key={comment.id} comment={comment} users={users} />))}
-                    <AddComment postId={post.id} users={users} saveComment={saveComment} ></AddComment>
+                    {post.comments.map(comment => (<ThreadMessage key={comment.id} comment={comment} users={users} />))}
+                    <AddThreadMessage postId={post.id} users={users} saveComment={saveComment} ></AddThreadMessage>
                 </div>
             </CoursePageLayout>
         );

@@ -2,3 +2,6 @@
     padding: 0 98px;
 }
 
+:global(.is-mobile) .posts  { 
+    padding: 0 8px;
+ }

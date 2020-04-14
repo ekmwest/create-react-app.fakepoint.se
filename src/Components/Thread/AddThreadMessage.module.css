@@ -1,0 +1,30 @@
+.add_threadmessage {
+    display: flex;
+    align-items: center;
+    background-color: #fff; 
+    padding-bottom: 16px;
+}
+
+.threadmessage_textarea {
+    flex: 1 1;
+    padding: 16px 16px 16px 64px;
+    padding: 12px;
+    padding: 8px;
+    border-radius: 18px;
+    margin-left: 4px;
+}
+
+.content_input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 16px;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    outline: none;
+    border-color: #ccc;
+    transition: all .16s;
+    background-color: inherit;
+}

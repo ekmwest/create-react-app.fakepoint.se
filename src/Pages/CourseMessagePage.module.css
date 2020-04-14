@@ -3,6 +3,11 @@
     margin: 32px 0 0;
 }
 
+.message {
+    padding: 16px 0 0;
+    background-color: #fff;
+}
+
 .comments {
     padding: 0 98px;
     background-color: #fff;

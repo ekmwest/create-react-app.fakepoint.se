@@ -1,0 +1,22 @@
+.threadmessage {
+    padding: 8px 0;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    padding: 8px 12px ;
+    border-radius: 18px;
+    margin: -28px 0 0 44px;
+}
+
+.created_at {
+    color: #666;
+    font-size: 12px;
+    margin-left: 4px;
+    margin-top: -16px;
+}
