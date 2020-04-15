@@ -5,7 +5,7 @@ import CoursePageLayout from '../Layouts/CoursePageLayout';
 import api from '../Code/api';
 
 function CoursePostPage() {
-    let { postId } = useParams();
+    let { newsId } = useParams();
     const [post, setPost] = useState(null);
     const [users, setUsers] = useState([]);
 
@@ -14,8 +14,8 @@ function CoursePostPage() {
     }
 
     useEffect(() => {
-        api.get(`/posts/${postId}?_expand=course&_embed=comments`, setPost);
-    }, [postId]);
+        api.get(`/posts/${newsId}?_expand=course&_embed=comments`, setPost);
+    }, [newsId]);
 
     useEffect(loadUsers, []);
 

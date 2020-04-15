@@ -3,6 +3,10 @@
     align-items: center;
     background-color: #fff; 
     padding-bottom: 16px;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 572px;
 }
 
 .threadmessage_textarea {

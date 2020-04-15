@@ -14,16 +14,23 @@ function CourseNav({ id }) {
             <ul>
                 <li>
                     <NavLink
-                        to={`/courses/${id}/posts`}
+                        to={`/courses/${id}/news`}
                         activeClassName={styles.selected}>
                         Nyheter
                     </NavLink>
                 </li>
                 <li>
                     <NavLink
-                        to={`/courses/${id}/messages`}
+                        to={`/courses/${id}/posts`}
                         activeClassName={styles.selected}>
                         Inlägg
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to={`/courses/${id}/messages`}
+                        activeClassName={styles.selected}>
+                        Meddelande
                     </NavLink>
                 </li>
             </ul>
@@ -32,5 +39,3 @@ function CourseNav({ id }) {
 }
 
 export default CourseNav;
-
-

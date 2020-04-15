@@ -9,7 +9,7 @@ import styles from './CourseMessagePage.module.css';
 import api from '../Code/api';
 
 function CourseMessagePage() {
-    let { messageId } = useParams();
+    let { postId } = useParams();
     const [post, setPost] = useState(null);
     const [users, setUsers] = useState([]);
 
@@ -18,22 +18,22 @@ function CourseMessagePage() {
     }
 
     const loadPost = () => {
-        api.get(`/posts/${messageId}?_expand=course&_embed=comments`, setPost);
+        api.get(`/posts/${postId}?_expand=course&_embed=comments`, setPost);
     }
 
     const saveComment = (comment) => {
         api.post('/comments', { content: comment.content, user_id: 7, post_id: comment.postId }, loadPost);
     }
 
-    useEffect(loadPost, [messageId]);
+    useEffect(loadPost, [postId]);
 
     useEffect(loadUsers, []);
 
     if (post && users.length) {
         return (
             <CoursePageLayout title={post.course.name} courseId={post.course.id}>
-                <Link to={`/courses/${post.course.id}/messages`} title="Tillbaka">
-                    <img className={styles.backIcon} src="/icons/back_617160.png" alt="Back" width="40" height="40"></img>
+                <Link to={`/courses/${post.course.id}/posts`} title="Tillbaka">
+                    <img className={styles.backIcon} src="/icons/back.png" alt="Back" width="24" height="24"></img>
                 </Link>
                 <div className={styles.message}>
                     <Message

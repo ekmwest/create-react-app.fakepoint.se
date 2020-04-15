@@ -18,7 +18,7 @@ function Message({ post, users, deleteHandler }) {
                     <div className={menuOpen ? `${styles.menu} ${styles.open}` : `${styles.menu}`} >
                         <img src="/icons/ellipsis.png" className={styles.menu_icon} onClick={() => setMenuOpen(!menuOpen)}></img>
                         <div className={styles.menu_items}>
-                            <div className={styles.menu_item}> <Link to={`/courses/${post.course.id}/messages/${post.id}`} >Reply</Link></div>
+                            <div className={styles.menu_item}> <Link to={`/courses/${post.course.id}/posts/${post.id}`} >Reply</Link></div>
                             <div className={styles.menu_item} onClick={deleteHandler}>Delete</div>
                         </div>
                     </div>
@@ -27,7 +27,7 @@ function Message({ post, users, deleteHandler }) {
             <div className={styles.content}>
                 {post.content}
                 <div className={styles.comments}>
-                    <Link to={`/courses/${post.course.id}/messages/${post.id}`} className={styles.total_comments}>{comments()}</Link>
+                    <Link to={`/courses/${post.course.id}/posts/${post.id}`} className={styles.total_comments}>{comments()}</Link>
                 </div>
             </div>
         </div>

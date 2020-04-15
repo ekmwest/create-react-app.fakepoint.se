@@ -8,8 +8,6 @@ function Messages({ courseId }) {
     const [posts, setPosts] = useState([]);
     const [users, setUsers] = useState([]);
 
-
-
     const loadPosts = () => {
         if (courseId) {
             api.get(`/posts?_expand=course&_embed=comments&course_id=${courseId}&_sort=created_at&_order=asc`, setPosts);

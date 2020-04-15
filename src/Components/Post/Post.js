@@ -15,11 +15,11 @@ function Post({ post, users, deleteHandler, saveCommentHandler }) {
                 <div className={styles.meta}>
                     <div>{fmt.date(post.created_at)}</div>
                     <span>•</span>
-                    <Link to={`/courses/${post.course.id}/posts`}>{post.course.name}</Link>
+                    <Link to={`/courses/${post.course.id}/news`}>{post.course.name}</Link>
                     <span>•</span>
                     <button className={linkButtonStyles.link_button} onClick={deleteHandler}>Delete</button>
                     <span>•</span>
-                    <Link to={`/courses/${post.course.id}/posts/${post.id}`}>View</Link>
+                    <Link to={`/courses/${post.course.id}/news/${post.id}`}>View</Link>
                 </div>
             </div>
             <div className={styles.content}>

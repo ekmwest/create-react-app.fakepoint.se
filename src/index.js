@@ -8,6 +8,7 @@ import CoursePostsPage from './Pages/CoursePostsPage';
 import CoursePostPage from './Pages/CoursePostPage';
 import CourseMessagesPage from './Pages/CourseMessagesPage';
 import CourseMessagePage from './Pages/CourseMessagePage';
+import CourseMessageBoardPage from './Pages/CourseMessageBoardPage';
 import TestPage from './Pages/TestPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import ScrollToTop from './Components/ScrollToTop';
@@ -37,17 +38,20 @@ function App() {
                         <Route path='/startpagenotifications' exact>
                             <StartPageNotifications />
                         </Route>
-                        <Route path='/courses/:id/posts' exact>
+                        <Route path='/courses/:id/news' exact>
                             <CoursePostsPage />
                         </Route>
-                        <Route path='/courses/:id/posts/:postId' exact>
+                        <Route path='/courses/:id/news/:newsId' exact>
                             <CoursePostPage />
                         </Route>
-                        <Route path='/courses/:id/messages' exact>
+                        <Route path='/courses/:id/posts' exact>
                             <CourseMessagesPage />
                         </Route>
-                        <Route path='/courses/:id/messages/:messageId' exact>
+                        <Route path='/courses/:id/posts/:postId' exact>
                             <CourseMessagePage />
+                        </Route>
+                        <Route path='/courses/:id/messages' exact>
+                            <CourseMessageBoardPage />
                         </Route>
                         <Route path='/test' exact>
                             <TestPage />
