@@ -8,7 +8,8 @@ import CoursePostsPage from './Pages/CoursePostsPage';
 import CoursePostPage from './Pages/CoursePostPage';
 import CourseMessagesPage from './Pages/CourseMessagesPage';
 import CourseMessagePage from './Pages/CourseMessagePage';
-import CourseMessageBoardPage from './Pages/CourseMessageBoardPage';
+import CourseArticlesPage from './Pages/CourseArticlesPage';
+import CourseArticlePage from './Pages/CourseArticlePage';
 import TestPage from './Pages/TestPage';
 import NotFoundPage from './Pages/NotFoundPage';
 import ScrollToTop from './Components/ScrollToTop';
@@ -50,8 +51,11 @@ function App() {
                         <Route path='/courses/:id/posts/:postId' exact>
                             <CourseMessagePage />
                         </Route>
-                        <Route path='/courses/:id/messages' exact>
-                            <CourseMessageBoardPage />
+                        <Route path='/courses/:id/articles' exact>
+                            <CourseArticlesPage/>
+                        </Route>
+                        <Route path='/courses/:id/articles/:articleId' exact>
+                            <CourseArticlePage/>
                         </Route>
                         <Route path='/test' exact>
                             <TestPage />

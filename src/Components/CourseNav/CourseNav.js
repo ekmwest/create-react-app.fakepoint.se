@@ -28,9 +28,9 @@ function CourseNav({ id }) {
                 </li>
                 <li>
                     <NavLink
-                        to={`/courses/${id}/messages`}
+                        to={`/courses/${id}/articles`}
                         activeClassName={styles.selected}>
-                        Meddelande
+                        Artiklar
                     </NavLink>
                 </li>
             </ul>

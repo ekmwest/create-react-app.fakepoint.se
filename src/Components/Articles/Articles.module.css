@@ -1,0 +1,73 @@
+
+.articles {
+    background-color: #fff;
+    width: 600px;
+    margin: 48px auto;
+    padding: 32px 64px;
+}
+
+:global(.is-mobile) .articles {
+    padding-bottom: 36px;
+}
+
+.article {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    flex: 1;
+}
+
+.meta {
+    display: flex;
+}
+
+.created_at {
+    color: #999;
+    margin-left: 12px;
+    font-size: 14px;
+    margin-top: 1px;
+    
+}
+
+.title {
+    margin: -20px 0 0 56px;
+    display: block;
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.content {
+    margin: 0 0 0 56px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.date {
+    font-size:12px;
+    text-align: right;
+}
+
+.comment_count {
+    width: 16px;
+    height:16px;
+    font-size: 12px;
+    background-color: #0094EF;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    margin-left: 24px;
+
+}
