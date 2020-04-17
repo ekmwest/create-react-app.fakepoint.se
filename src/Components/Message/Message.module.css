@@ -5,8 +5,9 @@
     /* border-bottom: 1px solid #ddd; */
 }
 
-:global(.is-mobile) .post {
+:global(.is-mobile) .message {
     border-radius: 0;
+    padding: 12px;;
 }
 
 .header {
@@ -42,11 +43,6 @@
     padding-left: 56px;
 }
 
-:global(.is-mobile) .content, :global(.is-mobile) .comments {
-    padding-left: 0;
-    margin-top: 0;
-    padding-right: 0;
-}
 
 .comments {
     display: flex;

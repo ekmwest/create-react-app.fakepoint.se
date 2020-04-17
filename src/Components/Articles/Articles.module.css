@@ -1,17 +1,23 @@
 
 .articles {
     background-color: #fff;
-    width: 600px;
+    max-width: 600px;
     margin: 48px auto;
     padding: 32px 64px;
 }
 
 :global(.is-mobile) .articles {
-    padding-bottom: 36px;
+    padding:8px;
 }
 
 .article {
     border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.articleLastChild {
     padding: 20px 0;
     display: flex;
     align-items: center;
@@ -60,14 +66,14 @@
 }
 
 .comment_count {
-    width: 16px;
-    height:16px;
+    width: 18px;
+    height:18px;
     font-size: 12px;
     background-color: #0094EF;
     border-radius: 50%;
     color: #fff;
     text-align: center;
-    line-height: 16px;
+    line-height: 18px;
     margin-left: 24px;
 
 }

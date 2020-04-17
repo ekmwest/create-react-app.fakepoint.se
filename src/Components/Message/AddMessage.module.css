@@ -13,8 +13,10 @@
     /* border-top: 1px solid #ddd; */
 }
 
-:global(.is-mobile) .add_post {
-    border-radius: 0;
+:global(.is-mobile) .message_content {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
 .message_textarea {

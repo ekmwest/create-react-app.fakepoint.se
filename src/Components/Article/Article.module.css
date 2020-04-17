@@ -3,7 +3,7 @@
     padding:0 16px;
     border-radius: 8px;
     position: relative;
-    width: 600px;
+    max-width: 600px;
     margin:0 auto;
 }
 
@@ -48,7 +48,7 @@
 
 .content {
     padding: 16px 0;
-
+    margin-bottom: 16px;
     border-bottom: 1px solid #ddd;
 }
 

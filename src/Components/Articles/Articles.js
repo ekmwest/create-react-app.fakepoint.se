@@ -32,9 +32,9 @@ function Articles({ courseId }) {
         return (
             <div>
                 <div className={styles.articles}>
-                <Link to={`/courses/${courseId}/articles`} className={[css.button, css.PRIMARY].join(' ')}>Ny artikal</Link>
-                    {posts.map(post => (
-                        <div className={styles.article}>
+                <Link to={`/courses/${courseId}/articles`} className={[css.button, css.PRIMARY].join(' ')}>Ny artikel</Link>
+                    {posts.map((post, i) => (
+                        <div className={(i === posts.length - 1) ? styles.articleLastChild : styles.article} key={post.id}>
                             <div className={styles.header}>
                                 <div className={styles.meta} ><User user={users.find(user => user.id === post.user_id)} /> <div className={styles.created_at}>{fmt.date(post.created_at)}</div></div>
                                 <Link to={`/courses/${courseId}/articles/${post.id}`}  className={styles.title}>{post.title}</Link> 

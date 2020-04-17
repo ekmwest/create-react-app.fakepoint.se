@@ -17,5 +17,8 @@
 .comments {
     padding: 0 98px;
     background-color: #fff;
-    height: 100vh;
+}
+
+:global(.is-mobile) .comments {
+    padding: 12px;
 }
