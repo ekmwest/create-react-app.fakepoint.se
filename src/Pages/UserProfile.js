@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header/Header';
-import styles from './Usercards.module.css';
-import User from '../Components/User/User';
+import styles from './UserProfile.module.css';
 import api from '../Code/api';
+import UserCard from '../Components/UserCard/UserCard';
 
-function Usercards() {
+function UserProfile() {
 
     const [users, setUsers] = useState([]);
 
@@ -20,17 +20,12 @@ function Usercards() {
             <div className={styles.content}>
                 <div className={styles.users}>
                     {users.map(user => (
-                        <div className={styles.user}>
-                        <User
-                            key={user.id}
-                            user={user}
-                            bigUserAvatar
-                        /> </div>)
-                        )}
+                      <UserCard user={user}></UserCard>
+                      ))}
                 </div>
             </div>
         </>
     );
 }
 
-export default Usercards;
+export default UserProfile;

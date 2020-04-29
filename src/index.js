@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MasterLayout from './Layouts/MasterLayout';
 import StartPage from './Pages/StartPage';
 import HomePage from './Pages/HomePage';
-import Usercards from './Pages/Usercards';
+import UserProfile from './Pages/UserProfile';
 import CoursePostsPage from './Pages/CoursePostsPage';
 import CoursePostPage from './Pages/CoursePostPage';
 import CourseMessagesPage from './Pages/CourseMessagesPage';
@@ -37,8 +37,8 @@ function App() {
                         <Route path='/start' exact>
                             <StartPage />
                         </Route>
-                        <Route path='/usercards' exact>
-                            <Usercards />
+                        <Route path='/userprofile' exact>
+                            <UserProfile />
                         </Route>
                         <Route path='/startpagenotifications' exact>
                             <StartPageNotifications />

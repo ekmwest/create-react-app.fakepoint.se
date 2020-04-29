@@ -1,0 +1,60 @@
+.user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.avatar {
+    width:40px;
+    height:40px;
+}
+
+.avatar img,
+.avatar_big img {
+    width:100%;
+    height:100%; 
+    border-radius: 50%;
+}
+
+.avatar_big {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 8px;
+}
+
+.name {
+    margin-left:16px;
+    font-weight: 600;
+}
+
+.usercard {
+    position: absolute;
+    top:48px;
+    width: 250px;
+    box-shadow: rgba(0,0, 0, 0.2) 0 0 2px inset;
+    display:none;
+    background-color: #fff;
+    z-index: 100;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.usercard.open {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    right:8px;
+    top:4px;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 12px;
+}
