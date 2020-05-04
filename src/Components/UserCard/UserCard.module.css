@@ -1,9 +1,11 @@
-.user {
-    display: flex;
-    align-items: center;
+.user {    
     position: relative;
     border-bottom: 1px solid #ddd;
     padding: 8px;
+}
+
+.header {
+    display: flex;
 }
 
 .avatar {
@@ -25,7 +27,7 @@
 }
 
 .name {
-    margin-left:16px;
+    margin:0 16px;
     font-weight: 600;
 }
 
@@ -33,14 +35,14 @@
     position: absolute;
     top:48px;
     width: 250px;
-    box-shadow: rgba(0,0, 0, 0.2) 0 0 2px inset;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background: linear-gradient(#f8f8f8, #fff);
     display:none;
-    background-color: #fff;
     z-index: 100;
     padding: 16px;
     border-radius: 6px;
     text-align: center;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 18px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -57,4 +59,10 @@
     cursor: pointer;
     opacity: 0.7;
     font-size: 12px;
+}
+
+.note {
+    font-size: 13px;  
+    margin-left: 56px;
+    margin-top:-20px;
 }

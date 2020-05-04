@@ -1,8 +1,172 @@
 .content {
     max-width: 640px;
     margin: 80px auto;
-    background-color: #fff; 
+    background-color: #fff;
     border-radius: 8px;
     border: 1px solid #ddd;
-    padding:16px;
+    padding: 16px;
+}
+
+.overlay {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 100;
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.user {
+    position: relative;
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+}
+
+.user_1 {
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+}
+
+.user_2 {
+    border-bottom: none;
+    padding: 16px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar img, .avatar_big img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.avatar_big {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 8px;
+}
+
+.name {
+    margin: 0 16px;
+    font-weight: 600;
+}
+
+.usercard {
+    position: absolute;
+    top: 48px;
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#f8f8f8, #fff);
+    z-index: 10000;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.user:hover .usercard {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.usercard_1 {
+    position: absolute;
+    top: 48px;
+    width: 250px;
+    top: 50%;
+    /*position Y halfway in*/
+    left: 50%;
+    /*position X halfway in*/
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#f8f8f8, #fff);
+    z-index: 100;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: none;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.usercard_1.open {
+    display: block;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.usercard_2 {
+    position: absolute;
+    top: 48px;
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#f8f8f8, #fff);
+    z-index: 100;
+    padding: 16px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: none;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.usercard_2.open {
+    display: block;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.close {
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    font-size: 12px;
+}
+
+.note {
+    font-size: 13px;
+    margin-left: 56px;
+    margin-top: -20px;
 }
