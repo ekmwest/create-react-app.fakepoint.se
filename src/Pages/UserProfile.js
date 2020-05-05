@@ -29,7 +29,7 @@ function UserProfile() {
                             </div>
                         </div>
                         <div className={userCard1CssClass()}>
-                            <div className={styles.close} onClick={() => setUserCard1Open(!userCard1Open)}>Close</div>
+                            <div className={styles.close} onClick={() => setUserCard1Open(!userCard1Open)}><img src="/icons/close.png" alt="close"></img></div>
                             <div className={styles.avatar_big}>
                                 <img src="/icons/user-4.jpeg" alt="User"></img>
                             </div>
@@ -68,7 +68,7 @@ function UserProfile() {
                             </div>
                         </div>
                         <div className={userCard2CssClass()}>
-                            <div className={styles.close} onClick={() => setUserCard2Open(!userCard2Open)}>Close</div>
+                            <div className={styles.close} onClick={() => setUserCard2Open(!userCard2Open)}> <img src="/icons/close.png" alt="close"></img></div>
                             <div className={styles.avatar_big}>
                                 <img src="/icons/user-3.jpeg" alt="User"></img>
                             </div>
