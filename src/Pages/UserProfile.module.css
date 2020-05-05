@@ -25,7 +25,6 @@
 
 .user {
     position: relative;
-    border-bottom: 1px solid #ddd;
     padding: 16px;
 }
 
@@ -35,7 +34,7 @@
 }
 
 .user_2 {
-    border-bottom: none;
+    border-bottom: 1px solid #ddd;;
     padding: 16px;
     position: relative;
 }
@@ -50,16 +49,22 @@
     height: 40px;
 }
 
-.avatar img, .avatar_big img {
+.avatar img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
+    border-radius: 50%; 
 }
 
 .avatar_big {
     width: 140px;
-    height: 140px;
-    margin: 0 auto 8px;
+    height: 140px;   
+    width: 100%;
+    height: 100%;
+}
+
+.avatar_big img {
+    width: 100%;
+    height: 100%;
 }
 
 .name {
@@ -74,27 +79,24 @@
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     background: linear-gradient(#f8f8f8, #fff);
     z-index: 10000;
-    padding: 16px;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
+    /* padding: 16px; */
+    border-radius: 8px;
     text-overflow: ellipsis;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out;
-    -webkit-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out;
+    transition: opacity .5s ease-in-out 1s, visibility 2s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out 1s, visibility 2s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out 1s, visibility 2s ease-in-out;
 }
 
 .user:hover .usercard {
     display: block;
     opacity: 1;
     visibility: visible;
-    transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out;
-    -moz-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out;
-    -webkit-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out;
+    transition: opacity .5s ease-in-out 1s, visibility 1s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out 1s, visibility 1s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out 1s, visibility 1s ease-in-out;
 }
 
 .usercard_1 {
@@ -109,11 +111,8 @@
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     background: linear-gradient(#f8f8f8, #fff);
     z-index: 100;
-    padding: 16px;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
+    /* padding: 16px; */
+    border-radius: 8px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: none;
@@ -136,11 +135,7 @@
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     background: linear-gradient(#f8f8f8, #fff);
     z-index: 100;
-    padding: 16px;
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
+    border-radius: 8px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: none;
@@ -164,16 +159,28 @@
     opacity: 0.8;
     font-size: 12px;
     width: 12px;
-    height:12px;
+    height: 12px;
 }
 
 .close img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 .note {
     font-size: 13px;
     margin-left: 56px;
     margin-top: -20px;
+}
+
+.full_name {
+    font-size: 18px;
+    font-weight: 600;   
+    padding: 8px;
+}
+
+.meta {
+    padding:0 8px 8px;
+    font-size: 14px;
+    color: #868686;
 }
