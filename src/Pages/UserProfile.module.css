@@ -26,6 +26,7 @@
 .user {
     position: relative;
     padding: 16px;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 .user_1 {
@@ -34,7 +35,12 @@
 }
 
 .user_2 {
-    border-bottom: 1px solid #ddd;;
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+    position: relative;
+}
+
+.user_3 {
     padding: 16px;
     position: relative;
 }
@@ -52,12 +58,12 @@
 .avatar img {
     width: 100%;
     height: 100%;
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 .avatar_big {
     width: 140px;
-    height: 140px;   
+    height: 140px;
     width: 100%;
     height: 100%;
 }
@@ -175,12 +181,195 @@
 
 .full_name {
     font-size: 18px;
-    font-weight: 600;   
+    font-weight: 600;
     padding: 8px;
 }
 
 .meta {
-    padding:0 8px 8px;
+    padding: 0 8px 8px;
     font-size: 14px;
     color: #868686;
+}
+
+.usercard_3 {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    z-index: 100;
+    perspective: 600px;
+    display: none;
+    ;
+}
+
+.usercard_3 .front, .usercard_4 .back {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.usercard_3 .avatar_big {
+    height: 70%;
+}
+
+.usercard_3 .front {
+    transform: rotateY(0deg);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.usercard_3 .back {
+    transform: rotateY(180deg);
+    display: table;
+    z-index: 200;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 50px;
+}
+
+.usercard_3.flip .front {
+    transform: rotateY(180deg);
+}
+
+.usercard_3.flip .back {
+    transform: rotateY(360deg);
+}
+
+.card_design {
+    background-color: #ddd;
+}
+
+.cards {
+    display: flex;
+    max-width: 640px;
+    flex-wrap: wrap;
+    margin: 80px auto;
+}
+
+.usercard_v1, .usercard_v2, .usercard_v3, .usercard_v4 {
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    z-index: 100;
+    border-radius: 10px;
+    margin: 32px;
+    overflow: hidden;
+}
+
+.avatar_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v1 {
+    text-align: center;
+}
+
+.usercard_v1 .avatar_image {
+    width: 150px;
+    height: 150px;
+    margin: 32px auto 8px;
+}
+
+.usercard_v1 .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v3 {
+    width: 400px;
+    display: flex;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.usercard_v3 .avatar_image {
+    width: 150px;
+    height: 150px;
+    margin-right: 16px;
+}
+
+.usercard_v3 .avatar_image img {
+    border-radius: 4px;
+}
+
+.usercard_v4 {
+    position: relative;
+    height: 400px;
+    width: 350px;
+}
+
+.usercard_v4 .avatar_image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: .5s;  
+    opacity: 0.8;
+}
+
+.usercard_v4 .avatar_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v4 .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+    padding: 10px;   
+}
+
+.details .meta {
+    color: #000;
+}
+
+.usercard_v5 {
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 380px;
+    perspective: 500px;
+    margin: 32px;
+}
+
+.card_content {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.usercard_v5:hover .card_content {
+    transform: rotateY( 180deg );
+    transition: transform 1s;
+}
+
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    text-align: center;
+    font-size: 60px;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: #000;
+    color: white;
+    transform: rotateY( 180deg );
 }
