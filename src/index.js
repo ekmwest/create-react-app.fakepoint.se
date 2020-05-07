@@ -37,7 +37,7 @@ function App() {
                         <Route path='/start' exact>
                             <StartPage />
                         </Route>
-                        <Route path='/userprofile' exact>
+                        <Route path='/learnpointprofile' exact>
                             <UserProfile />
                         </Route>
                         <Route path='/startpagenotifications' exact>

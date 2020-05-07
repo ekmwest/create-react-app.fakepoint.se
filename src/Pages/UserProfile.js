@@ -14,7 +14,7 @@ function UserProfile() {
 
     return (
         <>
-            <Header title="Usercards"></Header>
+            <Header title="LearnPoint profile"></Header>
             <div className={overlayCssClass()}></div>
             <div className={styles.content}>
                 <div className={styles.users}>
@@ -116,15 +116,17 @@ function UserProfile() {
                         <div className={styles.avatar_image}>
                             <img src="/icons/user-3.jpeg" alt="User"></img>
                         </div>
-                        <div className={styles.full_name}>Hasse Hannson</div>
-                        <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                        <div className={styles.meta}>08759789</div>
+                        <div className={styles.details}>
+                            <div className={styles.full_name}>Hasse Hannson</div>
+                            <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
+                            <div className={styles.meta}>08759789</div>
+                        </div>
                     </div>
                     <div className={styles.usercard_v2}>
                         <div className={styles.avatar_image}>
                             <img src="/icons/user-1.jpeg" alt="User"></img>
                         </div>
-                        <div>
+                        <div className={styles.details}>
                             <div className={styles.full_name}>Sandy Richard</div>
                             <div className={styles.meta}>sandy.richard@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
@@ -134,7 +136,7 @@ function UserProfile() {
                         <div className={styles.avatar_image}>
                             <img src="/icons/user-4.jpeg" alt="User"></img>
                         </div>
-                        <div>
+                        <div className={styles.details}>
                             <div className={styles.full_name}>Samia Sindi</div>
                             <div className={styles.meta}>samia.indi@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
@@ -142,7 +144,7 @@ function UserProfile() {
                     </div>
                     <div className={styles.usercard_v4}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-2.jpeg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.full_name}>Stig Berg</div>
@@ -154,14 +156,85 @@ function UserProfile() {
                         <div className={styles.card_content}>
                             <div className={styles.front}>
                                 <div className={styles.avatar_image}>
-                                    <img src="/icons/user.jpg" alt="User"></img>
+                                    <img src="/icons/user-8.jpeg" alt="User"></img>
                                 </div>
-                                <div className={styles.full_name}>Rick R</div>
-                                <div className={styles.meta}>rick.richard@fakepoint.se</div>
-                                <div className={styles.meta}>Hover me to see my Id</div>
+                                <div className={styles.details}>
+                                    <div className={styles.full_name}>Rick R</div>
+                                    <div className={styles.meta}>rick.richard@fakepoint.se</div>
+                                    <div className={styles.meta}>Hover me to see my Id</div>
+                                </div>
                             </div>
                             <div className={styles.back}>
-                               ID card
+                                <div className={styles.avatar_image}>
+                                    <img src="/icons/user.jpg" alt="User"></img>
+                                </div>
+                                <div className={styles.details}>
+                                    <   div className={styles.label}>Name</div>
+                                    <div className={styles.full_name}>Rick Richardsson</div>
+                                    <div className={styles.label}>Social security number</div>
+                                    <div className={styles.meta}>19870901-7827</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.usercard_v6}>
+                        <div className={styles.profile}>
+                            <div className={styles.avatar_image}>
+                                <img src="/icons/user-3.jpeg" alt="User"></img>
+                            </div>
+                            <div className={styles.details}>
+                                <div className={styles.full_name}>Stig B</div>
+                                <div className={styles.meta}>stig.berg@fakepoint.se</div>
+                                <div className={styles.meta}>08786547</div>
+                            </div>
+                        </div>
+                        <div className={styles.id_title}>Id card</div>
+                        <div className={styles.id_card}>
+                            <div className={styles.avatar_image}>
+                                <img src="/icons/user-7.jpeg" alt="User"></img>
+                            </div>
+                            <div className={styles.details}>
+                                <   div className={styles.label}>Name</div>
+                                <div className={styles.full_name}>Stig Berg</div>
+                                <div className={styles.label}>Social security number</div>
+                                <div className={styles.meta}>19870901-7827</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.usercard_v7}>
+                        <div className={styles.avatar_image}>
+                            <img src="/icons/user-1.jpeg" alt="User"></img>
+                        </div>
+                        <div className={styles.details}>
+                            <div className={styles.label}>Name</div>
+                            <div className={styles.full_name}>Sandy Richard</div>
+                            <div className={styles.label}>Email</div>
+                            <div className={styles.meta}>sandy.richard@fakepoint.se</div>
+                            <div className={styles.label}>Telephone</div>
+                            <div className={styles.meta}>08535678</div>
+                        </div>
+                    </div>
+                    <div className={styles.usercard_v8}>
+                        <div className={styles.avatar_image}>
+                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                        </div>
+                        <div className={styles.details}>
+                            <div className={styles.full_name}>Stig B</div>
+                            <div className={styles.meta}>rick.richard@fakepoint.se</div>
+                            <div className={styles.meta}>08786547</div>
+                            <div className={styles.meta}>Hover to see Id card</div>
+                        </div>
+                        <div className={styles.card_overlay}>
+                            <div className={styles.id_card}>
+                                <div className={styles.school_photo}>
+                                    <img src="/icons/user-7.jpeg" alt="User"></img>
+                                </div>
+                                <div className={styles.details}>
+                                    <   div className={styles.label}>Name</div>
+                                    <div className={styles.full_name}>Stig Berg</div>
+                                    <div className={styles.label}>Social security number</div>
+                                    <div className={styles.meta}>19870901-7827</div>
+                                </div>
                             </div>
                         </div>
                     </div>

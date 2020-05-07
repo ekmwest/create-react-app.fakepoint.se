@@ -182,11 +182,16 @@
 .full_name {
     font-size: 18px;
     font-weight: 600;
-    padding: 8px;
+    padding: 4px 8px;
+}
+
+.details {
+    color: #000;
+    padding: 12px;
 }
 
 .meta {
-    padding: 0 8px 8px;
+    padding: 0 8px 2px;
     font-size: 14px;
     color: #868686;
 }
@@ -255,7 +260,6 @@
     width: 250px;
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     background-color: #fff;
-    z-index: 100;
     border-radius: 10px;
     margin: 32px;
     overflow: hidden;
@@ -281,16 +285,15 @@
 }
 
 .usercard_v3 {
-    width: 400px;
+    width: 350px;
     display: flex;
     padding: 16px;
     border-radius: 4px;
 }
 
 .usercard_v3 .avatar_image {
-    width: 150px;
-    height: 150px;
-    margin-right: 16px;
+    width: 100px;
+    height: 100px;
 }
 
 .usercard_v3 .avatar_image img {
@@ -299,8 +302,8 @@
 
 .usercard_v4 {
     position: relative;
-    height: 400px;
-    width: 350px;
+    height: 250px;
+    width: 260px;
 }
 
 .usercard_v4 .avatar_image {
@@ -311,8 +314,7 @@
     height: 100%;
     z-index: 2;
     background-color: #000;
-    transition: .5s;  
-    opacity: 0.8;
+    transition: .5s;
 }
 
 .usercard_v4 .avatar_image img {
@@ -324,22 +326,24 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #fff;
+    background: #000;
+    color: #fff;
     width: 100%;
-    height: 80px;
+    height: 76px;
+    opacity: 0.5;
     z-index: 100;
-    padding: 10px;   
+    padding: 10px;
 }
 
-.details .meta {
-    color: #000;
+.usercard_v4 .meta {
+    color: #fff;
 }
 
 .usercard_v5 {
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 380px;
+    height: 420px;
     perspective: 500px;
     margin: 32px;
 }
@@ -348,13 +352,13 @@
     /* position: absolute; */
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     transition: transform 1s;
     transform-style: preserve-3d;
 }
 
 .usercard_v5:hover .card_content {
-    transform: rotateY( 180deg );
+    transform: rotateY( 180deg);
     transition: transform 1s;
 }
 
@@ -363,13 +367,185 @@
     height: 100%;
     width: 100%;
     background: white;
-    text-align: center;
-    font-size: 60px;
     backface-visibility: hidden;
 }
 
 .back {
     background: #000;
     color: white;
-    transform: rotateY( 180deg );
+    transform: rotateY( 180deg);
+}
+
+.back .full_name,
+.back .meta {
+    color: #fff;
+    padding: 0 0 8px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.usercard_v6 {
+    width: 350px;
+    position: relative;
+    margin: 32px;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.profile .details, .id_card .details {
+    padding: 0;
+}
+
+.usercard_v6 .id_card {
+    display: flex;
+    padding: 16px;
+    background-color: #f2f2f2;
+    /* transform: translateY(124px);   */
+    transition: all 0.7s;
+}
+
+.id_title {
+    padding: 8px 16px 0;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.usercard_v6:hover .id_card {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.7s;
+}
+
+.id_card .avatar_image {
+    margin-right: 10px;
+}
+
+.id_card .avatar_image img {
+    border-radius: 4px;
+}
+
+.usercard_v6 .avatar_image {
+    width: 100px;
+    height: 100px;
+}
+
+.profile .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v7 {
+    width: 400px;
+    display: flex;
+    margin: 32px;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+.usercard_v7 .avatar_image {
+    width: 160px;
+    height: 160px;
+    margin-right: 16px;
+}
+
+.usercard_v7 .avatar_image img {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: ;
+}
+
+.usercard_v7 .details {
+    padding: 4px 0 0;
+}
+
+.label {
+    color: #868686;
+}
+
+.usercard_v7 .meta, .id_card .meta, .usercard_v7 .full_name, .id_card .full_name {
+    padding: 0 0 6px 0;
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.usercard_v8 {
+    width: 250px;
+    height: 360px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 32px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.usercard_v8 .avatar_image {
+    width: 120px;
+    height: 120px;
+    margin: 16px;
+}
+
+.usercard_v8 .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v8 .school_photo  {
+    width:100%;
+    height:100%;
+}
+
+.usercard_v8 .school_photo img {
+    border-radius:0;
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v8 .details{
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+.usercard_v8 .id_card {
+    transform: translateY(30px);
+    transition: all 0.7s;
+}
+
+.usercard_v8:hover .card_overlay {
+    opacity: 1;
+}
+
+.usercard_v8:hover .card_overlay .id_card {
+    transform: translateY(0px);
 }
