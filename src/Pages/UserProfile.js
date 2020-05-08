@@ -33,9 +33,11 @@ function UserProfile() {
                             <div className={styles.avatar_big}>
                                 <img src="/icons/user-4.jpeg" alt="User"></img>
                             </div>
-                            <div className={styles.full_name}>Raechal Hamilton</div>
-                            <div className={styles.meta}>rachel.hamilton@fakepoint.se</div>
-                            <div className={styles.meta}>08759789</div>
+                            <div className={styles.details}>
+                                <div className={styles.full_name}>Raechal Hamilton</div>
+                                <div className={styles.meta}>rachel.hamilton@fakepoint.se</div>
+                                <div className={styles.meta}>08759789</div>
+                            </div>
                         </div>
                         <div className={styles.note}>Click to display user modal</div>
                     </div>
@@ -54,9 +56,11 @@ function UserProfile() {
                             <div className={styles.avatar_big}>
                                 <img src="/icons/user-3.jpeg" alt="User"></img>
                             </div>
-                            <div className={styles.full_name}>Hasse Hannson</div>
-                            <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                            <div className={styles.meta}>08759789</div>
+                            <div className={styles.details}>
+                                <div className={styles.full_name}>Hasse Hannson</div>
+                                <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
+                                <div className={styles.meta}>08759789</div>
+                            </div>
                         </div>
                         <div className={styles.note}>Click to display user card</div>
                     </div>
@@ -73,9 +77,11 @@ function UserProfile() {
                             <div className={styles.avatar_big}>
                                 <img src="/icons/user-1.jpeg" alt="User"></img>
                             </div>
-                            <div className={styles.full_name}>Sandy Richard</div>
-                            <div className={styles.meta}>sandy.richard@fakepoint.se</div>
-                            <div className={styles.meta}>08759789</div>
+                            <div className={styles.details}>
+                                <div className={styles.full_name}>Sandy Richard</div>
+                                <div className={styles.meta}>sandy.richard@fakepoint.se</div>
+                                <div className={styles.meta}>08759789</div>
+                            </div>
                         </div>
                         <div className={styles.note}>Hover to display user card</div>
                     </div>
