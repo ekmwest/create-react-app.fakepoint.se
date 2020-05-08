@@ -250,10 +250,12 @@
 }
 
 .cards {
-    display: flex;
-    max-width: 640px;
-    flex-wrap: wrap;
-    margin: 80px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    margin: 0 auto;
+    max-width: 1400px;
+    grid-column-gap: 200px;
+    padding: 16px;
 }
 
 .usercard_v1, .usercard_v2, .usercard_v3, .usercard_v4 {
@@ -261,7 +263,7 @@
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
     background-color: #fff;
     border-radius: 10px;
-    margin: 32px;
+    margin: 48px 0;
     overflow: hidden;
 }
 
@@ -285,7 +287,8 @@
 }
 
 .usercard_v3 {
-    width: 350px;
+    width: 320px;
+    height:100px;
     display: flex;
     padding: 16px;
     border-radius: 4px;
@@ -302,8 +305,8 @@
 
 .usercard_v4 {
     position: relative;
-    height: 250px;
-    width: 260px;
+    height: 280px;
+    width: 280px;
 }
 
 .usercard_v4 .avatar_image {
@@ -329,10 +332,10 @@
     background: #000;
     color: #fff;
     width: 100%;
-    height: 76px;
+    height: 72px;
     opacity: 0.5;
     z-index: 100;
-    padding: 10px;
+    padding: 4px;
 }
 
 .usercard_v4 .meta {
@@ -345,7 +348,7 @@
     width: 300px;
     height: 420px;
     perspective: 500px;
-    margin: 32px;
+    margin: 48px 0;
 }
 
 .card_content {
@@ -386,8 +389,9 @@
 
 .usercard_v6 {
     width: 350px;
+    height:296px;
     position: relative;
-    margin: 32px;
+    margin: 48px 0;
     align-items: center;
     border-radius: 4px;
     background-color: #f8f8f8;
@@ -446,8 +450,9 @@
 
 .usercard_v7 {
     width: 400px;
+    height: 160px;
     display: flex;
-    margin: 32px;
+    margin: 48px 0;
     border-radius: 4px;
     background-color: #f8f8f8;
     border-radius: 10px;
@@ -490,7 +495,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    margin: 32px;
+    margin: 48px 0;
     background-color: #f8f8f8;
     border-radius: 10px;
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
@@ -548,4 +553,69 @@
 
 .usercard_v8:hover .card_overlay .id_card {
     transform: translateY(0px);
+}
+
+.usercard_v9 {
+    width: 250px;
+    text-align: center;
+    height: 320px;
+    margin: 48px 0;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.usercard_v9 .card_info {
+    height: 252px;
+    color: #000;
+}
+
+.usercard_v9 .card_overlay {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    text-align: left;
+    transition: all 0.5s;
+    border-radius: 0;
+    opacity: 1;
+    transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+.id_card_title {
+    padding: 8px 0;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+
+.usercard_v9 .avatar_image {
+    width: 120px;
+    height: 120px;
+    margin: 32px auto;
+}
+
+.usercard_v9 .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v9 .school_photo  {
+    width:100px;
+    height:100px;
+    margin: 16px;
+}
+
+.usercard_v9 .school_photo img {
+    border-radius:4px;
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v9 .details{
+    padding:0 16px;
+    font-size: 14px;
+}
+
+.usercard_v9:hover .card_overlay {
+    transform: translateY(-284px);
 }
