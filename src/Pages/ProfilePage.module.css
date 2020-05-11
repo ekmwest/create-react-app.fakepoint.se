@@ -1,0 +1,46 @@
+.content {
+    max-width: 400px;
+    margin: 80px auto;
+    background-color: #fff; 
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding:16px;
+}
+
+.profile_image {
+    width:150px;
+    height: 150px;
+    margin: 32px auto;
+}
+
+.profile_image img {
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+.attribute {
+    margin: 16px;
+}
+
+.attribute_value textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    height: 40px;
+    border-color: #ccc;
+    transition: height .4s ease;
+}
+
+
+.save {
+    text-align: center;
+    margin: 16px;;
+}

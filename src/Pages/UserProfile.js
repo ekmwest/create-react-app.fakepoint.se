@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Components/Header/Header';
 import styles from './UserProfile.module.css';
+import { Link } from 'react-router-dom';
 
 function UserProfile() {
 
@@ -126,6 +127,7 @@ function UserProfile() {
                             <div className={styles.full_name}>Hasse Hannson</div>
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
+                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                         </div>
                     </div>
                     <div className={styles.usercard_v2}>
@@ -136,6 +138,7 @@ function UserProfile() {
                             <div className={styles.full_name}>Hasse Hannson</div>
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
+                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                         </div>
                     </div>
                     <div className={styles.usercard_v4}>
@@ -146,6 +149,7 @@ function UserProfile() {
                             <div className={styles.full_name}>Hasse Hannson</div>
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
+                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                         </div>
                     </div>
 
@@ -159,6 +163,7 @@ function UserProfile() {
                                     <div className={styles.full_name}>Hasse Hannson</div>
                                     <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                                     <div className={styles.meta}>Hover me to see my ID</div>
+                                    <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                                 </div>
                             </div>
                             <div className={styles.back}>
@@ -184,6 +189,7 @@ function UserProfile() {
                                 <div className={styles.full_name}>Hasse Hannson</div>
                                 <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                                 <div className={styles.meta}>08786547</div>
+                                <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                             </div>
                         </div>
                         <div className={styles.id_title}>ID card</div>
@@ -218,6 +224,7 @@ function UserProfile() {
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08786547</div>
                             <div className={styles.meta}>Hover to see ID card</div>
+                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                         </div>
                         <div className={styles.card_overlay}>
                             <div className={styles.id_card}>
@@ -229,6 +236,7 @@ function UserProfile() {
                                     <div className={styles.full_name}>Hasse Hannson</div>
                                     <div className={styles.label}>Social security number</div>
                                     <div className={styles.meta}>19870901-7827</div>
+                                    <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                                 </div>
                             </div>
                         </div>
@@ -243,6 +251,7 @@ function UserProfile() {
                                 <div className={styles.full_name}>Hasse Hannson</div>
                                 <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                                 <div className={styles.meta}>08786547</div>
+                                <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                             </div>
                         </div>
                         <div className={styles.card_overlay}>

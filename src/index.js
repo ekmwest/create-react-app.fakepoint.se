@@ -5,6 +5,7 @@ import MasterLayout from './Layouts/MasterLayout';
 import StartPage from './Pages/StartPage';
 import HomePage from './Pages/HomePage';
 import UserProfile from './Pages/UserProfile';
+import ProfilePage from './Pages/ProfilePage';
 import CoursePostsPage from './Pages/CoursePostsPage';
 import CoursePostPage from './Pages/CoursePostPage';
 import CourseMessagesPage from './Pages/CourseMessagesPage';
@@ -39,6 +40,9 @@ function App() {
                         </Route>
                         <Route path='/learnpointprofile' exact>
                             <UserProfile />
+                        </Route>
+                        <Route path='/profile' exact>
+                            <ProfilePage />
                         </Route>
                         <Route path='/startpagenotifications' exact>
                             <StartPageNotifications />

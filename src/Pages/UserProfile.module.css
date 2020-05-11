@@ -346,7 +346,7 @@
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 420px;
+    height: 438px;
     perspective: 500px;
     margin: 48px 0;
 }
@@ -389,7 +389,7 @@
 
 .usercard_v6 {
     width: 350px;
-    height:296px;
+    height: 320px;
     position: relative;
     margin: 48px 0;
     align-items: center;
@@ -558,7 +558,7 @@
 .usercard_v9 {
     width: 250px;
     text-align: center;
-    height: 320px;
+    height: 360px;
     margin: 48px 0;
     background-color: #f8f8f8;
     border-radius: 6px;
@@ -567,14 +567,14 @@
 }
 
 .usercard_v9 .card_info {
-    height: 252px;
+    height: 292px;
     color: #000;
 }
 
 .usercard_v9 .card_overlay {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 360px;
     text-align: left;
     transition: all 0.5s;
     border-radius: 0;
@@ -617,5 +617,15 @@
 }
 
 .usercard_v9:hover .card_overlay {
-    transform: translateY(-284px);
+    transform: translateY(-324px);
+}
+
+.link_to_profile {
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    display: block;
+    margin-top: 16px;
+    padding: 8px;
+    border-radius: 6px;
 }
