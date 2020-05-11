@@ -7,11 +7,11 @@ function UserProfile() {
 
     const [userCard1Open, setUserCard1Open] = useState(false);
     const [userCard2Open, setUserCard2Open] = useState(false);
-    // const [userCardFlip, setUserCardFlip] = useState(false);
+    const [userCardFlip, setUserCardFlip] = useState(false);
     const userCard1CssClass = () => userCard1Open ? `${styles.usercard_1}  ${styles.open}` : `${styles.usercard_1}`;
     const userCard2CssClass = () => userCard2Open ? `${styles.usercard_2}  ${styles.open}` : `${styles.usercard_2}`;
     const overlayCssClass = () => userCard1Open ? `${styles.overlay}  ${styles.open}` : `${styles.overlay}`;
-    // const userCardFlipCssClass = () => userCardFlip ? `${styles.usercard_3}  ${styles.flip}` : `${styles.usercard_3}`;
+    const userCardFlipCssClass = () => userCardFlip ? `${styles.usercard_v5}  ${styles.flip}` : `${styles.usercard_v5}`;
 
     return (
         <>
@@ -153,7 +153,7 @@ function UserProfile() {
                         </div>
                     </div>
 
-                    <div className={styles.usercard_v5}>
+                    <div className={userCardFlipCssClass()}>
                         <div className={styles.card_content}>
                             <div className={styles.front}>
                                 <div className={styles.avatar_image}>
@@ -162,7 +162,7 @@ function UserProfile() {
                                 <div className={styles.details}>
                                     <div className={styles.full_name}>Hasse Hannson</div>
                                     <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                                    <div className={styles.meta}>Hover me to see my ID</div>
+                                    <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>Click me to see my ID</div>
                                     <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                                 </div>
                             </div>
@@ -175,6 +175,7 @@ function UserProfile() {
                                     <div className={styles.full_name}>Hasse Hannson</div>
                                     <div className={styles.label}>Social security number</div>
                                     <div className={styles.meta}>19870901-7827</div>
+                                    <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>Back</div>
                                 </div>
                             </div>
                         </div>
@@ -224,7 +225,6 @@ function UserProfile() {
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08786547</div>
                             <div className={styles.meta}>Hover to see ID card</div>
-                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                         </div>
                         <div className={styles.card_overlay}>
                             <div className={styles.id_card}>

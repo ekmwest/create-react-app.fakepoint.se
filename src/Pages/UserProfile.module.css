@@ -346,7 +346,7 @@
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 438px;
+    height: 454px;
     perspective: 500px;
     margin: 48px 0;
 }
@@ -360,7 +360,7 @@
     transform-style: preserve-3d;
 }
 
-.usercard_v5:hover .card_content {
+.usercard_v5.flip .card_content {
     transform: rotateY( 180deg);
     transition: transform 1s;
 }
@@ -385,6 +385,10 @@
     padding: 0 0 8px;
     font-weight: 600;
     font-size: 16px;
+    cursor: pointer;
+}
+.usercard_v5 .meta {
+    cursor: pointer;
 }
 
 .usercard_v6 {
@@ -616,7 +620,7 @@
     font-size: 14px;
 }
 
-.usercard_v9:hover .card_overlay {
+.usercard_v9 .card_overlay:hover {
     transform: translateY(-324px);
 }
 
