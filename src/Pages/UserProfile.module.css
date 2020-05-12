@@ -246,16 +246,15 @@
 }
 
 .card_design {
-    background-color: #ddd;
 }
 
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
-    margin: 0 auto;
-    max-width: 1400px;
+    margin: 32px auto;
     grid-column-gap: 200px;
-    padding: 16px;
+    padding: 0 200px ;   
+    background-color: #ddd;
 }
 
 .usercard_v1, .usercard_v2, .usercard_v3, .usercard_v4 {
@@ -632,4 +631,5 @@
     margin-top: 16px;
     padding: 8px;
     border-radius: 6px;
+    text-align: center;
 }

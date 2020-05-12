@@ -153,34 +153,6 @@ function UserProfile() {
                         </div>
                     </div>
 
-                    <div className={userCardFlipCssClass()}>
-                        <div className={styles.card_content}>
-                            <div className={styles.front}>
-                                <div className={styles.avatar_image}>
-                                    <img src="/icons/user-3.jpeg" alt="User"></img>
-                                </div>
-                                <div className={styles.details}>
-                                    <div className={styles.full_name}>Hasse Hannson</div>
-                                    <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                                    <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>Click me to see my ID</div>
-                                    <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
-                                </div>
-                            </div>
-                            <div className={styles.back}>
-                                <div className={styles.avatar_image}>
-                                    <img src="/icons/user-7.jpeg" alt="User"></img>
-                                </div>
-                                <div className={styles.details}>
-                                    <   div className={styles.label}>Name</div>
-                                    <div className={styles.full_name}>Hasse Hannson</div>
-                                    <div className={styles.label}>Social security number</div>
-                                    <div className={styles.meta}>19870901-7827</div>
-                                    <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>Back</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div className={styles.usercard_v6}>
                         <div className={styles.profile}>
                             <div className={styles.avatar_image}>
@@ -214,6 +186,49 @@ function UserProfile() {
                             <div className={styles.full_name}>Hasse Hannson</div>
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
+                        </div>
+                    </div>
+                    <div className={styles.usercard_v7}>
+                        <div className={styles.avatar_image}>
+                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                        </div>
+                        <div className={styles.details}>
+                            <div className={styles.label}>Name</div>
+                            <div className={styles.full_name}>Hasse Hannson</div>
+                            <div className={styles.label}>Email</div>
+                            <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
+                            <div className={styles.label}>Telephone</div>
+                            <div className={styles.meta}>08535678</div>
+                        </div>
+                    </div>
+                </div>s
+                <div className={styles.cards}>
+                   
+                    <div className={userCardFlipCssClass()}>
+                        <div className={styles.card_content}>
+                            <div className={styles.front}>
+                                <div className={styles.avatar_image}>
+                                    <img src="/icons/user-3.jpeg" alt="User"></img>
+                                </div>
+                                <div className={styles.details}>
+                                    <div className={styles.full_name}>Hasse Hannson</div>
+                                    <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
+                                    <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>Click me to see my ID</div>
+                                    <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
+                                </div>
+                            </div>
+                            <div className={styles.back}>
+                                <div className={styles.avatar_image}>
+                                    <img src="/icons/user-7.jpeg" alt="User"></img>
+                                </div>
+                                <div className={styles.details}>
+                                    <   div className={styles.label}>Name</div>
+                                    <div className={styles.full_name}>Hasse Hannson</div>
+                                    <div className={styles.label}>Social security number</div>
+                                    <div className={styles.meta}>19870901-7827</div>
+                                    <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>Back</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className={styles.usercard_v8}>
@@ -269,19 +284,6 @@ function UserProfile() {
                                     <div className={styles.meta}>19870901-7827</div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className={styles.usercard_v7}>
-                        <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
-                        </div>
-                        <div className={styles.details}>
-                            <div className={styles.label}>Name</div>
-                            <div className={styles.full_name}>Hasse Hannson</div>
-                            <div className={styles.label}>Email</div>
-                            <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                            <div className={styles.label}>Telephone</div>
-                            <div className={styles.meta}>08535678</div>
                         </div>
                     </div>
                 </div>
