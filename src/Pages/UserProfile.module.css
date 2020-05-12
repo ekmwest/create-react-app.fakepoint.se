@@ -623,6 +623,72 @@
     transform: translateY(-324px);
 }
 
+.usercard_v10{
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 48px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.usercard_v10 .user_images {
+    display: inline-block;
+    width:250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.usercard_v10 .avatar_image,
+.usercard_v10 .school_image {
+    width:250px;
+    height: 250px;   
+    transition: all .8s ease;
+}
+
+.usercard_v10 .school_image {
+    transform: translate(250px, -250px);
+}
+
+.usercard_v10 .avatar_image img,
+.usercard_v10 .school_image img {
+    width:100%;
+    height: 100%;
+}
+
+.usercard_v10:hover .school_image {
+    transform: translate(0, -250px);   
+    transition: all .8s ease;
+}
+
+.usercard_v10:hover .avatar_image {
+    transform: translate(-250px,0); 
+    transition: all .8s ease;
+}
+
+
+.usercard_v10 .nav_dots {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    justify-content: center;
+}
+
+.usercard_v10 .nav_dot_school_image,
+.usercard_v10 .nav_dot_avatar_image {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+    margin: 0 4px;
+}
+
+.usercard_v10 .nav_dot_school_image.selected,
+.usercard_v10 .nav_dot_avatar_image.selected {
+    opacity: 1;
+}
+
 .link_to_profile {
     color: #000;
     text-decoration: none;

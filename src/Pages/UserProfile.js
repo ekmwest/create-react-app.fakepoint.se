@@ -8,10 +8,17 @@ function UserProfile() {
     const [userCard1Open, setUserCard1Open] = useState(false);
     const [userCard2Open, setUserCard2Open] = useState(false);
     const [userCardFlip, setUserCardFlip] = useState(false);
+    const [userCardImageSlideRight, setUserCardImageSlideRight] = useState(false);
+    const [userCardImageSlideLeft, setUserCardImageSlideLeft] = useState(false);
     const userCard1CssClass = () => userCard1Open ? `${styles.usercard_1}  ${styles.open}` : `${styles.usercard_1}`;
     const userCard2CssClass = () => userCard2Open ? `${styles.usercard_2}  ${styles.open}` : `${styles.usercard_2}`;
     const overlayCssClass = () => userCard1Open ? `${styles.overlay}  ${styles.open}` : `${styles.overlay}`;
     const userCardFlipCssClass = () => userCardFlip ? `${styles.usercard_v5}  ${styles.flip}` : `${styles.usercard_v5}`;
+    const userCardImageSlideRightCssClass = () => userCardImageSlideRight ? `${styles.usercard_v10}  ${styles.slide_right}` : `${styles.usercard_v10}`;   
+    const userCardImageSlideLeftCssClass = () => userCardImageSlideLeft ? `${styles.usercard_v10}  ${styles.slide_left}` : `${styles.usercard_v10}`;   
+    const userCardNavDotAvatarImageCssClass = () => userCardImageSlideLeft ? `${styles.nav_dot_avatar_image}  ${styles.selected}` : `${styles.nav_dot_avatar_image}`;
+    const userCardNavDotSchoolImageCssClass = () => userCardImageSlideRight ? `${styles.nav_dot_school_image}  ${styles.selected}` : `${styles.nav_dot_school_image}`;
+
 
     return (
         <>
@@ -42,11 +49,10 @@ function UserProfile() {
                         </div>
                         <div className={styles.note}>Click to display user modal</div>
                     </div>
-
                     <div className={styles.user_2} onClick={() => setUserCard2Open(!userCard2Open)}>
                         <div className={styles.header}>
                             <div className={styles.avatar}>
-                                <img src="/icons/user-3.jpeg" alt="User"></img>
+                                <img src="/icons/user-a.jpg" alt="User"></img>
                             </div>
                             <div className={styles.name}>
                                 Hasse H
@@ -55,7 +61,7 @@ function UserProfile() {
                         <div className={userCard2CssClass()}>
                             <div className={styles.close} onClick={() => setUserCard2Open(!userCard2Open)}> <img src="/icons/close.png" alt="close"></img></div>
                             <div className={styles.avatar_big}>
-                                <img src="/icons/user-3.jpeg" alt="User"></img>
+                                <img src="/icons/user-a.jpg" alt="User"></img>
                             </div>
                             <div className={styles.details}>
                                 <div className={styles.full_name}>Hasse Hannson</div>
@@ -68,7 +74,7 @@ function UserProfile() {
                     <div className={styles.user}>
                         <div className={styles.header}>
                             <div className={styles.avatar} >
-                                <img src="/icons/user-1.jpeg" alt="User"></img>
+                                <img src="/icons/user-c.jpg" alt="User"></img>
                             </div>
                             <div className={styles.name} >
                                 Sandy R
@@ -76,7 +82,7 @@ function UserProfile() {
                         </div>
                         <div className={styles.usercard}>
                             <div className={styles.avatar_big}>
-                                <img src="/icons/user-1.jpeg" alt="User"></img>
+                                <img src="/icons/user-c.jpg" alt="User"></img>
                             </div>
                             <div className={styles.details}>
                                 <div className={styles.full_name}>Sandy Richard</div>
@@ -86,42 +92,13 @@ function UserProfile() {
                         </div>
                         <div className={styles.note}>Hover to display user card</div>
                     </div>
-
-                    {/* <div className={styles.user_3}>
-                        <div className={styles.header}>
-                            <div className={styles.avatar} >
-                                <img src="/icons/user-3.jpeg" alt="User"></img>
-                            </div>
-                            <div className={styles.name} >
-                                Hasse H
-                            </div>
-                        </div>
-                        <div className={userCardFlipCssClass()}>
-                            <div className={styles.front}>
-                                <div className={styles.avatar_big}>
-                                    <img src="/icons/user-3.jpeg" alt="User"></img>
-                                </div>
-                                <div className={styles.full_name}>Hasse Hannson</div>
-                                <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                                <div className={styles.meta}>08759789</div>
-                                <div className={styles.meta} onClick={() => setUserCardFlip(!userCardFlip)}>See Id card</div>
-                            </div>
-                            <div className={styles.back}>
-                                <div className={styles.back_info}>
-                                    <p>This is my id card</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={styles.note}>Flip to see ID card</div>
-                    </div> */}
-
                 </div>
             </div>
             <div className={styles.card_design}>
                 <div className={styles.cards}>
                     <div className={styles.usercard_v1}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-a.jpg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.full_name}>Hasse Hannson</div>
@@ -132,7 +109,7 @@ function UserProfile() {
                     </div>
                     <div className={styles.usercard_v2}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-a.jpg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.full_name}>Hasse Hannson</div>
@@ -143,7 +120,7 @@ function UserProfile() {
                     </div>
                     <div className={styles.usercard_v4}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-a.jpg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.full_name}>Hasse Hannson</div>
@@ -180,7 +157,7 @@ function UserProfile() {
                     </div>
                     <div className={styles.usercard_v3}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-a.jpg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.full_name}>Hasse Hannson</div>
@@ -190,7 +167,7 @@ function UserProfile() {
                     </div>
                     <div className={styles.usercard_v7}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-a.jpg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.label}>Name</div>
@@ -203,12 +180,12 @@ function UserProfile() {
                     </div>
                 </div>s
                 <div className={styles.cards}>
-                   
+
                     <div className={userCardFlipCssClass()}>
                         <div className={styles.card_content}>
                             <div className={styles.front}>
                                 <div className={styles.avatar_image}>
-                                    <img src="/icons/user-3.jpeg" alt="User"></img>
+                                    <img src="/icons/user-a.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.details}>
                                     <div className={styles.full_name}>Hasse Hannson</div>
@@ -219,7 +196,7 @@ function UserProfile() {
                             </div>
                             <div className={styles.back}>
                                 <div className={styles.avatar_image}>
-                                    <img src="/icons/user-7.jpeg" alt="User"></img>
+                                    <img src="/icons/user-b.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.details}>
                                     <   div className={styles.label}>Name</div>
@@ -233,7 +210,7 @@ function UserProfile() {
                     </div>
                     <div className={styles.usercard_v8}>
                         <div className={styles.avatar_image}>
-                            <img src="/icons/user-3.jpeg" alt="User"></img>
+                            <img src="/icons/user-a.jpg" alt="User"></img>
                         </div>
                         <div className={styles.details}>
                             <div className={styles.full_name}>Hasse Hannson</div>
@@ -244,7 +221,7 @@ function UserProfile() {
                         <div className={styles.card_overlay}>
                             <div className={styles.id_card}>
                                 <div className={styles.school_photo}>
-                                    <img src="/icons/user-7.jpeg" alt="User"></img>
+                                    <img src="/icons/user-b.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.details}>
                                     <   div className={styles.label}>Name</div>
@@ -260,7 +237,7 @@ function UserProfile() {
                     <div className={styles.usercard_v9}>
                         <div className={styles.card_info}>
                             <div className={styles.avatar_image}>
-                                <img src="/icons/user-3.jpeg" alt="User"></img>
+                                <img src="/icons/user-a.jpg" alt="User"></img>
                             </div>
                             <div className={styles.details}>
                                 <div className={styles.full_name}>Hasse Hannson</div>
@@ -275,7 +252,7 @@ function UserProfile() {
                                     ID card
                                 </div>
                                 <div className={styles.school_photo}>
-                                    <img src="/icons/user-7.jpeg" alt="User"></img>
+                                    <img src="/icons/user-b.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.details}>
                                     <div className={styles.label}>Name</div>
@@ -286,6 +263,28 @@ function UserProfile() {
                             </div>
                         </div>
                     </div>
+                    <div className={styles.usercard_v10}>
+                        <div className={styles.user_images}>
+                            <div className={styles.avatar_image}>
+                                <img src="/icons/user-a.jpg" alt="User"></img>
+                            </div>
+                            <div className={styles.school_image}>
+                                <img src="/icons/user-b.jpg" alt="User"></img>
+                            </div>
+                        </div>
+                        {/* <div className={styles.nav_dots}>
+                            <div className={userCardNavDotAvatarImageCssClass()} onClick={() => setUserCardImageSlideLeft(!userCardImageSlideLeft)}></div>
+                            <div className={userCardNavDotSchoolImageCssClass()} onClick={() => setUserCardImageSlideRight(!userCardImageSlideRight)}></div>
+                        </div> */}
+                        <div className={styles.details}>
+                            <div className={styles.full_name}>Hasse Hannson</div>
+                            <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
+                            <div className={styles.meta}>08759789</div>
+                            <div className={styles.meta}>Hover to see gallery</div>
+                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </>

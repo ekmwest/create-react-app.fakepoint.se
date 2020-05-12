@@ -39,7 +39,7 @@ function ProfilePage() {
                     </div>
                 </div>
                 <div className={styles.save}>
-                    <button className={[css.button, css.PRIMARY].join(' ')}>Save</button>
+                    <button className={[css.button, css.PRIMARY, css.BLOCK].join(' ')}>Save</button>
                 </div>
             </div>
         </>
