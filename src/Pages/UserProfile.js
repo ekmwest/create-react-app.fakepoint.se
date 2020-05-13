@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from '../Components/Header/Header';
 import styles from './UserProfile.module.css';
 import { Link } from 'react-router-dom';
@@ -273,7 +273,8 @@ function UserProfile() {
                             <div className={styles.full_name}>Hasse Hannson</div>
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
-                            <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
+                            <Link className={styles.link_to_profile} to={`/profile`}>Gå till profil</Link>
+                            <Link className={styles.link_to_profile} to={`/profile`}>Ändra roll</Link>
                         </div>
                     </div>
 

@@ -257,6 +257,11 @@
     background-color: #ddd;
 }
 
+:global(.is-mobile) .cards {
+    padding: 12px;
+}
+
+
 .usercard_v1, .usercard_v2, .usercard_v3, .usercard_v4 {
     width: 250px;
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
@@ -672,7 +677,7 @@
     text-decoration: none;
     border: 1px solid #ddd;
     display: block;
-    margin-top: 16px;
+    margin-top: 8px;
     padding: 8px;
     border-radius: 6px;
     text-align: center;
