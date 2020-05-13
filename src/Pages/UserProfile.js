@@ -133,7 +133,7 @@ function UserProfile() {
                     <div className={styles.usercard_v6}>
                         <div className={styles.profile}>
                             <div className={styles.avatar_image}>
-                                <img src="/icons/user-3.jpeg" alt="User"></img>
+                                <img src="/icons/user-a.jpg" alt="User"></img>
                             </div>
                             <div className={styles.details}>
                                 <div className={styles.full_name}>Hasse Hannson</div>
@@ -145,7 +145,7 @@ function UserProfile() {
                         <div className={styles.id_title}>ID card</div>
                         <div className={styles.id_card}>
                             <div className={styles.avatar_image}>
-                                <img src="/icons/user-7.jpeg" alt="User"></img>
+                                <img src="/icons/user-b.jpg" alt="User"></img>
                             </div>
                             <div className={styles.details}>
                                 <   div className={styles.label}>Name</div>
