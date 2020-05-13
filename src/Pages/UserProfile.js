@@ -8,16 +8,13 @@ function UserProfile() {
     const [userCard1Open, setUserCard1Open] = useState(false);
     const [userCard2Open, setUserCard2Open] = useState(false);
     const [userCardFlip, setUserCardFlip] = useState(false);
-    const [userCardImageSlideRight, setUserCardImageSlideRight] = useState(false);
-    const [userCardImageSlideLeft, setUserCardImageSlideLeft] = useState(false);
+    const [userCardImageSlide, setUserCardImageSlide] = useState(false);
     const userCard1CssClass = () => userCard1Open ? `${styles.usercard_1}  ${styles.open}` : `${styles.usercard_1}`;
     const userCard2CssClass = () => userCard2Open ? `${styles.usercard_2}  ${styles.open}` : `${styles.usercard_2}`;
     const overlayCssClass = () => userCard1Open ? `${styles.overlay}  ${styles.open}` : `${styles.overlay}`;
     const userCardFlipCssClass = () => userCardFlip ? `${styles.usercard_v5}  ${styles.flip}` : `${styles.usercard_v5}`;
-    const userCardImageSlideRightCssClass = () => userCardImageSlideRight ? `${styles.usercard_v10}  ${styles.slide_right}` : `${styles.usercard_v10}`;   
-    const userCardImageSlideLeftCssClass = () => userCardImageSlideLeft ? `${styles.usercard_v10}  ${styles.slide_left}` : `${styles.usercard_v10}`;   
-    const userCardNavDotAvatarImageCssClass = () => userCardImageSlideLeft ? `${styles.nav_dot_avatar_image}  ${styles.selected}` : `${styles.nav_dot_avatar_image}`;
-    const userCardNavDotSchoolImageCssClass = () => userCardImageSlideRight ? `${styles.nav_dot_school_image}  ${styles.selected}` : `${styles.nav_dot_school_image}`;
+    const userCardImageSlideCssClass = () => userCardImageSlide ? `${styles.usercard_v10}  ${styles.slide}` : `${styles.usercard_v10}`;   
+  
 
 
     return (
@@ -263,24 +260,19 @@ function UserProfile() {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.usercard_v10}>
+                    <div className={userCardImageSlideCssClass()}>
                         <div className={styles.user_images}>
-                            <div className={styles.avatar_image}>
+                            <div className={styles.avatar_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}>
                                 <img src="/icons/user-a.jpg" alt="User"></img>
                             </div>
-                            <div className={styles.school_image}>
+                            <div className={styles.school_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}>
                                 <img src="/icons/user-b.jpg" alt="User"></img>
                             </div>
                         </div>
-                        {/* <div className={styles.nav_dots}>
-                            <div className={userCardNavDotAvatarImageCssClass()} onClick={() => setUserCardImageSlideLeft(!userCardImageSlideLeft)}></div>
-                            <div className={userCardNavDotSchoolImageCssClass()} onClick={() => setUserCardImageSlideRight(!userCardImageSlideRight)}></div>
-                        </div> */}
                         <div className={styles.details}>
                             <div className={styles.full_name}>Hasse Hannson</div>
                             <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                             <div className={styles.meta}>08759789</div>
-                            <div className={styles.meta}>Hover to see gallery</div>
                             <Link className={styles.link_to_profile} to={`/profile`}>View profile</Link>
                         </div>
                     </div>
