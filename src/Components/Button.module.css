@@ -31,17 +31,13 @@
     border: 0;
 }
 
-/* .button:hover {
-    background-color: #378CDE;
-} */
-
 .button:active {
     background-image: linear-gradient(rgba(0,0,0,0.06), rgba(0,0,0,0) 60%, rgba(0,0,0,0));
 }
 
-
 .button.BLOCK {
     width:100%;
+    margin: 0;
     display: block;
 }
 
@@ -49,4 +45,8 @@
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0));
 }
 
-
+.button.BIG {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}

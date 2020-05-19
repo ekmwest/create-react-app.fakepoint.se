@@ -12,6 +12,15 @@ function ProfilePage() {
                 <div className={styles.profile_image}>
                     <img src="/icons/user-3.jpeg" alt="User"></img>
                 </div>
+                <div className={styles.profile_image_nav_container}>
+                    <div className={styles.profile_image_nav}>
+                        <a className={styles.SELECTED}>Profilbild</a>
+                        <a>Skolfoto</a>
+                    </div>
+                </div>
+                <div className={styles.profile_image_explainer}>
+                    * Endast lärare och skola kan se ditt skolfoto
+                </div>
                 <div className={styles.attributes}>
                     <div className={styles.attribute}>
                         <div className={styles.attribute_name}>Name</div>
@@ -39,7 +48,7 @@ function ProfilePage() {
                     </div>
                 </div>
                 <div className={styles.save}>
-                    <button className={[css.button, css.PRIMARY, css.BLOCK].join(' ')}>Save</button>
+                    <button className={[css.button, css.PRIMARY, css.BLOCK, css.BIG].join(' ')}>Save</button>
                 </div>
             </div>
         </>
