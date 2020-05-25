@@ -1,0 +1,80 @@
+.add_question {
+    position: relative;
+}
+
+.content {
+    background-color: #fff;
+    padding: 16px 98px;
+    position: fixed;
+    bottom: 0;
+    width: 572px;
+    z-index: 30;
+    display: flex;
+    align-items: center;    
+    /* border-top: 1px solid #ddd; */
+}
+
+:global(.is-mobile) .content {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    flex:1;
+    margin-right: 4px;
+    position: relative;
+    z-idex:100;
+}
+
+.message_textarea {
+    flex: 1;
+    margin-left: 8px;
+}
+
+.content_input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 40px;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    height: 48px;
+    border:1px solid #ccc;
+    transition: height .4s ease;
+}
+
+.message_types {
+    display: flex;
+    position: absolute;
+    right:110px;
+}
+
+.message_type {
+    border-radius: 50%;
+    width:26px;
+    height:26px;
+    border: 1px solid #ccc;
+    margin-left: 4px;
+    padding: 2px;
+}
+
+.message_type img {
+    width:100%;
+    height:100%;
+}
+
+.message_options {
+    display: none;
+    margin-top: 16px;
+}
+
+.open .message_options {
+    text-align: right;
+    display: block;
+}

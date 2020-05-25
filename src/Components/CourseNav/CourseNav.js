@@ -33,6 +33,13 @@ function CourseNav({ id }) {
                         Artiklar
                     </NavLink>
                 </li>
+                <li>
+                    <NavLink
+                        to={`/courses/${id}/questions`}
+                        activeClassName={styles.selected}>
+                        Questions
+                    </NavLink>
+                </li>
             </ul>
         </div>
     );

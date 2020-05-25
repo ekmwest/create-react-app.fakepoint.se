@@ -1,0 +1,41 @@
+.messages_container {
+
+}
+
+.messages {
+    padding:32px 0 80px;   
+    background-color: #fff;
+}
+
+:global(.is-mobile) .messages {
+    padding-bottom: 36px;
+}
+
+.unread_message_indicator {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.unread_message_indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #e01e5a;
+    border-bottom: 1px solid #CBEEFA;
+    z-index: -1;
+}
+
+.unread_message_indicator_label {
+    color: #e01e5a;
+    color: #000;
+    background-color: #CBEEFA;
+    width: 80px;
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+}
