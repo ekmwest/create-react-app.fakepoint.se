@@ -7,6 +7,7 @@ import css from './../Button.module.css';
 function AddPost({ saveHandler, users }) {
     const [values, setValues, changeHandler] = useForm({ content: "" });
     const [textareaOpen, setTextareaOpen] = useState(false);
+    const [postTypeSelect, setPostTypeSelected] = useState(false);
     const [emptyPostError, setEmptyPostError] = useState(false);
 
     const onSaveHandler = event => {
@@ -42,12 +43,22 @@ function AddPost({ saveHandler, users }) {
             <div className={styles.post_content}>
                 <User user={users.find(user => user.id === 4)} hideUserName="true" />
                 <div className={styles.post_textarea}>
-                    <textarea placeholder="Skriv nyhet..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} />
+                    <textarea placeholder="Add..." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} />
                 </div>
             </div>
             <div className={styles.post_options}>
-                <button className={css.button} onClick={onCancelHandler}>Avbryt</button>
-                <button className={[css.button, css.PRIMARY].join(' ')} onClick={onSaveHandler}>Spara</button>
+                <div className={styles.post_types}>
+                    <div className={[styles.post_type, styles.selected].join(' ')}>
+                        Question
+                    </div>
+                    <div className={styles.post_type}>
+                        Announcement
+                    </div>
+                </div>
+                <div>
+                    <button className={css.button} onClick={onCancelHandler}>Avbryt</button>
+                    <button className={[css.button, css.PRIMARY].join(' ')} onClick={onSaveHandler}>Spara</button>
+                </div>
             </div>
         </div>
     );
