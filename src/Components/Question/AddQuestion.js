@@ -43,12 +43,12 @@ function AddQuestion({ saveHandler, users }) {
                 <div className={styles.message}>
                     <User user={users.find(user => user.id === 4)} hideUserName="true" />
                     <div className={styles.message_textarea}>
-                        <textarea placeholder="Add.." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} onKeyDown={keyDownHandler} />
+                        <textarea placeholder="Skriv inlägg.." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} onKeyDown={keyDownHandler} />
                     </div>
                 </div>
                 <div className={styles.message_types}>
                     <div className={styles.message_type}>
-                        <img src="/icons/question-mark.png" title="Add a question" width="18" height="18" className={styles.question} ></img>
+                        <img src="/icons/question-mark.png" title="Add a question" width="20" height="18" className={styles.question} ></img>
                     </div>
                     <div className={styles.message_type}>
                         <img src="/icons/megaphone.png" title="Add an announcement" width="22" height="22"></img>
