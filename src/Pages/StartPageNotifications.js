@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../Components/Header/Header';
 import styles from './StartPageNotifications.module.css';
-import Messages from '../Components/Messages/Messages';
-import { Link } from 'react-router-dom';
 
 function StartPageNotifications() {
 
@@ -14,7 +12,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/bell.png" className={styles.notification_bell}></img>
+                                <img src="/icons/bell.png" className={styles.notification_bell} alt="notification"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Du behöver godkänna en LIA-plats
@@ -27,7 +25,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/bell.png" className={styles.notification_bell}></img>
+                                <img src="/icons/bell.png" className={styles.notification_bell} alt="notification"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Kursutvärdering Att arbeta i näringslivet
@@ -40,7 +38,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/bell.png" className={styles.notification_bell}></img>
+                                <img src="/icons/bell.png" className={styles.notification_bell} alt="notification"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Kursutvärdering Teknikkurs 1
@@ -54,7 +52,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user.jpg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user.jpg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Stig Rig and 20 others have commented on your post
@@ -70,7 +68,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Maria Mania has added a new post
@@ -86,7 +84,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-4.jpeg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user-4.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Sara Hansson has commented on your post
@@ -99,7 +97,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Maria Mania has added a new post
@@ -112,7 +110,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-4.jpeg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user-4.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Sara Hansson has commented on your post
@@ -125,7 +123,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user.jpg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user.jpg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Stig Rig and 2 others have commented on your post
@@ -138,7 +136,7 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user.jpg" className={styles.notification_avatar}></img>
+                                <img src="/icons/user.jpg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
                                 Stig Rig has added a new post

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import User from '../User/User';
 import styles from './Question.module.css';
 import fmt from '../../Code/fmt';
@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Question({ post, users, deleteHandler }) {
 
-    const comments = () => post.comments.length > 0 ? post.comments.length == 1 ? post.comments.length + " svar" : post.comments.length + " svar" : "";
-    const [menuOpen, setMenuOpen] = useState(false);
+    const comments = () => post.comments.length > 0 ? post.comments.length === 1 ? post.comments.length + " svar" : post.comments.length + " svar" : "";
 
     return (
         <div className={styles.message}>

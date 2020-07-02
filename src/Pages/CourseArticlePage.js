@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Article from '../Components/Article/Article';
 import CoursePageLayout from '../Layouts/CoursePageLayout';
-import ThreadMessage from '../Components/Thread/ThreadMessage';
-import AddThreadMessage from '../Components/Thread/AddThreadMessage';
 import { Link } from 'react-router-dom';
 import styles from './CourseMessagePage.module.css';
 import api from '../Code/api';
@@ -19,10 +17,6 @@ function CourseArticlePage() {
 
     const loadPost = () => {
         api.get(`/posts/${articleId}?_expand=course&_embed=comments`, setPost);
-    }
-
-    const saveComment = (comment) => {
-        api.post('/comments', { content: comment.content, user_id: 7, post_id: comment.postId }, loadPost);
     }
 
     useEffect(loadPost, [articleId]);

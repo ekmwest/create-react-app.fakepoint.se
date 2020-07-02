@@ -30,7 +30,7 @@
     align-items: center;
 }
 
-.profile_image_nav a {
+.profile_image_nav div {
     flex: 0 0 auto;
     font-size: 13px;
     width: 52px;
@@ -42,7 +42,7 @@
     border: 1px solid #777;
 }
 
-.profile_image_nav a.SELECTED {
+.profile_image_nav div.SELECTED {
     background-color: #777;
     color: #fff;
 }

@@ -5,7 +5,7 @@ import { SidebarContext } from '../../Contexts/SidebarContext';
 
 function CourseNav({ id }) {
 
-    const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
+    const { sidebarOpen } = useContext(SidebarContext);
 
     const cssClass = () => sidebarOpen ? `${styles.course_nav} ${styles.sidebar_open}` : `${styles.course_nav}`;
 

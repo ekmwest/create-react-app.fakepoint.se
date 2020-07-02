@@ -14,8 +14,8 @@ function ProfilePage() {
                 </div>
                 <div className={styles.profile_image_nav_container}>
                     <div className={styles.profile_image_nav}>
-                        <a className={styles.SELECTED}>Profilbild</a>
-                        <a>Skolfoto</a>
+                        <div className={styles.SELECTED}>Profilbild</div>
+                        <div>Skolfoto</div>
                     </div>
                 </div>
                 <div className={styles.profile_image_explainer}>

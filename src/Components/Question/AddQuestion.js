@@ -48,10 +48,10 @@ function AddQuestion({ saveHandler, users }) {
                 </div>
                 <div className={styles.message_types}>
                     <div className={styles.message_type}>
-                        <img src="/icons/question-mark.png" title="Add a question" width="20" height="18" className={styles.question} ></img>
+                        <img src="/icons/question-mark.png" title="Add a question" alt="question" width="20" height="18" className={styles.question} ></img>
                     </div>
                     <div className={styles.message_type}>
-                        <img src="/icons/megaphone.png" title="Add an announcement" width="22" height="22"></img>
+                        <img src="/icons/megaphone.png" title="Add an announcement" alt="megaphone" width="22" height="22"></img>
                     </div>
                 </div>
             </div>

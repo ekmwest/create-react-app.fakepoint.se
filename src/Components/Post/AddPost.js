@@ -7,7 +7,6 @@ import css from './../Button.module.css';
 function AddPost({ saveHandler, users }) {
     const [values, setValues, changeHandler] = useForm({ content: "" });
     const [textareaOpen, setTextareaOpen] = useState(false);
-    const [postTypeSelect, setPostTypeSelected] = useState(false);
     const [emptyPostError, setEmptyPostError] = useState(false);
 
     const onSaveHandler = event => {

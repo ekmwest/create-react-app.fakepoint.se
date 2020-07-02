@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import User from '../User/User';
 import styles from './Message.module.css';
 import fmt from '../../Code/fmt';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Message({ post, users, deleteHandler }) {
 
-    const comments = () => post.comments.length > 0 ? post.comments.length == 1 ? post.comments.length + " kommentar" : post.comments.length + " kommentarer" : "";
+    const comments = () => post.comments.length > 0 ? post.comments.length === 1 ? post.comments.length + " kommentar" : post.comments.length + " kommentarer" : "";
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
@@ -16,7 +16,7 @@ function Message({ post, users, deleteHandler }) {
                 <div className={styles.meta}>
                     <div>{fmt.date(post.created_at)}</div>
                     <div className={menuOpen ? `${styles.menu} ${styles.open}` : `${styles.menu}`} >
-                        <img src="/icons/ellipsis.png" className={styles.menu_icon} onClick={() => setMenuOpen(!menuOpen)}></img>
+                        <img src="/icons/ellipsis.png" className={styles.menu_icon}  alt="more" onClick={() => setMenuOpen(!menuOpen)}></img>
                         <div className={styles.menu_items}>
                             <div className={styles.menu_item}> <Link to={`/courses/${post.course.id}/posts/${post.id}`} >Reply</Link></div>
                             <div className={styles.menu_item} onClick={deleteHandler}>Delete</div>

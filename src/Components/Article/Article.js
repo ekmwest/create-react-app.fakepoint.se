@@ -1,12 +1,10 @@
 import React from 'react';
-import Comment from '../Comment/Comment';
 import User from '../User/User';
 import styles from './Article.module.css';
 import AddThreadMessage from '../Thread/AddThreadMessage';
 import ThreadMessage from '../Thread/ThreadMessage';
 import fmt from '../../Code/fmt';
 import { Link } from 'react-router-dom';
-import linkButtonStyles from '../LinkButton.module.css'
 
 function Article({ post, users, deleteHandler, saveCommentHandler }) {
     return (

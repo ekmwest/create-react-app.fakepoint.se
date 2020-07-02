@@ -1,0 +1,708 @@
+.content {
+    max-width: 800px;
+    margin: 100px auto 8px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.content_1 {
+    max-width: 800px;
+    margin: 8px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+h3 {
+    max-width: 800px;
+    margin: 32px auto 0px;
+    font-weight: 600;
+}
+
+.overlay {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 100;
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.user {
+    position: relative;
+    padding: 16px;
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.user_1 {
+    border-bottom: 1px solid #ddd;
+    padding: 16px;
+}
+
+.user_2 {
+    padding: 16px;
+    position: relative;
+}
+
+.user_3 {
+    padding: 16px;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.avatar_big {
+    width: 140px;
+    height: 140px;
+    width: 100%;
+    height: 100%;
+}
+
+.avatar_big img {
+    width: 100%;
+    height: 100%;
+}
+
+.name {
+    margin: 0 16px;
+    font-weight: 600;
+}
+
+.usercard {
+    position: absolute;
+    top: 48px;
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#f8f8f8, #fff);
+    z-index: 10000;
+    /* padding: 16px; */
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-in-out 1s, visibility 2s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out 1s, visibility 2s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out 1s, visibility 2s ease-in-out;
+}
+
+.user:hover .usercard {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s ease-in-out 1s, visibility 1s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out 1s, visibility 1s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out 1s, visibility 1s ease-in-out;
+}
+
+.usercard_1 {
+    position: absolute;
+    top: 48px;
+    width: 250px;
+    top: 50%;
+    /*position Y halfway in*/
+    left: 50%;
+    /*position X halfway in*/
+    transform: translate(-50%, -50%);
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#f8f8f8, #fff);
+    z-index: 100;
+    /* padding: 16px; */
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: none;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.usercard_1.open {
+    display: block;
+    transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out, visibility .4s ease-in-out;
+}
+
+.usercard_2 {
+    position: absolute;
+    top: 48px;
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(#f8f8f8, #fff);
+    z-index: 100;
+    border-radius: 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: none;
+    transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out .5s;
+    -moz-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out .5s;
+    -webkit-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out .5s;
+}
+
+.usercard_2.open {
+    display: block;
+    transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out .5s;
+    -moz-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out .5s;
+    -webkit-transition: opacity .5s ease-in-out 1s, visibility .4s ease-in-out .5s;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    z-index:100;
+}
+
+.close img {
+    width: 100%;
+    height: 100%;
+}
+
+.note {
+    font-size: 13px;
+    margin-left: 56px;
+    margin-top: -20px;
+}
+
+.full_name {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 4px 8px;
+}
+
+.details {
+    color: #000;
+    padding: 12px;
+}
+
+.meta {
+    padding: 0 8px 2px;
+    font-size: 14px;
+    color: #868686;
+}
+
+.usercard_3 {
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    z-index: 100;
+    perspective: 600px;
+    display: none;
+    ;
+}
+
+.usercard_3 .front, .usercard_4 .back {
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.usercard_3 .avatar_big {
+    height: 70%;
+}
+
+.usercard_3 .front {
+    transform: rotateY(0deg);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.usercard_3 .back {
+    transform: rotateY(180deg);
+    display: table;
+    z-index: 200;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 50px;
+}
+
+.usercard_3.flip .front {
+    transform: rotateY(180deg);
+}
+
+.usercard_3.flip .back {
+    transform: rotateY(360deg);
+}
+
+.card_design {    
+    background-color: #ddd;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    margin: 8px auto;
+    grid-column-gap: 150px;
+    max-width: 800px;
+}
+
+:global(.is-mobile) .cards {
+    padding: 12px;
+}
+
+
+.usercard_v1, .usercard_v2, .usercard_v3, .usercard_v4 {
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 48px 0;
+    overflow: hidden;
+}
+
+.avatar_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v1 {
+    text-align: center;
+}
+
+.usercard_v1 .avatar_image {
+    width: 150px;
+    height: 150px;
+    margin: 32px auto 8px;
+}
+
+.usercard_v1 .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v3 {
+    width: 320px;
+    height:100px;
+    display: flex;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.usercard_v3 .avatar_image {
+    width: 100px;
+    height: 100px;
+}
+
+.usercard_v3 .avatar_image img {
+    border-radius: 4px;
+}
+
+.usercard_v4 {
+    position: relative;
+    height: 280px;
+    width: 280px;
+}
+
+.usercard_v4 .avatar_image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: .5s;
+}
+
+.usercard_v4 .avatar_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v4 .details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    height: 72px;
+    opacity: 0.5;
+    z-index: 100;
+    padding: 4px;
+}
+
+.usercard_v4 .meta {
+    color: #fff;
+}
+
+.usercard_v5 {
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 454px;
+    perspective: 500px;
+    margin: 48px 0;
+}
+
+.card_content {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.usercard_v5.flip .card_content {
+    transform: rotateY( 180deg);
+    transition: transform 1s;
+}
+
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: white;
+    backface-visibility: hidden;
+}
+
+.back {
+    background: #000;
+    color: white;
+    transform: rotateY( 180deg);
+}
+
+.back .full_name,
+.back .meta {
+    color: #fff;
+    padding: 0 0 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+.usercard_v5 .meta {
+    cursor: pointer;
+}
+
+.usercard_v6 {
+    width: 350px;
+    height: 320px;
+    position: relative;
+    margin: 48px 0;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.profile .details, .id_card .details {
+    padding: 0;
+}
+
+.usercard_v6 .id_card {
+    display: flex;
+    padding: 16px;
+    background-color: #f2f2f2;
+    /* transform: translateY(124px);   */
+    transition: all 0.7s;
+}
+
+.id_title {
+    padding: 8px 16px 0;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.usercard_v6:hover .id_card {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.7s;
+}
+
+.id_card .avatar_image {
+    margin-right: 10px;
+}
+
+.id_card .avatar_image img {
+    border-radius: 4px;
+}
+
+.usercard_v6 .avatar_image {
+    width: 100px;
+    height: 100px;
+}
+
+.profile .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v7 {
+    width: 400px;
+    height: 160px;
+    display: flex;
+    margin: 48px 0;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+.usercard_v7 .avatar_image {
+    width: 160px;
+    height: 160px;
+    margin-right: 16px;
+}
+
+.usercard_v7 .avatar_image img {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: ;
+}
+
+.usercard_v7 .details {
+    padding: 4px 0 0;
+}
+
+.label {
+    color: #868686;
+}
+
+.usercard_v7 .meta, .id_card .meta, .usercard_v7 .full_name, .id_card .full_name {
+    padding: 0 0 6px 0;
+    color: #000;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.usercard_v8 {
+    width: 250px;
+    height: 360px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 48px 0;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+}
+
+.card_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    opacity: 0;
+    transition: all 0.5s;
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.usercard_v8 .avatar_image {
+    width: 120px;
+    height: 120px;
+    margin: 16px;
+}
+
+.usercard_v8 .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v8 .school_photo  {
+    width:100%;
+    height:100%;
+}
+
+.usercard_v8 .school_photo img {
+    border-radius:0;
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v8 .details{
+    padding: 0 16px;
+    font-size: 14px;
+}
+
+.usercard_v8 .id_card {
+    transform: translateY(30px);
+    transition: all 0.7s;
+}
+
+.usercard_v8:hover .card_overlay {
+    opacity: 1;
+}
+
+.usercard_v8:hover .card_overlay .id_card {
+    transform: translateY(0px);
+}
+
+.usercard_v9 {
+    width: 250px;
+    text-align: center;
+    height: 360px;
+    margin: 48px 0;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.usercard_v9 .card_info {
+    height: 292px;
+    color: #000;
+}
+
+.usercard_v9 .card_overlay {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    text-align: left;
+    transition: all 0.5s;
+    border-radius: 0;
+    opacity: 1;
+    transition: 0.4s 0.15s cubic-bezier(0.17, 0.67, 0.5, 1.03);
+}
+
+.id_card_title {
+    padding: 8px 0;
+    text-align: center;
+    background-color: #888;
+    color: #fff;
+}
+
+.usercard_v9 .avatar_image {
+    width: 120px;
+    height: 120px;
+    margin: 32px auto;
+}
+
+.usercard_v9 .avatar_image img {
+    border-radius: 50%;
+}
+
+.usercard_v9 .school_photo  {
+    width:100px;
+    height:100px;
+    margin: 16px;
+}
+
+.usercard_v9 .school_photo img {
+    border-radius:4px;
+    width: 100%;
+    height: 100%;
+}
+
+.usercard_v9 .details{
+    padding:0 16px;
+    font-size: 14px;
+}
+
+.usercard_v9 .card_overlay:hover {
+    transform: translateY(-324px);
+}
+
+.usercard_v10 {
+    width: 250px;
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;   
+    position: absolute;
+    top: 58px;
+    display: none;
+    z-index: 100;;
+}
+
+.user_2.open .usercard_v10 {
+    display: block;
+}
+
+.usercard_v10 .user_images {
+    display: inline-block;
+    width:250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.usercard_v10 .avatar_image,
+.usercard_v10 .school_image {
+    width:250px;
+    height: 250px;   
+    transition: all .3s ease;
+}
+
+.usercard_v10 .school_image {
+    transform: translate(250px, -250px);
+}
+
+.usercard_v10 .avatar_image img,
+.usercard_v10 .school_image img {
+    width:100%;
+    height: 100%;
+}
+
+.usercard_v10.slide .school_image {
+    transform: translate(0, -250px);   
+    transition: all .3s ease;
+}
+
+.usercard_v10.slide .avatar_image {
+    transform: translate(-250px,0); 
+    transition: all .3s ease;
+}
+
+.link_to_profile {
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    display: block;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+}

@@ -21,21 +21,21 @@ function StartPage() {
                 <h2>Att göra</h2>
                 <div className={styles.notification_list}>
                     <div className={styles.notification}>
-                        <img src="/icons/bell.png" className={styles.notification_icon}></img>
+                        <img src="/icons/bell.png" className={styles.notification_icon} alt="notification"></img>
 
                         <div className={styles.notification_content}>
                             Du behöver godkänna en LIA-plats
                     </div>
                     </div>
                     <div className={styles.notification}>
-                        <img src="/icons/bell.png" className={styles.notification_icon}></img>
+                        <img src="/icons/bell.png" className={styles.notification_icon} alt="notification"></img>
                         <div className={styles.notification_content}>
 
                             Kursutvärdering Att arbeta i näringslivet
                     </div>
                     </div>
                     <div className={styles.notification}>
-                        <img src="/icons/bell.png" className={styles.notification_icon}></img>
+                        <img src="/icons/bell.png" className={styles.notification_icon} alt="notification"></img>
                         <div className={styles.notification_content}>
                             Kursutvärdering Presentationsteknik
                     </div>
