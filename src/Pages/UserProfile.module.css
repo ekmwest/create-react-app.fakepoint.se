@@ -1,6 +1,6 @@
 .content {
     max-width: 800px;
-    margin: 100px auto 8px;
+    margin: 8px auto;
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #ddd;
@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+h3 {
+    max-width: 800px;
+    margin: 100px auto 8px;
+}
 
 .user {
     position: relative;

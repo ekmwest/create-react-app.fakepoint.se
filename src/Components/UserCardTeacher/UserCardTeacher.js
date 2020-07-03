@@ -1,8 +1,8 @@
 import React,  { useState }  from 'react';
-import styles from './UserCardTeacherView.module.css';
+import styles from './UserCardTeacher.module.css';
 import { Link } from 'react-router-dom';
 
-function UserCardTeacherView({ open, handleClose }) {
+function UserCardTeacher({ open, handleClose }) {
 
     const userCardCssClass = () => open ? `${styles.usercard}  ${styles.open}` : `${styles.usercard}`;
     const [userCardImageSlide, setUserCardImageSlide] = useState(false);
@@ -26,10 +26,10 @@ function UserCardTeacherView({ open, handleClose }) {
                 <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                 <div className={styles.meta}>08759789</div>
                 <Link className={styles.link_to_profile} to={`/profile`}>Gå till profil</Link>
-                {/* <Link className={styles.link_to_profile} to={`/profile`}>Ändra roll</Link> */}
+                <Link className={styles.link_to_profile} to={`/profile`}>Ändra status</Link>
             </div>
         </div>
     );
 }
 
-export default UserCardTeacherView;
+export default UserCardTeacher;
