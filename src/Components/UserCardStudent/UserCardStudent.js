@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './UserCardStudent.module.css';
 import { Link } from 'react-router-dom';
 
-function UserCardStudent({ open, handleClose }) {
+function UserCardStudent({ open, handleClose, user }) {
 
     const userCardCssClass = () => open ? `${styles.usercard}  ${styles.open}` : `${styles.usercard}`;
     
@@ -14,7 +14,7 @@ function UserCardStudent({ open, handleClose }) {
             <div className={styles.close} onClick={handleClose}> <img src="/icons/close.png" alt="close"></img></div>
             <div className={styles.user_images}>
                 <div className={styles.avatar_image}>
-                    <img src="/icons/user-a.jpg" alt="User"></img>
+                    <img src={user.image_url} alt="User"></img>
                     {/* <div className={styles.img_title}>Profilbild</div> */}
                 </div>
                 {/* <div className={styles.school_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}>
@@ -23,9 +23,9 @@ function UserCardStudent({ open, handleClose }) {
                 </div> */}
             </div>
             <div className={styles.details}>
-                <div className={styles.full_name}>Hasse Hannson</div>
-                <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
-                <div className={styles.meta}>08759789</div>
+                <div className={styles.full_name}>{user.display_name}</div>
+                <div className={styles.meta}>{user.email}</div>
+                <div className={styles.meta}>{user.telephone}</div>
                 <Link className={styles.link_to_profile} to={`/profile`}>Min profil</Link>
             </div>
         </div>

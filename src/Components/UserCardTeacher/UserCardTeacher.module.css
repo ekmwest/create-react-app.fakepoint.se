@@ -70,26 +70,27 @@
 
 .img_title{
     position: absolute;
-    top:6px;
-    /* background-color: #000; */
-    /* opacity: 0.7; */
-    color:#000;
+    top:210px;
+    background-color: #000; 
+    color:#fff;
     font-size: 14px;
-    left: 0px;
-    padding:6px;
+    left: 90px;
+    padding:4px 16px;
     font-weight: 600;
+    border-radius: 4px;
 }
 
 
 .details {
     color: #000;
     padding: 12px;
+    font-weight: 600;
 }
 
 .meta {
     padding: 0 8px 2px;
-    font-size: 14px;
-    color: #868686;
+    font-size: 14px;  
+    font-weight: normal;
 }
 
 .link_to_profile {

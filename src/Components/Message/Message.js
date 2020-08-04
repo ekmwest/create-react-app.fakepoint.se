@@ -9,10 +9,11 @@ function Message({ post, users, deleteHandler }) {
     const comments = () => post.comments.length > 0 ? post.comments.length === 1 ? post.comments.length + " kommentar" : post.comments.length + " kommentarer" : "";
     const [menuOpen, setMenuOpen] = useState(false);
 
+
     return (
         <div className={styles.message}>
             <div className={styles.header}>
-                <User user={users.find(user => user.id === post.user_id)} bigUserAvatar />
+                <User user={users.find(user => user.id === post.user_id)} bigUserAvatar/>
                 <div className={styles.meta}>
                     <div>{fmt.date(post.created_at)}</div>
                     <div className={menuOpen ? `${styles.menu} ${styles.open}` : `${styles.menu}`} >
@@ -30,6 +31,7 @@ function Message({ post, users, deleteHandler }) {
                     <Link to={`/courses/${post.course.id}/posts/${post.id}`} className={styles.total_comments}>{comments()}</Link>
                 </div>
             </div>
+           
         </div>
     );
 }

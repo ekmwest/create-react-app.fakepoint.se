@@ -26,7 +26,6 @@ function UserCardTeacher({ open, handleClose }) {
                 <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
                 <div className={styles.meta}>08759789</div>
                 <Link className={styles.link_to_profile} to={`/profile`}>Gå till profil</Link>
-                <Link className={styles.link_to_profile} to={`/profile`}>Ändra status</Link>
             </div>
         </div>
     );
