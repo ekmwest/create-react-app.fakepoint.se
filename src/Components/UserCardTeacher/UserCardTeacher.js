@@ -15,8 +15,8 @@ function UserCardTeacher({ open, handleClose }) {
                 </div>
             </div>
             <div className={styles.details}>
-                <div className={styles.full_name}>Hasse Hannson</div>
-                <div className={styles.meta}>hasse.hannson@fakepoint.se</div>
+                <div className={styles.full_name}>Linda Mason</div>
+                <div className={styles.meta}>linda.mason@fakepoint.se</div>
                 <div className={styles.meta}>08759789</div>
                 <Link className={styles.link_to_profile} to={`/profile`}>Min profil</Link>
             </div>

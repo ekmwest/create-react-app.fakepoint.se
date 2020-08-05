@@ -75,7 +75,7 @@ function UserProfile() {
                                     <img src="/icons/user-c.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Hasse Hannson
+                                    Linda Mason
                             </div>
                             </div>
                             <div className={styles.note}>View own profile card</div>
@@ -99,7 +99,7 @@ function UserProfile() {
                                     <img src="/icons/4.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Hasse Hannson
+                                    Carrie Carbon
                             </div>
                             </div>
                             <div className={styles.note}>View a student's profile card</div>
@@ -116,7 +116,7 @@ function UserProfile() {
                                     <img src="/icons/4.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Hasse Hannson
+                                    Carrie Carbon
                             </div>
                             </div>
                             <div className={styles.note}>Click avatar to view profile card</div>

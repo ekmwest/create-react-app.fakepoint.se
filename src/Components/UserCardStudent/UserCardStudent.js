@@ -24,7 +24,7 @@ function UserCardStudent({ open, handleClose, user }) {
                 </div> 
             </div>
             <div className={styles.details}>
-                <div className={styles.full_name}>{user.display_name}</div>
+                <div className={styles.full_name}>{user.name}</div>
                 <div className={styles.meta}>{user.email}</div>
                 <div className={styles.meta}>{user.telephone}</div>
                 <Link className={styles.link_to_profile} to={`/profile`}>Gå till profil</Link>
