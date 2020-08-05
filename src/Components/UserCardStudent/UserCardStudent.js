@@ -12,13 +12,15 @@ function UserCardStudent({ open, handleClose, user }) {
         <div className={userCardCssClass()}>
             <div className={styles.close} onClick={handleClose}> <img src="/icons/close.png" alt="close"></img></div>
             <div className={userCardImageSlideCssClass()}>
-                <div className={styles.avatar_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}>
+                <div className={styles.avatar_image}>
                     <img src={user.image_url} alt="User"></img>
                     <div className={styles.img_title}>Profilbild</div> 
+                    <img src="/icons/angle-right.png" alt="User" className={styles.slide_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}></img>
                 </div>
-                <div className={styles.school_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}>
+                <div className={styles.school_image}>
                     <img src={user.image_url} alt="User"></img>
                     <div className={styles.img_title}>Skolfoto</div>
+                    <img src="/icons/angle-left.png" alt="User" className={styles.slide_image} onClick={() => setUserCardImageSlide(!userCardImageSlide)}></img>
                 </div> 
             </div>
             <div className={styles.details}>
