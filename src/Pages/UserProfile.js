@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from '../Components/Header/Header';
 import UserCardTeacher from '../Components/UserCardTeacher/UserCardTeacher';
 import UserCardFellowTeacher from '../Components/UserCardFellowTeacher/UserCardFellowTeacher';
+import UserCardFellowStudent from '../Components/UserCardFellowStudent/UserCardFellowStudent';
 import UserCardStudent from '../Components/UserCardStudent/UserCardStudent';
 import styles from './UserProfile.module.css';
 import api from '../Code/api';
@@ -9,11 +10,21 @@ import api from '../Code/api';
 function UserProfile() {
 
     const teacherItem = useRef();
-    const studentItem = useRef();
+    const teacherItem1 = useRef();
     const fellowTeacherItem = useRef();
+
+    const studentItem = useRef();
+    const studentItem1 = useRef();
+    const fellowStudentItem = useRef();
+
     const [userCardTeacherOpen, setUserCardTeacherOpen] = useState(false);
+    const [userCardTeacher1Open, setUserCardTeacher1Open] = useState(false);
     const [userCardFellowTeacherOpen, setUserCardFellowTeacherOpen] = useState(false);
+
     const [userCardStudentOpen, setUserCardStudentOpen] = useState(false);
+    const [userCardStudent1Open, setUserCardStudent1Open] = useState(false);
+    const [userCardFellowStudentOpen, setUserCardFellowStudentOpen] = useState(false);
+
     const [users, setUsers] = useState([]);
 
     const handleTeacherCardOpen = () => {
@@ -21,6 +32,13 @@ function UserProfile() {
     };
     const handleTeacherCardClose = () => {
         setUserCardTeacherOpen(false);
+    }
+
+    const handleTeacherCard1Open = () => {
+        setUserCardTeacher1Open(true);
+    };
+    const handleTeacherCard1Close = () => {
+        setUserCardTeacher1Open(false);
     }
 
     const handleFellowTeacherCardOpen = () => {
@@ -37,8 +55,24 @@ function UserProfile() {
         setUserCardStudentOpen(false);
     }
 
+    const handleFellowStudentCardOpen = () => {
+        setUserCardFellowStudentOpen(true);
+    };
+    const handleFellowStudentCardClose = () => {
+        setUserCardFellowStudentOpen(false);
+    }
+
+    const handleStudentCard1Open = () => {
+        setUserCardStudent1Open(true);
+    };
+    const handleStudentCard1Close = () => {
+        setUserCardStudent1Open(false);
+    }
+
+
     const handleClickOutside = e => {
-        if (teacherItem.current.contains(e.target) || studentItem.current.contains(e.target) || fellowTeacherItem.current.contains(e.target)) {
+        if (teacherItem.current.contains(e.target) || studentItem.current.contains(e.target) || fellowTeacherItem.current.contains(e.target) 
+        || teacherItem1.current.contains(e.target) || studentItem1.current.contains(e.target) || fellowStudentItem.current.contains(e.target)) {
             // inside click
             return;
         }
@@ -46,6 +80,9 @@ function UserProfile() {
         setUserCardTeacherOpen(false);
         setUserCardStudentOpen(false);
         setUserCardFellowTeacherOpen(false);
+        setUserCardTeacher1Open(false);
+        setUserCardStudent1Open(false);
+        setUserCardFellowStudentOpen(false);
     };
 
     const loadUsers = () => {
@@ -110,20 +147,45 @@ function UserProfile() {
                 <h3>Student View</h3>
                 <div className={styles.content}>
                     <div className={styles.users}>
-                        <div className={styles.user}>
+                        <div className={styles.user} ref={studentItem1}>
                             <div className={styles.header} >
-                                <div className={styles.avatar} onClick={handleStudentCardOpen}>
+                                <div className={styles.avatar} onClick={handleStudentCard1Open}>
                                     <img src="/icons/4.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
                                     Carrie Carbon
+                                </div>
                             </div>
+                            <div className={styles.note}>View own profile card</div>
+                            <UserCardStudent user={users.find(user => user.id === 4)} open={userCardStudent1Open} handleClose={handleStudentCard1Close}></UserCardStudent>
+                        </div>
+                        <div className={styles.user} ref={fellowStudentItem}>
+                            <div className={styles.header} >
+                                <div className={styles.avatar} onClick={handleFellowStudentCardOpen}>
+                                    <img src="/icons/1.jpg" alt="User"></img>
+                                </div>
+                                <div className={styles.name}>
+                                    Harry Helium
+                                </div>
                             </div>
-                            <div className={styles.note}>Click avatar to view profile card</div>
-                            {/* <UserCardStudent user={users.find(user => user.id === 4)} open={userCardStudentOpen} handleClose={handleStudentCardClose}></UserCardStudent> */}
+                            <div className={styles.note}>View fellow student profile card</div>
+                            <UserCardFellowStudent user={users.find(user => user.id === 1)} open={userCardFellowStudentOpen} handleClose={handleFellowStudentCardClose}></UserCardFellowStudent>
+                        </div>
+                        <div className={styles.user} ref={teacherItem1}>
+                            <div className={styles.header} >
+                                <div className={styles.avatar} onClick={handleTeacherCard1Open}>
+                                    <img src="/icons/user-a.jpg" alt="User"></img>
+                                </div>
+                                <div className={styles.name}>
+                                   Hasse Hannson
+                                </div>
+                            </div>
+                            <div className={styles.note}>View staff profile card</div>
+                            <UserCardFellowTeacher open={userCardTeacher1Open} handleClose={handleTeacherCard1Close}></UserCardFellowTeacher>
                         </div>
                     </div>
                 </div>
+                <div className={styles.space}></div>
             </>
         );
     }
