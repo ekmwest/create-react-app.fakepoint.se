@@ -6,7 +6,7 @@
     background: linear-gradient(#f8f8f8, #fff);
     display:none; 
     z-index: 100;
-    border-radius: 6px;
+    border-radius: 12px;
     text-align: center;
     /* font-weight: 600; */
     font-size: 18px;
@@ -75,8 +75,8 @@
     font-weight: 600;
     color: #000;
     font-size: 14px;
-    padding: 4px;
-    border-radius: 2px;
+    padding: 4px 8px;
+    border-radius: 12px;
 }
 
 
@@ -95,7 +95,7 @@ img.slide_image {
 }
 
 .full_name {
-    margin-top: -8px;;
+    margin-top: -8px;
 }
 
 .meta {
@@ -119,7 +119,7 @@ img.slide_image {
 
 .close {
     position: absolute;
-    right: 6px;
+    right: 8px;
     top: 8px;
     cursor: pointer;
     font-size: 12px;

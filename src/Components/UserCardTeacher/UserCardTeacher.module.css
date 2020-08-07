@@ -6,7 +6,7 @@
     background: linear-gradient(#f8f8f8, #fff);
     display:none; 
     z-index: 100;
-    border-radius: 6px;
+    border-radius: 12px;
     text-align: center;
     /* font-weight: 600; */
     font-size: 18px;
@@ -109,7 +109,7 @@
 
 .close {
     position: absolute;
-    right: 6px;
+    right: 8px;
     top: 8px;
     cursor: pointer;
     font-size: 12px;

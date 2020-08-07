@@ -6,7 +6,7 @@
     background: linear-gradient(#f8f8f8, #fff);
     display:none; 
     z-index: 100;
-    border-radius: 6px;
+    border-radius: 12px;
     text-align: center;
     /* font-weight: 600; */
     font-size: 18px;
@@ -62,16 +62,14 @@
 .img_title{
     position: absolute;
     top: 8px;
-    left: 6px;
+    left: 8px;
     background-color: rgba(0,0,0,.54);
     background-color: rgba(255,255,255, 0.8);
     color: #fff;
     color: #000;
     font-size: 14px;
-    /* margin: 0 86px; */
-    padding: 4px;
-    /* font-weight: 600; */
-    border-radius: 2px;
+    padding: 4px 8px;
+    border-radius: 12px;
 }
 
 
@@ -87,11 +85,11 @@ img.slide_right {
 }
 
 img.slide_left {
-    left: 6px;
+    left: 8px;
 }
 
 img.slide_right {
-    right: 6px;
+    right: 8px;
 }
 
 .details {
@@ -121,7 +119,7 @@ img.slide_right {
 
 .close {
     position: absolute;
-    right: 6px;
+    right: 8px;
     top: 8px;
     cursor: pointer;
     font-size: 12px;
