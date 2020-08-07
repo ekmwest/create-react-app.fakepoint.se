@@ -61,7 +61,7 @@
 
 .img_title{
     position: absolute;
-    top: 216px;
+    top: 8px;
     left: 6px;
     background-color: rgba(0,0,0,.54);
     background-color: rgba(255,255,255, 0.8);
@@ -75,10 +75,10 @@
 }
 
 
-img.slide_image {
+img.slide_left,
+img.slide_right {
     position: absolute;
     top: 216px;
-    right: 6px;
     width: 12px;
     height:12px;
     padding:8px;
@@ -86,6 +86,13 @@ img.slide_image {
     border-radius: 50%;
 }
 
+img.slide_left {
+    left: 6px;
+}
+
+img.slide_right {
+    right: 6px;
+}
 
 .details {
     color: #000;

@@ -109,10 +109,10 @@ function UserProfile() {
                         <div className={styles.user} ref={teacherItem}>
                             <div className={styles.header} >
                                 <div className={styles.avatar} onClick={handleTeacherCardOpen}>
-                                    <img src="/icons/user-c.jpg" alt="User"></img>
+                                    <img src="/icons/user-4.jpeg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Linda Mason
+                                    Linda M
                             </div>
                             </div>
                             <div className={styles.note}>View own profile card</div>
@@ -124,7 +124,7 @@ function UserProfile() {
                                     <img src="/icons/user-a.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Hasse Hannson
+                                    Hasse H
                             </div>
                             </div>
                             <div className={styles.note}>View a fellow teacher's profile card</div>
@@ -136,7 +136,7 @@ function UserProfile() {
                                     <img src="/icons/4.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Carrie Carbon
+                                    Carrie C
                             </div>
                             </div>
                             <div className={styles.note}>View a student's profile card</div>
@@ -153,7 +153,7 @@ function UserProfile() {
                                     <img src="/icons/4.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Carrie Carbon
+                                    Carrie C
                                 </div>
                             </div>
                             <div className={styles.note}>View own profile card</div>
@@ -165,7 +165,7 @@ function UserProfile() {
                                     <img src="/icons/1.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                    Harry Helium
+                                    Harry H
                                 </div>
                             </div>
                             <div className={styles.note}>View fellow student profile card</div>
@@ -177,7 +177,7 @@ function UserProfile() {
                                     <img src="/icons/user-a.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
-                                   Hasse Hannson
+                                   Hasse H
                                 </div>
                             </div>
                             <div className={styles.note}>View staff profile card</div>

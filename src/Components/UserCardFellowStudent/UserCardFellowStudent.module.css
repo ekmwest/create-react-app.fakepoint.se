@@ -94,6 +94,10 @@ img.slide_image {
     font-weight: 600;
 }
 
+.full_name {
+    margin-top: -8px;;
+}
+
 .meta {
     padding: 0 8px 2px;
     font-size: 14px;  

@@ -11,7 +11,7 @@ function UserCardTeacher({ open, handleClose }) {
             <div className={styles.close} onClick={handleClose}> <img src="/icons/close.png" alt="close"></img></div>
             <div className={styles.user_images}>
                 <div className={styles.avatar_image}>
-                    <img src="/icons/user-c.jpg" alt="User"></img>
+                    <img src="/icons/user-4.jpeg" alt="User"></img>
                 </div>
             </div>
             <div className={styles.details}>

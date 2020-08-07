@@ -17,8 +17,8 @@ function UserCardFellowStudent({ open, handleClose, user }) {
                 </div>
             </div>
             <div className={styles.details}>
-                <div className={styles.full_name}>{user.name}</div>
-                <Link className={styles.link_to_profile} to={`/profile`}>Gå till profil</Link>
+                <div className={styles.full_name}>{user.display_name}</div>
+                {/* <Link className={styles.link_to_profile} to={`/profile`}>Gå till profil</Link> */}
             </div>
         </div>
     );
