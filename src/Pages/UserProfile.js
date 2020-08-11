@@ -109,7 +109,7 @@ function UserProfile() {
                         <div className={styles.user} ref={teacherItem}>
                             <div className={styles.header} >
                                 <div className={styles.avatar} onClick={handleTeacherCardOpen}>
-                                    <img src="/icons/user-4.jpeg" alt="User"></img>
+                                    <img src="/icons/2.jpg" alt="User"></img>
                                 </div>
                                 <div className={styles.name}>
                                     Linda M

@@ -82,6 +82,7 @@ img.slide_right {
     padding:8px;
     background-color: rgba(255,255,255, 0.8);
     border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
 }
 
 img.slide_left {
@@ -127,6 +128,7 @@ img.slide_right {
     height: 28px;
     z-index:100;   
     background-color: rgba(255,255,255, 0.9);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
     border-radius: 50%;
 }
 
