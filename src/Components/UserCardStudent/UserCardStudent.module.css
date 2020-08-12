@@ -70,52 +70,48 @@
     top: 8px;
     left: 8px;
     background-color: rgba(0,0,0,.54);
-    background-color: rgba(255,255,255, 0.8);
+    background-color: #fff;
     color: #fff;
     color: #000;
     font-size: 14px;
-    padding: 4px 8px;
+    padding: 5px 8px;
     border-radius: 12px;
 }
 
-.content.teacher .schoolphoto_title {
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+.profileimg_edit,
+.schoolphoto_edit {
+    position: absolute;
+    left: 82px;
+    top: 8px;
+    text-decoration: none;
     cursor: pointer;
+    width: 28px;
+    height: 28px;
+    z-index:100;   
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
-.content.teacher .profileimg_title {
-    box-shadow: none;
-    cursor: default;
+.profileimg_edit img,
+.schoolphoto_edit img {
+    width: 13px;
+    height:13px;
+    opacity: 0.7;
+    padding-top:7px;
 }
 
-.content .profileimg_title {
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
-}
-
-.content .schoolphoto_title {
-    cursor: default;
-}
-
-img.profileimg_edit,
-img.schoolphoto_edit {
-    width: 12px;
-    height:12px;
-    opacity: 0.6;
-    padding-left: 4px;
-}
-
-.content.teacher img.schoolphoto_edit {
+.content.teacher .schoolphoto_edit {
    display: inline;
 }
 
-.content.teacher img.profileimg_edit {
+.content.teacher .profileimg_edit {
     display: none;
 }
 
-.content img.schoolphoto_edit {
+.content .schoolphoto_edit {
     display: none;
 }
-
 
 img.slide_left,
 img.slide_right {
@@ -126,7 +122,7 @@ img.slide_right {
     padding:8px;
     background-color: rgba(255,255,255, 0.8);
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
 img.slide_left {
@@ -172,7 +168,7 @@ img.slide_right {
     height: 28px;
     z-index:100;   
     background-color: rgba(255,255,255, 0.9);
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
     border-radius: 50%;
 }
 
