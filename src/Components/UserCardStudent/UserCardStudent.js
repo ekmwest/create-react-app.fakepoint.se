@@ -18,16 +18,16 @@ function UserCardStudent({ open, handleClose, user, teacherView, studentView }) 
                     <div className={styles.avatar_image}>
                         <img src="/icons/4.jpg" alt="User"></img>
                         <div className={styles.overlay} >
-                            <Link className={styles.profileimg_title} to={`/profile`}>Profilbild</Link> 
-                            <div className={styles.profileimg_edit}><img src="/icons/edit.png" alt="Edit"></img></div>                            
+                            <div className={styles.profileimg_title}>Profilbild</div> 
+                            <Link className={styles.profileimg_edit} to={`/profile`}><img src="/icons/edit.png" alt="Edit"></img></Link>                            
                             <img src="/icons/angle-right.png" alt="User" className={styles.slide_right} onClick={() => setUserCardImageSlide(!userCardImageSlide)}></img>
                         </div>
                     </div>
                     <div className={styles.school_image}>
                         <img src="/icons/user-4.jpeg" alt="User"></img>
                         <div className={styles.overlay}>
-                            <Link className={styles.schoolphoto_title} to={`/profile`}>Skolfoto </Link>
-                            <div className={styles.schoolphoto_edit}><img src="/icons/edit.png" alt="Edit"></img></div>   
+                            <div className={styles.schoolphoto_title} to={`/profile`}>Skolfoto </div>
+                            <Link className={styles.schoolphoto_edit} to={`/profile`}><img src="/icons/edit.png" alt="Edit"></img></Link>       
                             <img src="/icons/angle-left.png" alt="User" className={styles.slide_left} onClick={() => setUserCardImageSlide(!userCardImageSlide)}></img>
                         </div>
                     </div>

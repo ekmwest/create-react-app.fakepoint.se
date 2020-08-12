@@ -116,13 +116,13 @@
     width: 28px;
     height: 28px;
     z-index:100;   
-    background-color: rgba(255,255,255, 0.9);
+    background-color: #fff;
     border-radius: 50%;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
 }
 
 .close img {
-    width: 10px;
-    height: 10px;
-    margin-top:9px
+    width: 11px;
+    height: 11px;
+    margin-top:8px
 }
