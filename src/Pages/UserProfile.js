@@ -140,7 +140,7 @@ function UserProfile() {
                             </div>
                             </div>
                             <div className={styles.note}>View a student's profile card</div>
-                            <UserCardStudent user={users.find(user => user.id === 4)} open={userCardStudentOpen} handleClose={handleStudentCardClose}></UserCardStudent>
+                            <UserCardStudent user={users.find(user => user.id === 4)} open={userCardStudentOpen} handleClose={handleStudentCardClose} teacherView={true}></UserCardStudent>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ function UserProfile() {
                                 </div>
                             </div>
                             <div className={styles.note}>View own profile card</div>
-                            <UserCardStudent user={users.find(user => user.id === 4)} open={userCardStudent1Open} handleClose={handleStudentCard1Close}></UserCardStudent>
+                            <UserCardStudent user={users.find(user => user.id === 4)} open={userCardStudent1Open} handleClose={handleStudentCard1Close} studentView={true}></UserCardStudent>
                         </div>
                         <div className={styles.user} ref={fellowStudentItem}>
                             <div className={styles.header} >

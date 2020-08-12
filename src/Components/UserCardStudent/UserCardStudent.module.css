@@ -24,6 +24,10 @@
     margin-top:-20px;
 }
 
+.content {
+
+}
+
 .user_images {
     display: inline-block;
     width:264px;
@@ -59,8 +63,10 @@
     transition: all .3s ease;
 }
 
-.img_title{
+.profileimg_title ,
+.schoolphoto_title {
     position: absolute;
+    text-decoration:none;
     top: 8px;
     left: 8px;
     background-color: rgba(0,0,0,.54);
@@ -70,6 +76,44 @@
     font-size: 14px;
     padding: 4px 8px;
     border-radius: 12px;
+}
+
+.content.teacher .schoolphoto_title {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+    cursor: pointer;
+}
+
+.content.teacher .profileimg_title {
+    box-shadow: none;
+    cursor: default;
+}
+
+.content .profileimg_title {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.04), 0 4px 8px 0 rgba(0,0,0,0.20);
+}
+
+.content .schoolphoto_title {
+    cursor: default;
+}
+
+img.profileimg_edit,
+img.schoolphoto_edit {
+    width: 12px;
+    height:12px;
+    opacity: 0.6;
+    padding-left: 4px;
+}
+
+.content.teacher img.schoolphoto_edit {
+   display: inline;
+}
+
+.content.teacher img.profileimg_edit {
+    display: none;
+}
+
+.content img.schoolphoto_edit {
+    display: none;
 }
 
 

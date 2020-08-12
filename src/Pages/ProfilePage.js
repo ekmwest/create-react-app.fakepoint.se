@@ -10,7 +10,7 @@ function ProfilePage() {
             <Header title="Profile Page"></Header>
             <div className={styles.content}>
                 <div className={styles.profile_image}>
-                    <img src="/icons/user-3.jpeg" alt="User"></img>
+                    <img src="/icons/user-4.jpeg" alt="User"></img>
                 </div>
                 <div className={styles.profile_image_nav_container}>
                     <div className={styles.profile_image_nav}>

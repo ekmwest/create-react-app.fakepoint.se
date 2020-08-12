@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import styles from './UserCardTeacher.module.css';
 import { Link } from 'react-router-dom';
 
@@ -12,6 +12,9 @@ function UserCardTeacher({ open, handleClose }) {
             <div className={styles.user_images}>
                 <div className={styles.avatar_image}>
                     <img src="/icons/2.jpg" alt="User"></img>
+                    <Link className={styles.img_edit} to={`/profile`}>
+                        <img src="/icons/edit.png" alt="Edit"></img>
+                    </Link>
                 </div>
             </div>
             <div className={styles.details}>
