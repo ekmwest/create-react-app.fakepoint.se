@@ -1,6 +1,6 @@
 .notifications {
     position: relative;
-    display: none;
+    /* display: none; */
 }
 
 .toggler {
@@ -15,7 +15,7 @@
 .count {
     position: absolute;
     right: -4px;
-    top: -3px;
+    top: -5px;
     background-color: red;
     color: #fff;
     border-radius: 50%;
@@ -41,6 +41,22 @@
     display: block;
     padding: 16px;
     border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: inherit;
+    display:flex;
+    align-items: center;
+}
+
+.list_avatar {
+    border: 1px solid #f2f2f2;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    margin-right:8px;
+    background-color: #f2f2f2;
+}
+
+.list_content {
     text-decoration: none;
     color: inherit;
 }

@@ -5,18 +5,21 @@ const defaultNotifications = [
     {
         id: 1,
         read: false,
+        avatar: "/icons/user-a.jpg",
         url: "/courses/6/posts/1",
         text: "Barry commented on a post"
     },
     {
         id: 2,
         read: false,
+        avatar: "/icons/user-c.jpg",
         url: "/courses/6/posts/2",
         text: "Sarah wrote a new post"
     },
     {
         id: 3,
         read: false,
+        avatar: "/icons/user-b.jpg",
         url: "/courses/1/posts/4",
         text: "Sammy commented on a post"
     }
@@ -39,14 +42,17 @@ function Notifications() {
         return (
             <div className={styles.list}>
                 {notifications.map(n => (
-                    <a
-                        key={n.id}
-                        href={n.url}
-                        className={styles.list_item}
-                        onClick={() => setOpen(!open)}
-                    >
-                        {n.text}
-                    </a>
+                    <div className={styles.list_item}>
+                        <img src={n.avatar}  className={styles.list_avatar}></img>
+                        <a
+                            key={n.id}
+                            href={n.url}
+                            className={styles.list_content}
+                            onClick={() => setOpen(!open)}
+                        >
+                            {n.text}
+                        </a>
+                    </div>
                 ))}
             </div>
         );

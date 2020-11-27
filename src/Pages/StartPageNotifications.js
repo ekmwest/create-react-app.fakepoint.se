@@ -52,10 +52,10 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user.jpg" className={styles.notification_avatar} alt="user"></img>
+                                <img src="/icons/user-c.jpg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Stig Rig and 20 others have commented on your post
+                                Sara and 20 others have commented on your post
                             </div>
 
                             <div className={styles.notification_read}>
@@ -68,10 +68,10 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar} alt="user"></img>
+                                <img src="/icons/user-7.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Maria Mania has added a new post
+                                John has added a new post
                             </div>                           
                             <div className={styles.notification_read}>
                             </div>
@@ -87,7 +87,7 @@ function StartPageNotifications() {
                                 <img src="/icons/user-4.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Sara Hansson has commented on your post
+                                Sara has commented on your post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
@@ -97,10 +97,10 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user-1.jpeg" className={styles.notification_avatar} alt="user"></img>
+                                <img src="/icons/user-7.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Maria Mania has added a new post
+                                John has added a new post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
@@ -113,7 +113,7 @@ function StartPageNotifications() {
                                 <img src="/icons/user-4.jpeg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Sara Hansson has commented on your post
+                                Sara has commented on your post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
@@ -123,10 +123,10 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user.jpg" className={styles.notification_avatar} alt="user"></img>
+                                <img src="/icons/1.jpg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Stig Rig and 2 others have commented on your post
+                                Stig and 2 others have commented on your post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
@@ -136,10 +136,10 @@ function StartPageNotifications() {
                     <div className={styles.notification}>
                         <div className={styles.notification_header}>
                             <div className={styles.notification_icon}>
-                                <img src="/icons/user.jpg" className={styles.notification_avatar} alt="user"></img>
+                                <img src="/icons/1.jpg" className={styles.notification_avatar} alt="user"></img>
                             </div>
                             <div className={styles.notification_content}>
-                                Stig Rig has added a new post
+                                Stig has added a new post
                             </div>
                         </div>
                         <div className={styles.notification_action}>
