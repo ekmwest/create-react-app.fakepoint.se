@@ -13,7 +13,25 @@
     font-weight: 600;
 }
 
-.notification_list {
+.notification_listheader {
+    display: flex;
+}
+
+.notification_title {
+    flex:1;
+    padding: 16px 0 4px 16px;
+    margin: 0;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.notification_link {
+    padding: 16px 0 4px 16px;
+    margin: 0;
+    margin-top: 16px;
+    font-weight: normal;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .notification {
@@ -34,6 +52,13 @@
     margin-right: 16px;
     text-align: center;
     background-color: #f2f2f2;
+}
+
+.reminder {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top:14px;
 }
 
 .notification_bell {
@@ -74,9 +99,8 @@
     margin-top: 20px;
 }
 
-.notification_title {
-    padding: 16px 0 4px 16px;
-    margin: 0;
-    margin-top: 16px;
+.load_notifications {
+    text-align: center;
+    margin:32px 0;
     font-weight: 600;
 }

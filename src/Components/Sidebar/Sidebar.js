@@ -46,10 +46,10 @@ function Sidebar() {
         <div className={sidebarCssClass()}>
             <ul>
                 <li>
-                    <NavLink exact to="/" activeClassName={styles.current} onClick={clickHandler}>Home A</NavLink>
+                    <NavLink exact to="/" activeClassName={styles.current} onClick={clickHandler}>Newsfeed</NavLink>
                 </li>
                 <li>
-                    <NavLink exact to="/startpagenotifications" activeClassName={styles.current} onClick={clickHandler}>Home B</NavLink>
+                    <NavLink exact to="/startpagenotifications" activeClassName={styles.current} onClick={clickHandler}>Notifications</NavLink>
                 </li>
                 <li>
                     <NavLink exact to="/learnpointprofile" activeClassName={styles.current} onClick={clickHandler}>LearnPoint Profile</NavLink>
