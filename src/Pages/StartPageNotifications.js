@@ -18,7 +18,7 @@ const defaultNotifications = [
         url: "/courses/6/posts/2",
         text: "Anna has added a new post",
         group: "Javascript 3",
-        date: "Yesterday"
+        date: "Today"
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const defaultNotifications = [
         url: "/courses/1/posts/4",
         text: "Sammy has added a new post",
         group: "Informationsarkitektur",
-        date: "Yesterday"
+        date: "Today"
     }
 ];
 
@@ -36,7 +36,7 @@ const groupedNotifications = [
         id: 1,
         avatar: "/icons/1.jpg",
         url: "/courses/6/posts/1",
-        text: "Anna has submitted an assignment",
+        text: "Richard has submitted an assignment",
         group: "Javascript 3",
         date: "Today"
     },
