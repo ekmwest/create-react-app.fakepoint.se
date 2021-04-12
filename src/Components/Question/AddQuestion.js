@@ -46,14 +46,6 @@ function AddQuestion({ saveHandler, users }) {
                         <textarea placeholder="Skriv inlägg.." name="content" value={values.content} onChange={changeHandler} className={emptyPostError ? `${styles.content_input} ${styles.error}` : `${styles.content_input}`} onClick={openTextarea} onKeyDown={keyDownHandler} />
                     </div>
                 </div>
-                <div className={styles.message_types}>
-                    <div className={styles.message_type}>
-                        <img src="/icons/question-mark.png" title="Add a question" alt="question" width="20" height="18" className={styles.question} ></img>
-                    </div>
-                    <div className={styles.message_type}>
-                        <img src="/icons/megaphone.png" title="Add an announcement" alt="megaphone" width="22" height="22"></img>
-                    </div>
-                </div>
             </div>
 
         </div>

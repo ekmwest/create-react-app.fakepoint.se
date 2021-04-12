@@ -44,14 +44,14 @@
     display: flex;
 }
 
-.notification_icon {
+.notification_avatar {
     border: 1px solid #f2f2f2;
     border-radius: 50%;
-    width: 48px;
-    height: 48px;
-    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: #CBEEFA;
 }
 
 .reminder {
@@ -67,7 +67,7 @@
     margin-top: 13px;
 }
 
-.notification_avatar {
+.notification_avatar_image {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -75,23 +75,26 @@
 
 .notification_content {
     /* font-weight: 600; */
-    flex: 1;
-    font-size: 18px;
-}
-
-.notification_content a{
+    flex: 1; 
     text-decoration: none;
-    color:inherit;
+    color: #000;
 }
 
+.notification_content_new {
+    font-weight: 600; 
+    flex: 1;
+    text-decoration: none;
+    color: #000;
+}
 
-.notification_action {
-    margin-left: 66px;
-    margin-top: -26px;
+.notification_meta {
+    margin-left: 54px;
+    margin-top: -22px;
     color: #777;
+    font-size:14px;
 }
 
-.notification_read {
+.notification_new_indicator {
     background-color: #0094EF;
     width: 10px;
     height: 10px;
@@ -99,8 +102,56 @@
     margin-top: 20px;
 }
 
+
+.notification_expand {
+    background-image: url(/icons/expand.png);
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    padding-right: 8px;
+    background-position: center;
+}
+
+.notification_collapse {
+    background-image: url(/icons/collapse.png);
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    display: block;
+    background-repeat: no-repeat;
+    /* background-color: #f2f2f2; */
+    border-radius: 50%;
+    padding-right: 8px;
+    background-position: center;
+}
+
+.notification_actions {
+    background-image: url(/icons/ellipsis.png);
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+    display: block;
+    background-repeat: no-repeat;
+    /* background-color: #f2f2f2; */
+    border-radius: 50%;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.notification_group_collapsed {
+    display: none;
+}
+
+.notification_group_expanded {
+    display: block;
+}
+
 .load_notifications {
     text-align: center;
     margin:32px 0;
     font-weight: 600;
 }
+
