@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header/Header';
 import styles from './StartPageNotifications.module.css';
+import { Link } from 'react-router-dom';
+import NotificationActions from '../Components/NotificationActions/NotificationActions';
 
 
 const defaultNotifications = [
@@ -10,7 +12,8 @@ const defaultNotifications = [
         url: "/courses/6/posts/1",
         text: "You have a survey to respond",
         group: "Javascript 3",
-        date: "Today"
+        date: "Today",
+        type: "Surveys"
     },
     {
         id: 2,
@@ -18,7 +21,8 @@ const defaultNotifications = [
         url: "/courses/6/posts/2",
         text: "Anna has added a new post",
         group: "Javascript 3",
-        date: "Today"
+        date: "Today",
+        type: "Newsfeed"
     },
     {
         id: 3,
@@ -26,8 +30,9 @@ const defaultNotifications = [
         url: "/courses/1/posts/4",
         text: "Sammy has added a new post",
         group: "Informationsarkitektur",
-        date: "Today"
-    }
+        date: "Today",
+        type: "Newsfeed"
+    } 
 ];
 
 
@@ -38,7 +43,8 @@ const groupedNotifications = [
         url: "/courses/6/posts/1",
         text: "Richard has submitted an assignment",
         group: "Javascript 3",
-        date: "Today"
+        date: "Today",
+        type: "Submissions"
     },
     {
         id: 2,
@@ -46,7 +52,8 @@ const groupedNotifications = [
         url: "/courses/6/posts/2",
         text: "Anna has submitted an assignment",
         group: "Javascript 3",
-        date: "Today"
+        date: "Today",
+        type: "Submissions"
     },
     {
         id: 3,
@@ -54,7 +61,8 @@ const groupedNotifications = [
         url: "/courses/1/posts/4",
         text: "Sammy has submitted an assignment",
         group: "Javascript 3",
-        date: "Yesterday"
+        date: "Yesterday",
+        type: "Submissions"
     },
     {
         id: 4,
@@ -62,7 +70,8 @@ const groupedNotifications = [
         url: "/courses/6/posts/1",
         text: "Danny has submitted an assignment",
         group: "Javascript 3",
-        date: "Yesterday"
+        date: "Yesterday",
+        type: "Submissions"
     },
     {
         id: 5,
@@ -70,15 +79,17 @@ const groupedNotifications = [
         url: "/courses/6/posts/2",
         text: "Rachel has submitted an assignment",
         group: "Javascript 3",
-        date: "Yesterday"
+        date: "Yesterday",
+        type: "Submissions"
     },
     {
         id: 6,
         avatar: "/icons/user-a.jpg",
         url: "/courses/1/posts/4",
-        text: "Sam has submitted assignment",
+        text: "Sam has submitted an assignment",
         group: "Javascript 3",
-        date: "Yesterday"
+        date: "Yesterday",
+        type: "Submissions"
     }
 ];
 
@@ -95,7 +106,7 @@ function StartPageNotifications() {
                 <div className={styles.notification_list}>
                     <div className={styles.notification_listheader}>
                         <h4 className={styles.notification_title}>New</h4>
-                        <h4 className={styles.notification_link}>Mark all read</h4>
+                        <h4 className={styles.notification_mark_read_link}>Mark all read</h4>
                     </div>
                 </div>
                 {notifications.map(n => (
@@ -109,12 +120,11 @@ function StartPageNotifications() {
                                     key={n.id}
                                     href={n.url}
                                     className={styles.notification_content_new}
-                                    onClick={() => setOpen(!open)}
+
                                 >
                                     {n.text}
                                 </a>
-                                <div className={styles.notification_actions}>
-                                </div>
+                                <NotificationActions group={n.group} type={n.type}/>
                             </div>
                             <div className={styles.notification_meta}>
                                 {n.group} • {n.date}
@@ -131,45 +141,46 @@ function StartPageNotifications() {
 
         return (
             <>
-                <div className={styles.notification} onClick={() => setOpen(!open)}>
-                    <div className={styles.notification_header}>
-                        <div className={styles.notification_icon}>
-                            <img src="/icons/documents.png" className={styles.notification_avatar} alt="user"></img>
-                        </div>
-                        <div className={styles.notification_content_new}>
-                            6 new submissions in Landing page assignment
-                        </div>
-                        <div className={open ? styles.notification_collapse : styles.notification_expand}>
-                        </div>
-                    </div>
-                    <div className={styles.notification_meta}>
-                        Javascript 3 • Today
-                    </div>
-                </div>
-                <div className= {open ? styles.notification_group_expanded : styles.notification_group_collapsed}>
-                    {groupNotifications.map(n => (
-                        <>
-                            <div key={n.id} className={styles.notification}>
-                                <div className={styles.notification_header}>
-                                    <div className={styles.notification_avatar}>
-                                        <img src={n.avatar} className={styles.notification_avatar_image}></img>
-                                    </div>
-                                    <a
-                                        key={n.id}
-                                        href={n.url}
-                                        className={styles.notification_content_new}
-                                    >
-                                        {n.text}
-                                    </a>
-                                    <div className={styles.notification_actions}>
-                                    </div>
-                                </div>
-                                <div className={styles.notification_meta}>
-                                    {n.group} • {n.date}
-                                </div>
+                <div className={open ? styles.notification_group_expanded : styles.notification_group}>
+                    <div className={styles.notification} onClick={() => setOpen(!open)}>
+                        <div className={styles.notification_header}>
+                            <div className={styles.notification_icon}>
+                                <img src="/icons/documents.png" className={styles.notification_avatar} alt="user"></img>
                             </div>
-                        </>
-                    ))}
+                            <div className={styles.notification_content_new}>
+                                6 new submissions in Landing page assignment
+                        </div>
+                            <div className={open ? styles.notification_collapse : styles.notification_expand}>
+                            </div>
+                        </div>
+                        <div className={styles.notification_meta}>
+                            Javascript 3 • Today
+                    </div>
+                    </div>
+                    <div className={open ? styles.notification_group_items_expanded : styles.notification_group_items_collapsed}>
+                        {groupNotifications.map(n => (
+                            <>
+                                <div key={n.id} className={styles.notification}>
+                                    <div className={styles.notification_header}>
+                                        <div className={styles.notification_avatar}>
+                                            <img src={n.avatar} className={styles.notification_avatar_image}></img>
+                                        </div>
+                                        <a
+                                            key={n.id}
+                                            href={n.url}
+                                            className={styles.notification_content_new}
+                                        >
+                                            {n.text}
+                                        </a>
+                                        <NotificationActions group={n.group} type={n.type}/>
+                                    </div>
+                                    <div className={styles.notification_meta}>
+                                        {n.group} • {n.date}
+                                    </div>
+                                </div>
+                            </>
+                        ))}
+                    </div>
                 </div>
             </>
         );
@@ -180,10 +191,9 @@ function StartPageNotifications() {
 
         return (
             <>
-
                 <div className={styles.notification_list}>
                     <div className={styles.notification_listheader}>
-                        <h4 className={styles.notification_title}>Earlier</h4>
+                        <h4 className={styles.notification_title}>Previous</h4>
                     </div>
                 </div>
                 {notifications.map(n => (
@@ -197,12 +207,11 @@ function StartPageNotifications() {
                                     key={n.id}
                                     href={n.url}
                                     className={styles.notification_content}
-                                    
+
                                 >
                                     {n.text}
                                 </a>
-                                <div className={styles.notification_actions}>
-                                </div>
+                                <NotificationActions group={n.group} type={n.type}/>
                             </div>
                             <div className={styles.notification_meta}>
                                 {n.group} • {n.date}
@@ -217,9 +226,13 @@ function StartPageNotifications() {
 
     return (
         <div className={styles.notifications}>
-            <div className={styles.content}>
+            <div className={styles.notifications_container}>
+                <div className={styles.notification_settings}>
+                    <Link to="/notificationsettings" className={styles.notification_settings_link}> Notification settings</Link>
+                </div>
                 {newNotificationsList()}
-                {groupedNotification()}
+                {groupedNotification()}               
+                <div className={styles.divider}> </div>
                 {oldNotificationsList()}
             </div>
         </div>

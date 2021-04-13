@@ -1,0 +1,45 @@
+.notification_settings_container {
+    max-width: 640px;
+    margin: 80px auto;
+    background-color: #fff; 
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding:16px;
+}
+
+.notification_settings_container h3 {
+    margin:0;
+    padding: 16px;
+}
+
+.notifications_page {
+    text-align: right;
+    padding: 6px 0;
+}
+
+.notifications_page_link {
+    color:#0079f2;
+    font-size: 14px;
+}
+
+.notification_settings_course_list {
+    margin:0;
+}
+
+.notification_settings_course {
+    font-weight: 600;
+    padding: 12px;
+}
+
+.notification_settings_type_list { 
+    display: none;
+}
+
+.notification_settings_type_list_open {
+    display: block;
+    margin-top: -4px;
+}
+
+.notification_settings_type {
+    padding:6px 32px;
+}

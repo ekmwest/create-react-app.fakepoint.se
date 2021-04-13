@@ -1,17 +1,34 @@
-.content {
+.notifications_container {
     max-width: 640px;
     margin: 80px auto;
     background-color: #fff; 
     border-radius: 8px;
     border: 1px solid #ddd;
-    padding:16px;
+    padding:16px 0;
 }
 
-.content h2 {
+.notifications_container h2 {
     margin-top: 48px;
     margin-bottom: 16px;
     font-weight: 600;
 }
+
+.notifications_container h2 {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.notification_settings {
+    text-align: right;
+    padding: 6px 32px;
+    font-size:14px;
+}
+
+.notification_settings_link {
+    color:#0079f2;
+}
+
 
 .notification_listheader {
     display: flex;
@@ -19,14 +36,14 @@
 
 .notification_title {
     flex:1;
-    padding: 16px 0 4px 16px;
+    padding: 16px 0 4px 32px;
     margin: 0;
     margin-top: 16px;
     font-weight: 600;
 }
 
-.notification_link {
-    padding: 16px 0 4px 16px;
+.notification_mark_read_link {
+    padding: 16px 32px 4px 16px;
     margin: 0;
     margin-top: 16px;
     font-weight: normal;
@@ -35,7 +52,7 @@
 }
 
 .notification {
-    padding: 12px;
+    padding: 12px 32px;
     cursor: pointer;
     background-color: #fff;
 }
@@ -54,18 +71,10 @@
     background-color: #CBEEFA;
 }
 
-.reminder {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top:14px;
+.notification_group_expanded .notification_avatar {
+    background-color: #CBEEFA;
 }
 
-.notification_bell {
-    width: 22px;
-    height: 22px;
-    margin-top: 13px;
-}
 
 .notification_avatar_image {
     width: 100%;
@@ -74,7 +83,6 @@
 }
 
 .notification_content {
-    /* font-weight: 600; */
     flex: 1; 
     text-decoration: none;
     color: #000;
@@ -122,31 +130,32 @@
     background-size: 20px;
     display: block;
     background-repeat: no-repeat;
-    /* background-color: #f2f2f2; */
     border-radius: 50%;
     padding-right: 8px;
     background-position: center;
 }
 
-.notification_actions {
-    background-image: url(/icons/ellipsis.png);
-    width: 28px;
-    height: 28px;
-    background-size: 28px;
-    display: block;
-    background-repeat: no-repeat;
-    /* background-color: #f2f2f2; */
-    border-radius: 50%;
-    background-position: center;
-    opacity: 0.7;
+.notification_group_expanded .notification  {
+    background-color: #f2f2f2;
 }
 
-.notification_group_collapsed {
+.notification_group_items_collapsed {
     display: none;
 }
 
-.notification_group_expanded {
+.notification_group_items_expanded {
     display: block;
+}
+
+.notifications hr {
+    background-color: #ddd;
+    margin: 32px 0 0 0;
+    color: #ddd;
+}
+
+.divider {
+    border-top: 1px solid #ddd;
+    margin-top: 32px;
 }
 
 .load_notifications {

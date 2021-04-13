@@ -19,6 +19,7 @@ import ScrollToTop from './Components/ScrollToTop';
 import { SidebarContext } from './Contexts/SidebarContext';
 import { isMobile } from './Code/utils';
 import StartPageNotifications from './Pages/StartPageNotifications';
+import NotificationSettings from './Pages/NotificationSettings';
 
 ReactDOM.render(<App />, document.getElementById('app'));
 
@@ -47,6 +48,9 @@ function App() {
                         </Route>
                         <Route path='/startpagenotifications' exact>
                             <StartPageNotifications />
+                        </Route>
+                        <Route path='/notificationsettings' exact>
+                            <NotificationSettings />
                         </Route>
                         <Route path='/courses/:id/news' exact>
                             <CoursePostsPage />

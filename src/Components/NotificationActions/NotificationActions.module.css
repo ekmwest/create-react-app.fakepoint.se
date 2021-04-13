@@ -1,0 +1,47 @@
+.notification_actions,
+.notification_actions_open {
+  position: relative;
+}
+
+.notification_actions_icon {
+    background-image: url(/icons/ellipsis.png);
+    width: 28px;
+    height: 28px;
+    background-size: 28px;
+    display: block;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+    opacity: 0.7;
+}
+
+.notification_actions_open .notification_actions_icon {
+    background-color: #e5e5e5;
+}
+
+
+.notification_action_items {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: absolute;
+    right:0;
+    background-color: #fff;
+    width:180px;
+    display: none;
+    z-index: 1;
+    font-size: 14px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+}
+
+.notification_actions_open .notification_action_items {
+    display: block;
+}
+
+.notification_action_item {
+    border-bottom: 1px solid #ccc;
+    padding:12px;
+}
+
+.notification_action_item:last-child {
+    border-bottom: none;
+}
