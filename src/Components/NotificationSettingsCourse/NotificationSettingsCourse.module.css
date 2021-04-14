@@ -1,0 +1,58 @@
+.notification_settings_course_type_list { 
+    display: none;
+}
+
+.notification_settings_course_type_list_open {
+    display: block;
+    margin-top: 8px;
+}
+
+
+.notification_settings_type {
+    color: #333;
+    padding: 4px 0;
+    font-weight: normal;
+}
+
+.notification_settings_course_header {
+    display: flex;
+    align-items: center;
+}
+
+.notification_settings_course_name {
+    flex:1;
+    margin-right: 16px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  .switch::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius:50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+  }
+  
+  .checkbox:checked + .switch::after {
+    left : 17px;
+  }
+  .checkbox:checked + .switch {
+    background-color: #0079f2;
+  }
+  .checkbox {
+    display : none;
+  }
+  

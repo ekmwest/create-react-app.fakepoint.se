@@ -10,7 +10,7 @@ function NotificationActions({type, group}) {
             </div>
             <div className={styles.notification_action_items}>
                 <div className={styles.notification_action_item}>
-                    Mark as read
+                    Mark as seen
             </div>
                 <div className={styles.notification_action_item}>
                     Unsubscribe

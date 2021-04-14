@@ -105,8 +105,8 @@ function StartPageNotifications() {
                 <Header title="Notifications"></Header>
                 <div className={styles.notification_list}>
                     <div className={styles.notification_listheader}>
-                        <h4 className={styles.notification_title}>New</h4>
-                        <h4 className={styles.notification_mark_read_link}>Mark all read</h4>
+                        <h4 className={styles.notification_title}>New for you</h4>
+                        <h4 className={styles.notification_mark_read_link}>Mark all as seen</h4>
                     </div>
                 </div>
                 {notifications.map(n => (
@@ -193,7 +193,7 @@ function StartPageNotifications() {
             <>
                 <div className={styles.notification_list}>
                     <div className={styles.notification_listheader}>
-                        <h4 className={styles.notification_title}>Previous</h4>
+                        <h4 className={styles.notification_title}>Previously seen</h4>
                     </div>
                 </div>
                 {notifications.map(n => (

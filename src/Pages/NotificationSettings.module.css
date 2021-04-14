@@ -1,20 +1,22 @@
 .notification_settings_container {
-    max-width: 640px;
+    max-width: 800px;
     margin: 80px auto;
     background-color: #fff; 
     border-radius: 8px;
     border: 1px solid #ddd;
-    padding:16px;
+    padding:16px 64px 64px;
 }
 
 .notification_settings_container h3 {
     margin:0;
+    text-align: center;
+    font-size: 24px;
     padding: 16px;
 }
 
 .notifications_page {
     text-align: right;
-    padding: 6px 0;
+    padding:12px 16px;
 }
 
 .notifications_page_link {
@@ -24,11 +26,30 @@
 
 .notification_settings_course_list {
     margin:0;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-gap: 16px;
+    padding-left: 16px;
+    margin-top: 16px;
 }
 
 .notification_settings_course {
     font-weight: 600;
     padding: 12px;
+    background-color: #f0f0f0;
+    padding : 32px 16px;
+    border-radius: 6px;
+}
+
+
+.notification_settings_course_header {
+    display: flex;
+    align-items: center;
+}
+
+.notification_settings_course_name {
+    flex:1;
+    margin-right: 16px;
 }
 
 .notification_settings_type_list { 
@@ -37,9 +58,44 @@
 
 .notification_settings_type_list_open {
     display: block;
-    margin-top: -4px;
+    margin-top: 8px;
 }
 
 .notification_settings_type {
-    padding:6px 32px;
+    color: #333;
+    padding: 4px 0;
+    font-weight: normal;
 }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    transition: all 0.3s;
+  }
+
+  .switch::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius:50%;
+    background-color: white;
+    top: 1px;
+    left: 1px;
+    transition: all 0.3s;
+  }
+  
+  .checkbox:checked + .switch::after {
+    left : 17px;
+  }
+  .checkbox:checked + .switch {
+    background-color: #0079f2;
+  }
+  .checkbox {
+    display : none;
+  }
+  

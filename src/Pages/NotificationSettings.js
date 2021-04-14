@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 
 function NotificationSettings() {
     const [open, setOpen] = useState(false);
+    const [open1, setOpen1] = useState(false);
 
     return (
         <>
@@ -20,31 +21,199 @@ function NotificationSettings() {
                     </h3>
                     <div className={styles.notification_settings_course_list}>
                         <div className={styles.notification_settings_course}>
-                            <input type="checkbox"  className={styles.notification_setting_checkbox} /> JavaScript 3
+                            <div className={styles.notification_settings_course_header}>
+                                <div className={styles.notification_settings_course_name}>JavaScript 3 </div>
+                                <div>
+                                    <input type="checkbox" id="1" className={styles.checkbox} onChange={() => setOpen1(!open1)}/>
+                                    <label for="1" className={styles.switch} ></label>
+                                </div>
+                            </div>
+                            <div className={open1 ? styles.notification_settings_type_list_open : styles.notification_settings_type_list}>
+                                <div className={styles.notification_settings_type}>
+
+                                    <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Comments on result items </div>
+                                        <div>
+                                            <input type="checkbox" id="7" className={styles.checkbox} />
+                                            <label for="7" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Newsfeed</div>
+                                        <div>
+                                            <input type="checkbox" id="8"  checked="checked" className={styles.checkbox} />
+                                            <label for="8" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Logbook </div>
+                                        <div>
+                                            <input type="checkbox" id="9" className={styles.checkbox} />
+                                            <label for="9" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Survey to answer</div>
+                                        <div>
+                                            <input type="checkbox" id="10" className={styles.checkbox} />
+                                            <label for="10" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>LIA approval </div>
+                                        <div>
+                                            <input type="checkbox" id="11" checked="checked" className={styles.checkbox} />
+                                            <label for="11" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Submissions</div>
+                                        <div>
+                                            <input type="checkbox" id="12" checked="true" className={styles.checkbox} />
+                                            <label for="12" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
                         <div className={styles.notification_settings_course}>
-                            <input type="checkbox" className={styles.notification_setting_checkbox}  onChange={() => setOpen(!open)} /> Informationsarkitektur
+                            <div className={styles.notification_settings_course_header}>
+                                <div className={styles.notification_settings_course_name}>Informationsarkitektur </div>
+                                <div>
+                                    <input type="checkbox" id="2" className={styles.checkbox} onChange={() => setOpen(!open)} />
+                                    <label for="2" className={styles.switch} ></label>
+                                </div>
+                            </div>
+                            <div className={open ? styles.notification_settings_type_list_open : styles.notification_settings_type_list}>
+                                <div className={styles.notification_settings_type}>
+
+                                    <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Comments on result items </div>
+                                        <div>
+                                            <input type="checkbox" id="7" className={styles.checkbox} />
+                                            <label for="7" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Newsfeed</div>
+                                        <div>
+                                            <input type="checkbox" id="8"  checked="checked" className={styles.checkbox} />
+                                            <label for="8" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Logbook </div>
+                                        <div>
+                                            <input type="checkbox" id="9" className={styles.checkbox} />
+                                            <label for="9" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Survey to answer</div>
+                                        <div>
+                                            <input type="checkbox" id="10" className={styles.checkbox} />
+                                            <label for="10" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>LIA approval </div>
+                                        <div>
+                                            <input type="checkbox" id="11" checked="checked" className={styles.checkbox} />
+                                            <label for="11" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div className={styles.notification_settings_type}>
+                                    
+                                <div className={styles.notification_settings_course_header}>
+                                        <div className={styles.notification_settings_course_name}>Submissions</div>
+                                        <div>
+                                            <input type="checkbox" id="12" checked="true" className={styles.checkbox} />
+                                            <label for="12" className={styles.switch} ></label>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
                         </div>
-                        <div className={open ? styles.notification_settings_type_list_open  : styles.notification_settings_type_list }>
-                            <div className={styles.notification_settings_type}>
-                                <input type="checkbox"  className={styles.notification_setting_checkbox} /> Comments on result items
+                        <div className={styles.notification_settings_course}>
+                            <div className={styles.notification_settings_course_header}>
+                                <div className={styles.notification_settings_course_name}>LIA - Flygplats</div>
+                                <div>
+                                    <input type="checkbox" id="3" className={styles.checkbox} />
+                                    <label for="3" className={styles.switch} ></label>
+                                </div>
                             </div>
-                            <div className={styles.notification_settings_type}>
-                                <input type="checkbox"  className={styles.notification_setting_checkbox} /> Newsfeed
-                            </div>
-                            <div className={styles.notification_settings_type}>
-                                <input type="checkbox" checked="checked" className={styles.notification_setting_checkbox} /> Logbook
-                            </div>
-                            <div className={styles.notification_settings_type}>
-                                <input type="checkbox"  className={styles.notification_setting_checkbox} /> Survey to answer
-                            </div>
-                            <div className={styles.notification_settings_type}>
-                                <input type="checkbox" checked="checked" className={styles.notification_setting_checkbox} /> LIA approval
-                            </div>
-                            <div className={styles.notification_settings_type}>
-                                <input type="checkbox" className={styles.notification_setting_checkbox} /> Submissions
+
+                        </div>
+                        <div className={styles.notification_settings_course}>
+                            <div className={styles.notification_settings_course_header}>
+                                <div className={styles.notification_settings_course_name}>Teknikkurs 1</div>
+                                <div>
+                                    <input type="checkbox" id="4" className={styles.checkbox} />
+                                    <label for="4" className={styles.switch} ></label>
+                                </div>
                             </div>
                         </div>
+                        <div className={styles.notification_settings_course}>
+                            <div className={styles.notification_settings_course_header}>
+                                <div className={styles.notification_settings_course_name}>Grundläggande teori och praktik</div>
+                                <div>
+                                    <input type="checkbox" id="5" className={styles.checkbox} />
+                                    <label for="5" className={styles.switch} ></label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div className={styles.notification_settings_course}>
+                            <div className={styles.notification_settings_course_header}>
+                                <div className={styles.notification_settings_course_name}>
+                                    Arbetsmiljö och säkerhet</div>
+                                <div>
+                                    <input type="checkbox" id="6" className={styles.checkbox} />
+                                    <label for="6" className={styles.switch} ></label>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
