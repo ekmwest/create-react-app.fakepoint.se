@@ -234,6 +234,7 @@ function StartPageNotifications() {
                 {groupedNotification()}               
                 <div className={styles.divider}> </div>
                 {oldNotificationsList()}
+                <div className={styles.load_notifications}>View all your notifications...</div>
             </div>
         </div>
     );

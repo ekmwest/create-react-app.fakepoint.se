@@ -160,7 +160,8 @@
 
 .load_notifications {
     text-align: center;
-    margin:32px 0;
+    margin:36px 0;
     font-weight: 600;
+    cursor: pointer;
 }
 
