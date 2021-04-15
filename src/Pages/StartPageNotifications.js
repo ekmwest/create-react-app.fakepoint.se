@@ -110,7 +110,6 @@ function StartPageNotifications() {
                     </div>
                 </div>
                 {notifications.map(n => (
-                    <>
                         <div key={n.id} className={styles.notification}>
                             <div className={styles.notification_header}>
                                 <div className={styles.notification_avatar}>
@@ -130,7 +129,6 @@ function StartPageNotifications() {
                                 {n.group} • {n.date}
                             </div>
                         </div>
-                    </>
                 ))}
             </>
         );
@@ -159,7 +157,6 @@ function StartPageNotifications() {
                     </div>
                     <div className={open ? styles.notification_group_items_expanded : styles.notification_group_items_collapsed}>
                         {groupNotifications.map(n => (
-                            <>
                                 <div key={n.id} className={styles.notification}>
                                     <div className={styles.notification_header}>
                                         <div className={styles.notification_avatar}>
@@ -178,7 +175,6 @@ function StartPageNotifications() {
                                         {n.group} • {n.date}
                                     </div>
                                 </div>
-                            </>
                         ))}
                     </div>
                 </div>
@@ -197,8 +193,7 @@ function StartPageNotifications() {
                     </div>
                 </div>
                 {notifications.map(n => (
-                    <>
-                        <div key={n.id} className={styles.notification}>
+                        <div key={n.id+1} className={styles.notification}>
                             <div className={styles.notification_header}>
                                 <div className={styles.notification_avatar}>
                                     <img src={n.avatar} className={styles.notification_avatar_image}></img>
@@ -217,7 +212,6 @@ function StartPageNotifications() {
                                 {n.group} • {n.date}
                             </div>
                         </div>
-                    </>
                 ))}
             </>
         );

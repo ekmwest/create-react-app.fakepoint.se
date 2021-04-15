@@ -14,6 +14,14 @@
     font-weight: normal;
 }
 
+.notification_settings_course {
+    font-weight: 600;
+    padding: 12px;
+    background-color: #f0f0f0;
+    padding : 32px 16px;
+    border-radius: 6px;
+}
+
 .notification_settings_course_header {
     display: flex;
     align-items: center;

@@ -1,80 +1,71 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import styles from './NotificationSettingsCourse.module.css';
 
-function NotificationSettingsCourse(open) {
+const defaultTypes = [
+    {
+        id: 1,
+        type: "Comments on results items"
+    },
+    {
+        id: 2,
+        type: "Newsfeed"
 
-    const [checked, setChecked] = React.useState(true);
+    },
+    {
+        id: 3,
+        type: "Logbook"
+    },
+    {
+        id: 4,
+        type: "Submissions"
+    },
+    {
+        id: 5,
+        type: "Surveys"
+
+    },
+    {
+        id: 6,
+        type: "LIA approval"
+
+    }
+
+];
+
+function NotificationSettingsCourse({ id, group }) {
+
+    const [checked, setChecked] = useState(true);
+    const [open, setOpen] = useState(false);
+    
+    const [types] = useState(defaultTypes);
 
     return (
-        <div className={open.open ? styles.notification_settings_course_type_list_open : styles.notification_settings_course_type_list}>
-            <div className={styles.notification_settings_type}>
-
+        <>
+            <div className={styles.notification_settings_course} key={id}>
                 <div className={styles.notification_settings_course_header}>
-                    <div className={styles.notification_settings_course_name}>Comments on result items </div>
+                    <div className={styles.notification_settings_course_name}>{group}</div>
                     <div>
-                        <input type="checkbox" id="7" className={styles.checkbox} />
-                        <label for="7" className={styles.switch} ></label>
+                        <input type="checkbox" id={id} className={styles.checkbox} onChange={() => setOpen(!open)} />
+                        <label htmlFor={id} className={styles.switch} ></label>
                     </div>
                 </div>
+                <div className={open ? styles.notification_settings_course_type_list_open : styles.notification_settings_course_type_list}>
+                    {types.map(n => (
+                            <div className={styles.notification_settings_type} key={n.id}>
 
-            </div>
-            <div className={styles.notification_settings_type}>
+                                <div className={styles.notification_settings_course_header}>
+                                    <div className={styles.notification_settings_course_name}>{n.type}</div>
+                                    <div>
+                                        <input type="checkbox" id={group + id + n.id} className={styles.checkbox} />
+                                        <label htmlFor={group + id + n.id} className={styles.switch} ></label>
+                                    </div>
+                                </div>
 
-                <div className={styles.notification_settings_course_header}>
-                    <div className={styles.notification_settings_course_name}>Newsfeed</div>
-                    <div>
-                        <input type="checkbox" id="8"  defaultChecked={checked} className={styles.checkbox} />
-                        <label for="8" className={styles.switch} ></label>
-                    </div>
+                            </div>
+                    ))}
                 </div>
-
             </div>
-            <div className={styles.notification_settings_type}>
-
-                <div className={styles.notification_settings_course_header}>
-                    <div className={styles.notification_settings_course_name}>Logbook </div>
-                    <div>
-                        <input type="checkbox" id="9" className={styles.checkbox} />
-                        <label for="9" className={styles.switch} ></label>
-                    </div>
-                </div>
-
-            </div>
-            <div className={styles.notification_settings_type}>
-
-                <div className={styles.notification_settings_course_header}>
-                    <div className={styles.notification_settings_course_name}>Survey to answer</div>
-                    <div>
-                        <input type="checkbox" id="10" className={styles.checkbox} />
-                        <label for="10" className={styles.switch} ></label>
-                    </div>
-                </div>
-
-            </div>
-            <div className={styles.notification_settings_type}>
-
-                <div className={styles.notification_settings_course_header}>
-                    <div className={styles.notification_settings_course_name}>LIA approval </div>
-                    <div>
-                        <input type="checkbox" id="11"  defaultChecked={checked} className={styles.checkbox} />
-                        <label for="11" className={styles.switch} ></label>
-                    </div>
-                </div>
-
-            </div>
-            <div className={styles.notification_settings_type}>
-
-                <div className={styles.notification_settings_course_header}>
-                    <div className={styles.notification_settings_course_name}>Submissions</div>
-                    <div>
-                        <input type="checkbox" id="12"  defaultChecked={checked} className={styles.checkbox} />
-                        <label for="12" className={styles.switch} ></label>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        
+        </>
     );
 }
 
